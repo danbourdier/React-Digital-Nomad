@@ -1,4 +1,4 @@
-# Welcome to Digital Nomad! A place where you can see what its like to visit the city you always wanted to visit from a first person point of view. See daily life, and listen to top tracks local to the region!
+# Welcome to Digital Nomad! A way to visit the city of your dreams in person from the comfort of home!
 
 ### Technologies used
   1. HTML5
@@ -6,3 +6,4 @@
   1. JavaScript
   2. React.js
   3. Youtube video player API
+  4. Github pages (Hosting)
