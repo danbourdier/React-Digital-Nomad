@@ -4,8 +4,8 @@ module.exports = {
   context: __dirname,
   entry: "./src/entry.jsx",
   output: {
-    path: path.resolve(__dirname, 'dist'),
-    filename: './dist/bundle.js'
+    // path: path.resolve(__dirname, 'dist'),
+    filename: './bundle.js'
   },
   module: {
     rules: [
