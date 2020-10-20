@@ -3,8 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <div id="player"></div>
-  <script src="../dist/bundle.js"></script>
+  <!-- <div id="player"></div> -->
+  <iframe id="player" type="text/html" width="640" height="390"
+    src="https://www.youtube.com/embed/6qGiXY1SB68?enablejsapi=1&origin=http://example.com" 
+    frameborder="0">
+  </iframe>
+
   <script>
     // 2. This code loads the IFrame Player API code asynchronously.
     let tag = document.createElement('script');
@@ -18,9 +22,9 @@
     let player;
     function onYouTubeIframeAPIReady() {
       player = new YT.Player('player', {
-        height: '390',
-        width: '640',
-        videoId: 'M7lc1UVf-VE',
+        // height: '390',
+        // width: '640',
+        // videoId: '6qGiXY1SB68',
         events: {
           'onReady': onPlayerReady,
           'onStateChange': onPlayerStateChange
@@ -47,6 +51,7 @@
       player.stopVideo();
     }
   </script>
+  <script src="../dist/bundle.js"></script>
 
 
   <title>Document</title>

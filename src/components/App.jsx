@@ -1,7 +1,16 @@
 import React from 'react'
 
-const App = () => (
-  <h1>Prosper!</h1>
-)
+const App = () => {
+
+  const player = document.getElementById('player')
+  return (
+    <div>
+      
+    </div>
+    
+  )
+  
+
+}
 
 export default App
