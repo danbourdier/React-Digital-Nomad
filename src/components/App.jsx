@@ -1,11 +1,12 @@
 import React from 'react'
 
+import Player from './player/player'
+
 const App = () => {
 
-  const player = document.getElementById('player')
   return (
     <div>
-      App here
+      <Player />
     </div>
     
   )
