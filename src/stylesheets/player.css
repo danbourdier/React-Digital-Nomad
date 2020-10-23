@@ -15,8 +15,7 @@
 /* location controls (tokyo, france, nyc, etc) */
 .location-controls-container {
   position: absolute;
-  left: 50%;
-  right: 50%;
+  left: 44.5%;
   bottom: 10%;
 }
 
