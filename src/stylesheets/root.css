@@ -3,3 +3,7 @@
   width: 100vw;
   box-sizing: border-box;
 }
+  #root div:first-child {
+    width: 100%;
+    height: 100%;
+  }
