@@ -1,4 +1,5 @@
 import React from 'react'
+import LocationControls from './LocationControls'
 
 const Player = () => {
 
@@ -6,7 +7,7 @@ const Player = () => {
   return (
     <div>
       <div id="player"></div>
-      <button onClick={() => { window.player.loadVideoById('Pca24nzCdu0')} }>Click me</button>
+      <LocationControls />
     </div>
   )
 
