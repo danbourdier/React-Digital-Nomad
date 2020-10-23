@@ -5,7 +5,7 @@ const Player = () => {
 
 
   return (
-    <div>
+    <div id="location-player-container">
       <div id="player"></div>
       <LocationControls />
     </div>
