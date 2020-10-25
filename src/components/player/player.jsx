@@ -12,7 +12,7 @@ const Player = () => {
       <MusicControls />
       <div id="player"></div>
 
-      <locationURL.Provider value={{'location': 'hello'}}>
+      <locationURL.Provider value={{ 'location': ['yIMDgPKgN1w', '478TeAxm12g'], 'idx': 0 }}>
         <LocationControls />
       </locationURL.Provider>
     </div>
