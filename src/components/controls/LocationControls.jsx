@@ -6,11 +6,9 @@ const LocationControls = () => {
 
   const loadNext = arg => {window.player.loadVideoById(arg)}
 
-  const nextVid = () => { // i want to create a function that returns the next url in an array. In respect to bounds
+  const nextVid = () => {
     let topic = cntxt.location
-    //if its a 2 already
     cntxt.idx++
-    // 4 % 3
     return topic[cntxt.idx % topic.length ]
 
   }

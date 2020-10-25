@@ -4,17 +4,15 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <script src="https://www.youtube.com/iframe_api"></script>
+  <script rel='preload' src="https://www.youtube.com/iframe_api"></script>
 
-  <script>
+  <script rel='preload'>
     // 3. This function creates an <iframe> (and YouTube player)
     //    after the API code downloads.
     window.player
 
     function onYouTubeIframeAPIReady() {
       window.player = new YT.Player('player', {
-        // height: '390',
-        // width: '640',
         videoId: 'GAd9FH8DPTs',
         events: {
           'onReady': onPlayerReady,
@@ -32,13 +30,13 @@
     let done = false;
     function onPlayerStateChange(event) {
       if (event.data == YT.PlayerState.PLAYING && !done) {
-        setTimeout(stopVideo, 6000);
+        // setTimeout(stopVideo, 6000);
         done = true;
       }
     }
-    function stopVideo() {
-      player.stopVideo();
-    }
+    // function stopVideo() {
+    //   player.stopVideo();
+    // }
   </script>
   <script src="../dist/bundle.js"></script>
   

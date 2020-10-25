@@ -1,7 +1,7 @@
 import React from 'react'
 import LocationControls from '../controls/LocationControls'
 import MusicControls from '../controls/MusicControls'
-// import { locationURL } from '../App'
+
 export const locationURL = React.createContext(null)
 
 const Player = () => {
