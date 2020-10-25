@@ -2,7 +2,7 @@ import React from 'react'
 import LocationControls from '../controls/LocationControls'
 import MusicControls from '../controls/MusicControls'
 // import { locationURL } from '../App'
-export const locationURL = React.createContext({'location': 'hello'})
+export const locationURL = React.createContext(null)
 
 const Player = () => {
 
@@ -12,7 +12,7 @@ const Player = () => {
       <MusicControls />
       <div id="player"></div>
 
-      <locationURL.Provider >
+      <locationURL.Provider value={{'location': 'hello'}}>
         <LocationControls />
       </locationURL.Provider>
     </div>

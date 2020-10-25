@@ -7,9 +7,9 @@ const LocationControls = () => {
   return (
     <div className="location-controls-container">
       <section className="location-controls-flex-wrapper">
-        <button id="location-controls-button" onClick={() => { window.player.loadVideoById('JGaaU8j-9BI') }}> { '<<' } </button>
-        {/* <button id="location-controls-button" onClick={() => { window.player.loadVideoById('JGaaU8j-9BI') }}> { '>>' } </button> */}
-        <button id="location-controls-button" onClick={() => { console.log('locationURL.location') }}> { '>>' } </button>
+        <button className="location-controls-button" onClick={() => { window.player.loadVideoById('JGaaU8j-9BI') }}> { '<<' } </button>
+        <button className="location-controls-button" onClick={() => { window.player.loadVideoById('yIMDgPKgN1w') }}> { '>>' } </button>
+        {/* <button className="location-controls-button" onClick={() => { console.log(ourContext.location) }}> { '>>' } </button> */}
       </section>
     </div>
   )
