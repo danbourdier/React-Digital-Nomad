@@ -8,17 +8,16 @@ const LocationControls = () => {
 
   const nextVid = () => { // i want to create a function that returns the next url in an array. In respect to bounds
     let topic = cntxt.location
+    //if its a 2 already
     cntxt.idx++
-    return topic[cntxt.idx % topic.length - 1 ]
+    // 4 % 3
+    return topic[cntxt.idx % topic.length ]
 
   }
 
   const prevVid = () => {
-    let curr = cntxt.idx
-    curr = curr == 0 ? cntxt.location.length - 1 : curr - 1
-
-    return cntxt.location[curr]
-
+    cntxt.idx = cntxt.idx == 0 ? cntxt.location.length - 1 : cntxt.idx - 1
+    return cntxt.location[cntxt.idx]
   }
 
 
@@ -26,9 +25,9 @@ const LocationControls = () => {
   return (
     <div className="location-controls-container">
       <section className="location-controls-flex-wrapper">
-        <button className="location-controls-button" onClick={() => { loadNext('JGaaU8j-9BI') }}> { '<<' } </button>
+        <button className="location-controls-button" onClick={() => { loadNext(prevVid()) }}> { '<<' } </button>
         {/* <button className="location-controls-button" onClick={() => { window.player.loadVideoById(cntxt.location[0]) }}> { '>>' } </button> */}
-        <button className="location-controls-button" onClick={() => { cntxt.idx++; console.log(cntxt.idx) }}> { '>>' } </button>
+        <button className="location-controls-button" onClick={() => { loadNext(nextVid()) } }> { '>>' } </button>
 
       </section>
     </div>
