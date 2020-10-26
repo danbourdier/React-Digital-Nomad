@@ -4,15 +4,56 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <script rel='preload' src="https://www.youtube.com/iframe_api"></script>
+  <!-- <script rel='preload' src="https://sdk.scdn.co/spotify-player.js"></script>
+  <script>
+    window.onSpotifyWebPlaybackSDKReady = () => {
+        const token = '[ insert code here ]'
+        window.spotPlayer = 1
+        window.spotPlayer = new Spotify.Player({
+          name: 'Spotify Web Player',
+          getOAuthToken: cb => { cb(token); }
+        });
 
+        // Error handling
+        window.spotPlayer.addListener('initialization_error', ({ message }) => { console.error(message); });
+        window.spotPlayer.addListener('authentication_error', ({ message }) => { console.error(message); });
+        window.spotPlayer.addListener('account_error', ({ message }) => { console.error(message); });
+        window.spotPlayer.addListener('playback_error', ({ message }) => { console.error(message); });
+
+        // Playback status updates
+        window.spotPlayer.addListener('player_state_changed', state => { console.log(state); });
+
+        // Ready
+        window.spotPlayer.addListener('ready', ({ device_id }) => {
+          console.log('Ready with Device ID', device_id);
+        });
+
+        // Not Ready
+        window.spotPlayer.addListener('not_ready', ({ device_id }) => {
+          console.log('Device ID has gone offline', device_id);
+        });
+
+        // Connect to the window.spotPlayer!
+        window.spotPlayer.connect();
+      };
+  </script> -->
+
+  <script rel='preload' src="https://www.youtube.com/iframe_api"></script>
   <script rel='preload'>
     // 3. This function creates an <iframe> (and YouTube player)
     //    after the API code downloads.
-    window.player
+    window.locationPlayer
+    window.musicPlayer
 
     function onYouTubeIframeAPIReady() {
-      window.player = new YT.Player('player', {
+      window.locationPlayer = new YT.Player('locationPlayer', {
+        videoId: 'GAd9FH8DPTs',
+        events: {
+          'onReady': onPlayerReady,
+          'onStateChange': onPlayerStateChange
+        }
+      });
+      window.musicPlayer = new YT.Player('musicPlayer', {
         videoId: 'GAd9FH8DPTs',
         events: {
           'onReady': onPlayerReady,

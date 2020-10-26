@@ -4,7 +4,7 @@ import { locationURL } from '../player/Player'
 const LocationControls = () => {
   const cntxt = useContext(locationURL)  
 
-  const loadNext = arg => {window.player.loadVideoById(arg)}
+  const loadNext = arg => {window.locationPlayer.loadVideoById(arg)}
 
   const nextVid = () => {
     let topic = cntxt.location
