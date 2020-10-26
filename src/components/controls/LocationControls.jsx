@@ -18,13 +18,10 @@ const LocationControls = () => {
     return cntxt.location[cntxt.idx]
   }
 
-
-
   return (
     <div className="location-controls-container">
       <section className="location-controls-flex-wrapper">
         <button className="location-controls-button" onClick={() => { loadNext(prevVid()) }}> { '<<' } </button>
-        {/* <button className="location-controls-button" onClick={() => { window.player.loadVideoById(cntxt.location[0]) }}> { '>>' } </button> */}
         <button className="location-controls-button" onClick={() => { loadNext(nextVid()) } }> { '>>' } </button>
 
       </section>

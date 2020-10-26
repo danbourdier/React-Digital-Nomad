@@ -2,7 +2,7 @@ import React, { useContext } from 'react'
 import { musicURL } from '../player/Player'
 
 const MusicControls = () => {
-  const cntxt = useContext(musicURL)
+  // const cntxt = useContext(musicURL)
 
   // const options = {
   //   method: 'GET',
