@@ -10,7 +10,6 @@ const MusicControls = () => {
     let topic = cntxt.music
     cntxt.idx++
     return topic[cntxt.idx % topic.length]
-
   } 
 
   const prevVid = () => {
