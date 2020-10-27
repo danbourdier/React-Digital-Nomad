@@ -9,7 +9,7 @@ const Player = () => {
 
   return (
     <div id="location-player-container">
-      <musicURL.Provider value={{ 'music': ['Zy_KuTFwot4', '4TURpXzrE5k', 'NGcXJ-ypK3I'], 'idx': 0 } }>
+      <musicURL.Provider value={{ 'music': ['lA0pgGNvmv4', 'gdZLi9oWNZg', 'NGcXJ-ypK3I'], 'idx': 0 } }>
         <MusicControls />
       </musicURL.Provider>
 
