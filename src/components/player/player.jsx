@@ -10,7 +10,8 @@ const Player = () => {
   // if we have a japan key in location, i then want to switch to a key in music that matches the location right now.
   return (
     <div id="location-player-container">
-      <musicURL.Provider value={{ 'music': ['lA0pgGNvmv4', 'gdZLi9oWNZg', 'NGcXJ-ypK3I'], 'idx': 0 } }>
+      {/* <musicURL.Provider value={{ 'music': ['lA0pgGNvmv4', 'gdZLi9oWNZg', 'NGcXJ-ypK3I', 'elRS0ntrEjk', 'gLXNJou6-DQ'], 'idx': 0 } }> */}
+      <musicURL.Provider value={{ 'music': ['lA0pgGNvmv4', 'gdZLi9oWNZg', 'NGcXJ-ypK3I', 'elRS0ntrEjk', 'gLXNJou6-DQ'], 'idx': 0 } }>
         <MusicControls />
       </musicURL.Provider>
 
