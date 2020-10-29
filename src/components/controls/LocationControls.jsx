@@ -15,7 +15,7 @@ const LocationControls = props => {
       props.updateCurr(locale) // just our effect to occur
       // no cleanup method is needed since we are only updating our props
     
-  })
+  }, [ locale ])
 
   // This is our method to switch to the next location video in our player
   const nextVid = () => {
@@ -29,6 +29,7 @@ const LocationControls = props => {
   const prevVid = () => {
     let newIdx = index == 0 ? cntxt.length - 1 : index - 1
     setIndex( newIdx )
+    setLocale(cntxt[newIdx][0])
     return cntxt[newIdx][1]
   }
 
