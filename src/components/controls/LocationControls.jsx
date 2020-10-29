@@ -10,13 +10,12 @@ const LocationControls = props => {
   const cntxt = Object.entries(useContext(locationURL))
 
   // To legibly understand our code we set our parent state update logic in a useEffect
-  // useEffect({
-  //   function() { // once we update our locale, we bubble up our event
-  //     console.log('from child')
-  //     props.updateCurr(locale)
-  //   }
-
-  // })
+  useEffect(() => {
+     // once we update our locale, we bubble up our event
+      props.updateCurr(locale) // just our effect to occur
+      // no cleanup method is needed since we are only updating our props
+    
+  })
 
   // This is our method to switch to the next location video in our player
   const nextVid = () => {

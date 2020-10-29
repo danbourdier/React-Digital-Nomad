@@ -7,11 +7,10 @@ export const musicURL = React.createContext(null)
 const Player = () => {
   const [ currentCountry, setCountry ] = useState('France')
 
-  // useEffect({
-  //   function() {
+  // useEffect(() => {
+    
   //     console.log(currentCountry, 'to parent')
-  //   }
-
+    
   // })
 
   return (
