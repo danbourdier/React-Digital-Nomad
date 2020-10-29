@@ -1,21 +1,28 @@
-import React, { useContext } from 'react'
+import React, { useContext, useState } from 'react'
 import { locationURL } from '../player/Player'
 
 const LocationControls = () => {
-  const cntxt = useContext(locationURL)  
+  // this slice of state is to track our current index within our cntxt
+  const [ index, setIndex ] = useState(0)
+  const [ currentCountry, setCountry ] = useState()
 
+  // this is our deconstructed React conext of the nearest provider
+  const cntxt = Object.entries(useContext(locationURL))
+
+  // this instantiation is to keep our youtube method calls DRY to the respective player
   const loadNext = arg => {window.locationPlayer.loadVideoById(arg)}
 
+  // This is our method to switch to the next location video in our player
   const nextVid = () => {
-    let topic = cntxt.location
-    cntxt.idx++
-    return topic[cntxt.idx % topic.length ]
-
+    let topic = cntxt
+    setIndex(index++)
+    return topic[cntxt.index % topic.length ][1]
   }
 
+  // This is the ooposite of above
   const prevVid = () => {
-    cntxt.idx = cntxt.idx == 0 ? cntxt.location.length - 1 : cntxt.idx - 1
-    return cntxt.location[cntxt.idx]
+    cntxt.index = cntxt.index == 0 ? cntxt.length - 1 : cntxt.index - 1
+    return cntxt[cntxt.index]
   }
 
   return (
@@ -32,3 +39,5 @@ const LocationControls = () => {
 
 
 export default LocationControls
+
+
