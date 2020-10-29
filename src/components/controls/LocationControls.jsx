@@ -4,7 +4,7 @@ import { locationURL } from '../player/Player'
 const LocationControls = () => {
   // this slice of state is to track our current index within our cntxt
   const [ index, setIndex ] = useState(0)
-  const [ currentCountry, setCountry ] = useState()
+  const [ currentCountry, setCountry ] = useState('France')
 
   // this is our deconstructed React conext of the nearest provider
   const cntxt = Object.entries(useContext(locationURL))
@@ -14,9 +14,9 @@ const LocationControls = () => {
 
   // This is our method to switch to the next location video in our player
   const nextVid = () => {
-    let topic = cntxt
-    setIndex(index++)
-    return topic[cntxt.index % topic.length ][1]
+    setIndex(index++) // i need to increment our our curr idx
+    setCountry(cntxt[index % cntxt.length ][0]) // i need to track our current country
+    return cntxt[index % cntxt.length ][1]
   }
 
   // This is the ooposite of above
