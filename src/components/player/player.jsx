@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 
 import LocationControls from '../controls/LocationControls'
 import MusicControls from '../controls/MusicControls'
+import Blur from '../misc/blur'
 
 export const locationURL = React.createContext(null)
 export const musicURL = React.createContext(null)
@@ -24,6 +25,7 @@ const Player = () => {
       </musicURL.Provider>
 
       <div id="musicPlayer"></div> {/* our first embed player */}
+      <Blur />
       <div id="locationPlayer"></div>  {/* our location embed player */}
 
       <locationURL.Provider value={{ 'France': 'u3ayPmL2KN4', 'NYC': 'eZe4Q_58UTU', 
