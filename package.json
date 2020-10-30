@@ -32,6 +32,7 @@
   },
   "devDependencies": {
     "css-loader": "^5.0.0",
+    "eslint-plugin-react-hooks": "^4.2.0",
     "html-webpack-plugin": "^4.5.0",
     "style-loader": "^2.0.0",
     "webpack": "^5.2.0",

@@ -13,9 +13,10 @@ const LocationControls = props => {
   useEffect(() => {
      // once we update our locale, we bubble up our event
       props.updateCurr(locale) // just our effect to occur
+      console.log('location change in controls')
       // no cleanup method is needed since we are only updating our props
     
-  }, [ locale ])
+  }, [locale])
 
   // This is our method to switch to the next location video in our player
   const nextVid = () => {

@@ -3,28 +3,28 @@ import { musicURL } from '../player/Player'
 
 const MusicControls = props => {
   const [ index, setIndex ] = useState(0)
+  const [ currLocale, changeLocale ] = useState('France')
 
-  // As soon as our component detects a change in our props with our compared values
-  useEffect(() => {
-    // cntxt = useContext(musicURL)[props.currCountr]
-    // console.log(props.currCountr);
-    return () => ( loadNext(nextVid()) ) // we call our function to queue our next vid in that new playlist!
-  }, [props.currCountr])
-
-  let cntxt = useContext(musicURL)[props.currCountr]
-
-  const loadNext = arg => { window.musicPlayer.loadVideoById(arg) }
+  const loadNext = arg => props.loadFunc(arg, 'musicPlayer')
   
-  // this use of #useEffect enables us to to run this in a #componentDidMount method
-  // useEffect(() => { 
-  //   return () => {loadNext(nextVid())}
-  // }, []) // this is possible due to use of an empty array to compare against a stale value, therefore executing our method only once!
-
+  
+  // everytime we detect change in props, i want to load a vid with a respective key
+  useEffect(() => {
+    // loadNext(prevCntxt[props.currCountr])
+    return () => { 
+      loadNext(nextVid())
+      // loadNext(prevCntxt[props.currLocale])
+    }
+    // return window.musicPlayer.loadVideoById(prevCntxt[props.currCountr])
+  }) 
+ 
+  const prevCntxt = useContext(musicURL)
+  let cntxt = prevCntxt[props.currCountr]
 
   // This is our method to switch to the next location video in our player
   const nextVid = () => {
-    console.log(props.currCountr)
     let newIdx = index + 1
+    changeLocale(props.currCountr)
     setIndex(newIdx) // i need to increment our our curr idx
     // setLocale(cntxt[newIdx % cntxt.length][0]) // i need to track our current country
     return cntxt[newIdx % cntxt.length] // we return the videoId located at the Ith idx at [1]
@@ -49,4 +49,4 @@ const MusicControls = props => {
 }
 
 
-export default MusicControls
+export default MusicControls 
