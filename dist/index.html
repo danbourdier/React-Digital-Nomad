@@ -5,7 +5,7 @@
 
     function onYouTubeIframeAPIReady() {
       window.locationPlayer = new YT.Player('locationPlayer', {
-        videoId: 'GAd9FH8DPTs',
+        videoId: '09oFgM5IHSI',
         playerVars: {
           'iv_load_policy': 3,
           'disablekb': 1,
@@ -21,8 +21,8 @@
         }
       });
 
-      window.musicPlayer = new YT.Player('musicPlayer', {
-        videoId: 'gdZLi9oWNZg',
+      let musicObject = new YT.Player('musicPlayer', {
+        videoId: 'lEfkziQSmZI',
         playerVars: {
           'iv_load_policy': 3,
           'end': 45,
@@ -33,13 +33,21 @@
           'enablejsapi': 1,
         },
         events: {
-          'onReady': onPlayerReady,
+          'onReady': onMusicReady,
+          // 'onReady': function (ev) {
+          //   window.musicPlayer = ev.target
+          // },
           'onStateChange': onPlayerStateChange
         }
       });
     }
 
     // 4. The API will call this function when the video player is ready.
+    function onMusicReady(event) {
+      event.target.playVideo();
+      window.musicPlayer = event.target; 
+      // console.log(event.target)
+    }
     function onPlayerReady(event) {
       event.target.playVideo();
     }
