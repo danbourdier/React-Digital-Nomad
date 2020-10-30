@@ -12,11 +12,10 @@ const LocationControls = props => {
   // To legibly understand our code we set our parent state update logic in a useEffect
   useEffect(() => {
      // once we update our locale, we bubble up our event
-      props.updateCurr(locale) // just our effect to occur
-      console.log('location change in controls')
+      props.updateCurr(locale) // just our effect to occur and update our parent
       // no cleanup method is needed since we are only updating our props
-    
-  }, [locale])
+
+  }, [locale]) // we re-render only when there is a change to our state
 
   // This is our method to switch to the next location video in our player
   const nextVid = () => {
@@ -46,7 +45,7 @@ const LocationControls = props => {
       </section>
     </div>
   )
-}
+} 
 
 
 

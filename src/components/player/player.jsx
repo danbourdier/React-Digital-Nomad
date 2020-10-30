@@ -1,16 +1,14 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
+
 import LocationControls from '../controls/LocationControls'
 import MusicControls from '../controls/MusicControls'
 
 export const locationURL = React.createContext(null)
 export const musicURL = React.createContext(null)
+
 const Player = () => {
   const [ currentCountry, setCountry ] = useState('France')
-  const loadNext = (vidId, playType) => { window[playType].loadVideoById(vidId) }
-
-  useEffect(() => {
-    console.log('current country changed in player')
-  }, [ currentCountry ])
+  const loadNext = (vidId, playType) => { window[playType].loadVideoById(vidId) } // our dynamic API caller on a respective player
 
   return (
     <div id="location-player-container">
@@ -25,10 +23,10 @@ const Player = () => {
         <MusicControls currCountr={ currentCountry } loadFunc={ loadNext } />
       </musicURL.Provider>
 
-      <div id="musicPlayer"></div>
-      <div id="locationPlayer"></div>
+      <div id="musicPlayer"></div> {/* our first embed player */}
+      <div id="locationPlayer"></div>  {/* our location embed player */}
 
-      <locationURL.Provider value={{ 'France': '09oFgM5IHSI', 'NYC': 'eZe4Q_58UTU', 
+      <locationURL.Provider value={{ 'France': 'u3ayPmL2KN4', 'NYC': 'eZe4Q_58UTU', 
                                     'Columbia': 'FBDLlpg1P_I', 'Germany': 'mlS89Cd176M', 
                                     'HongKong': 'H50az3Aq7x4', 'India': 'XRU9omrRV64', 
                                     'Italy': 'lpo62RjldVA' } }>
