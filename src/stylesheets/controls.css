@@ -5,6 +5,8 @@
   position: absolute;
   left: 44.5%;
   bottom: 10%;
+  width: 15%;
+  height: 15%;
 }
 
 .location-controls-flex-wrapper {
@@ -36,6 +38,8 @@
   position: absolute;
   left: 44.5%;
   top: 5%;
+  width: 15% !important;
+  height: 15% !important;
 }
 
 .Music-controls-flex-wrapper {
