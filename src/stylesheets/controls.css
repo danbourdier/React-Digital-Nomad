@@ -4,7 +4,7 @@
 .location-controls-container {
   position: absolute;
   left: 44.5%;
-  bottom: -6%;
+  bottom: -8%;
   width: 15%;
   height: 15%;
   z-index: 20;
@@ -20,19 +20,20 @@
   border: groove 2px whitesmoke;
   border-top-left-radius: 90px;
     border-top-right-radius: 90px;
-    height: 60%;
+    height: 50%;
 }
 
   /* buttons in location controls */
   .location-controls-button {
-    height: 30px;
-    width: 100px;
+    height: 55%;
+    width: 13%;
     margin: auto;
     font-weight: 800;
     text-transform: uppercase;
-    border: thin, white, 1px;
+    border: whitesmoke outset 4px;
     background-color: transparent;
-    border-radius: 4px;
+    border-radius: 100px;
+    font-family: 'Inter-Loom';
   }
 
 /* Nusic Controls */
