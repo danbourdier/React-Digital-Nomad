@@ -41,7 +41,7 @@ const MusicControls = props => {
         <button id="Music-controls-button" onClick={() => { loadNext(prevVid()) }}> {'<<'} </button>
         <button id="Music-controls-button" onClick={() => { loadNext(nextVid()) }}> {'>>'} </button>
       </section>
-      <div id="blur1"></div>
+      {/* <div id="blur1"></div> */}
     </div>
   )
 }
