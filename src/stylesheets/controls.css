@@ -4,7 +4,7 @@
 .location-controls-container {
   position: absolute;
   left: 44.5%;
-  bottom: 10%;
+  bottom: -6%;
   width: 15%;
   height: 15%;
   z-index: 20;
@@ -14,10 +14,13 @@
   width: 300px;
   display: flex;
   justify-content: space-between;
-  background-color: aqua;
-  opacity: .7;
-  height: 85px;
+  background-color: lightblue;
+  opacity: .65;
   border-radius: 6px;
+  border: groove 2px whitesmoke;
+  border-top-left-radius: 90px;
+    border-top-right-radius: 90px;
+    height: 60%;
 }
 
   /* buttons in location controls */
@@ -49,10 +52,13 @@
   width: 300px;
   display: flex;
   justify-content: space-between;
-  background-color: aqua;
-  opacity: .7;
-  height: 85px;
+  background-color: lightblue;
+  opacity: .65;
   border-radius: 6px;
+  border: groove 2px whitesmoke;
+  border-bottom-left-radius: 90px;
+    border-bottom-right-radius: 90px;
+    height: 60%;
 }
 
   /* buttons in Music controls */
