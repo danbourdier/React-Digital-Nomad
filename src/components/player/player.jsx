@@ -24,9 +24,9 @@ const Player = () => {
         <MusicControls currCountr={ currentCountry } loadFunc={ loadNext } />
       </musicURL.Provider>
 
+      <div id="unclickable-overlay"></div>
       <div id="musicPlayer"></div> {/* our first embed player */}
       <div id="locationPlayer"></div>  {/* our location embed player */}
-
       <locationURL.Provider value={{ 'France': 'u3ayPmL2KN4', 'NYC': 'eZe4Q_58UTU', 
                                     'Columbia': 'FBDLlpg1P_I', 'Germany': 'mlS89Cd176M', 
                                     'HongKong': 'H50az3Aq7x4', 'India': 'XRU9omrRV64', 

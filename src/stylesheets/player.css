@@ -5,11 +5,13 @@
   width: 100%; 
   height: 100%; 
   position: relative; 
+  z-index: 10;
 }
 
 #locationPlayer {
-  height: 100%;
+  height: 115%;
   width: 100%;
+  z-index: 10;
 }
 
 #musicPlayer {
@@ -20,4 +22,12 @@
 .ytp-chrome-top {
   display: none !important;
   z-index: -1;
+}
+
+#unclickable-overlay {
+  z-index: 15;
+  position: absolute;
+    height: 100%;
+    width: 100%;
+    background: transparent;
 }
