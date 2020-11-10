@@ -39,10 +39,15 @@ const LocationControls = props => {
   return (
     <div className="location-controls-container">
       <section className="location-controls-flex-wrapper">
-        <button className="location-controls-button" onClick={() => { loadNext(prevVid()) }}> { '<<' } </button>
-        <button className="location-controls-button" onClick={() => { loadNext(nextVid()) } }> { '>>' } </button>
+
+        <button className="location-controls-button" onClick={() => { loadNext(prevVid()) }}>
+           <span>{'<<'}</span>
+        </button>
+        <button className="location-controls-button" onClick={() => { loadNext(nextVid()) } }>
+          <span>{'>>'}</span>
+        </button>
+
       </section>
-      {/* <div id="blur2"></div> */}
     </div>
   )
 } 

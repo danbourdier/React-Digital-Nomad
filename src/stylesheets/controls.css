@@ -11,7 +11,7 @@
 }
 
 .location-controls-flex-wrapper {
-  width: 300px;
+  width: 104%;
   display: flex;
   justify-content: space-between;
   background-color: lightblue;
@@ -35,7 +35,16 @@
     border-radius: 100px;
     font-family: 'Inter-Loom';
     outline: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
+    .location-controls-button span {
+      position: relative;
+      width: fit-content;
+      height: fit-content;
+      margin: auto;
+    }
     .location-controls-button:active {
       border: inset;
     }
@@ -46,15 +55,17 @@
 .Music-controls-container {
   position: absolute;
   left: 44.5%;
-  top: .5%;
+  top: 1.5%;
   width: 15% !important;
   height: 15% !important;
   z-index: 20;
 }
 
+
+
 .Music-controls-flex-wrapper {
   position: relative;
-  width: 300px;
+  width: 104%;
   display: flex;
   justify-content: space-between;
   background-color: lightblue;
@@ -78,9 +89,36 @@
     border: whitesmoke outset 4px;
     font-family: 'Inter-Loom';
     outline: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
+
+  #Music-controls-button span {
+      position: relative;
+      width: fit-content;
+      height: fit-content;
+      margin: auto;
+    }
 
     #Music-controls-button:active {
       border: inset;
     }
 
+
+
+@media screen and (max-width: 600px) {
+  .location-controls-container {
+    width: 40%;
+    margin: 0px auto;
+    left: 0;
+    right: 0;
+  }
+
+  .Music-controls-container {
+    width: 40% !important;
+    margin: 0px auto;
+    left: 0;
+    right: 0;
+  }
+}

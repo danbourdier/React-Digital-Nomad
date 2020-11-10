@@ -38,10 +38,15 @@ const MusicControls = props => {
   return (
     <div className="Music-controls-container">
       <section className="Music-controls-flex-wrapper">
-        <button id="Music-controls-button" onClick={() => { loadNext(prevVid()) }}> {'<<'} </button>
-        <button id="Music-controls-button" onClick={() => { loadNext(nextVid()) }}> {'>>'} </button>
+
+        <button id="Music-controls-button" onClick={() => { loadNext(prevVid()) }}> 
+          <span>{'<<'}</span>
+        </button>
+        <button id="Music-controls-button" onClick={() => { loadNext(nextVid()) }}> 
+          <span>{'>>'}</span>
+        </button>
+
       </section>
-      {/* <div id="blur1"></div> */}
     </div>
   )
 }
