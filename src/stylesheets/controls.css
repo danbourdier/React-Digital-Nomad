@@ -110,6 +110,23 @@
       border: inset;
     }
 
+#location-name-container {
+  background: white;
+    height: 2em;
+    display: flex;
+    border-radius: 7px;
+    width: 40%;
+    border: inset 1px lightgrey;
+}
+
+#location-name-container span {
+  font-family: 'Inter-Loom';
+  text-transform: uppercase;
+  text-align: center;
+    width: 100%;
+    align-items: center;
+    display: grid;
+}
 
 
 @media screen and (max-width: 600px) {
