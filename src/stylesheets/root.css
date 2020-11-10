@@ -54,6 +54,21 @@ table {
     height: 100%;
   }
 
-#blur {
+#blur2 {
   position: absolute;
+    height: 20vh;
+    width: 100vw;
+    right: -800px;
+    filter: blur(0px);
+    background: black;
+    opacity: .965;
+}
+#blur1 {
+  position: absolute;
+    height: 20vh;
+    width: 100vw;
+    right: -800px;
+    filter: blur(0px);
+    background: black;
+    opacity: .965;
 }

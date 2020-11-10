@@ -41,8 +41,8 @@ const LocationControls = props => {
       <section className="location-controls-flex-wrapper">
         <button className="location-controls-button" onClick={() => { loadNext(prevVid()) }}> { '<<' } </button>
         <button className="location-controls-button" onClick={() => { loadNext(nextVid()) } }> { '>>' } </button>
-
       </section>
+      <div id="blur2"></div>
     </div>
   )
 } 

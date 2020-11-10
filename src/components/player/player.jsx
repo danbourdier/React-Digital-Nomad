@@ -25,7 +25,6 @@ const Player = () => {
       </musicURL.Provider>
 
       <div id="musicPlayer"></div> {/* our first embed player */}
-      <Blur />
       <div id="locationPlayer"></div>  {/* our location embed player */}
 
       <locationURL.Provider value={{ 'France': 'u3ayPmL2KN4', 'NYC': 'eZe4Q_58UTU', 
