@@ -114,8 +114,41 @@
     right: 0;
   }
 
+  .location-controls-button {
+    border: none;
+  }
+
+
   .Music-controls-container {
     width: 40% !important;
+    margin: 0px auto;
+    left: 0;
+    right: 0;
+  }
+
+  #Music-controls-button {
+    border: none;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  #Music-controls-button {
+    border: none;
+  }
+
+  .Music-controls-container {
+    width: 40% !important;
+    margin: 0px auto;
+    left: 0;
+    right: 0;
+  }
+
+  .location-controls-button {
+    border: none;
+  }
+
+  .location-controls-container {
+    width: 40%;
     margin: 0px auto;
     left: 0;
     right: 0;
