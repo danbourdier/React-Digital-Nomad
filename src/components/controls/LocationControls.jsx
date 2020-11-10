@@ -43,6 +43,11 @@ const LocationControls = props => {
         <button className="location-controls-button" onClick={() => { loadNext(prevVid()) }}>
            <span>{'<<'}</span>
         </button>
+
+        <figure id="location-name-container">
+          <span>Blehh!!!</span> 
+        </figure>
+
         <button className="location-controls-button" onClick={() => { loadNext(nextVid()) } }>
           <span>{'>>'}</span>
         </button>

@@ -42,6 +42,11 @@ const MusicControls = props => {
         <button id="Music-controls-button" onClick={() => { loadNext(prevVid()) }}> 
           <span>{'<<'}</span>
         </button>
+
+        <figure id="track-name-container">
+          <span>Blehh!!!</span>
+        </figure>
+
         <button id="Music-controls-button" onClick={() => { loadNext(nextVid()) }}> 
           <span>{'>>'}</span>
         </button>
