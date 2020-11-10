@@ -45,7 +45,7 @@ const LocationControls = props => {
         </button>
 
         <figure id="location-name-container">
-          <span>Blehh!!!</span> 
+          <span>{ locale }</span> 
         </figure>
 
         <button className="location-controls-button" onClick={() => { loadNext(nextVid()) } }>
