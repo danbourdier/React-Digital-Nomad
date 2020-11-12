@@ -6,7 +6,7 @@
   <!-- youtube data API -->
   <script rel='preload' src="https://apis.google.com/js/api.js"></script>
 
-  <script>
+  <script rel='preload'>
     const loadClient = () => { // 1*
       gapi.client.setApiKey('AIzaSyDp-Ef6SpV-umrNe9-8TvnmPWiuFylJbNw')// 2*
       return gapi.client.load("https://www.googleapis.com/discovery/v1/apis/youtube/v3/rest") // 3*
@@ -14,8 +14,7 @@
 
     }
 
-    gapi.load('client', loadClient) // 4*
-
+    gapi.load('client', loadClient) // 4* 
     // 1* Before we access access any API belonging to Google, we must set our key, and load the discovery path with the client library we loaded
     // 2* Here we are loading the discovery URL that allows access to the specific location we can call methods on
         // Its our way of saying this is what we want access to (within google's client service) so we can request youtube vid data!

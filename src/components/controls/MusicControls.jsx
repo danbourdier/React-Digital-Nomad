@@ -15,7 +15,7 @@ const MusicControls = props => {
     } // under the hood, #useEffect makes use of currying to call this function in a #componentDidUnmount fashion
     // this might lead to performance issues on a bigger application due to causing a 
       // re-render everytime we skip a track. (our state changes every call to #nextVid)
-  }) 
+  })
  
   const preCntxt = useContext(musicURL) // our context we made use of
   let cntxt = preCntxt[props.currCountr]  // with a separation of concerns
@@ -34,14 +34,32 @@ const MusicControls = props => {
     return cntxt[newIdx] 
   }
 
+  // Our method that utilizes our Google Api(gapi) global imported in the header of our index.html
+    // Here we consume our API and call a built-in method to the library.
+  const getVideoData = vidId => (
+    gapi.client.youtube.videos.list({
+      'part': [
+        'snippet'
+      ],
+      'id': 
+        `${vidId[index]}`
+      
+    }).then(res => {
+      return console.log('Success, the response is:', res)
+    }) 
+
+  )
 
   return (
     <div className="Music-controls-container">
       <section className="Music-controls-flex-wrapper">
 
-        <button id="Music-controls-button" onClick={() => { loadNext(prevVid()) }}> 
+        <button id="Music-controls-button" onClick={() => { getVideoData(cntxt) } }> 
           <span>{'<<'}</span>
         </button>
+        {/* <button id="Music-controls-button" onClick={() => { loadNext(prevVid()) }}> 
+          <span>{'<<'}</span>
+        </button> */}
 
         <figure id="track-name-container">
           <span>Blehh!!!</span>
