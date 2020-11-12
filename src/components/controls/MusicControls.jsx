@@ -44,8 +44,11 @@ const MusicControls = props => {
       'id': 
         `${vidId[index]}` // To fetch read-only data we need to pass in vidIds
     }).then(res => {
-      return console.log('Success, the response is:', res?.result?.items[0]?.snippet?.title )
+      // return console.log('Success, the response is:', res?.result?.items[0]?.snippet?.title )
+      setTrack(res?.result?.items[0]?.snippet?.title)
+      return res?.result?.items[0]?.snippet?.title
     }) 
+      .catch(err => alert('Please allow a couple seconds before switching songs'))
 
   )
 
