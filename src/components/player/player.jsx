@@ -2,14 +2,13 @@ import React, { useState } from 'react'
 
 import LocationControls from '../controls/LocationControls'
 import MusicControls from '../controls/MusicControls'
-import Blur from '../misc/blur'
 
 export const locationURL = React.createContext(null)
 export const musicURL = React.createContext(null)
 
 const Player = () => {
   const [ currentCountry, setCountry ] = useState('France')
-  const loadNext = (vidId, playType) => { window[playType].loadVideoById(vidId) } // our dynamic API caller on a respective player
+  const loadNext = (vidId, playType) => { window[playType].loadVideoById(vidId) } // our dynamic API caller on respective player
 
   return (
     <div id="location-player-container">

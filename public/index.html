@@ -3,8 +3,25 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- youtube data API -->
+  <script rel='preload' src="https://apis.google.com/js/api.js"></script>
 
-  <!-- youtube API -->
+  <script>
+    const start = () => {
+      gapi.client.init({
+        'apiKey': 'AIzaSyDp-Ef6SpV-umrNe9-8TvnmPWiuFylJbNw',
+      }).then(() => {
+        return gapi.client.request({
+          'path': 'https://people.googleapis.com/v1/people/me?requestMask.includeField=person.names'
+        })
+      })
+    }
+
+    gapi.load('client', start)
+    // gapi.client.setApiKey('AIzaSyDp-Ef6SpV-umrNe9-8TvnmPWiuFylJbNw')
+  </script>
+
+  <!-- youtube video API -->
   <script rel='preload' src="https://www.youtube.com/iframe_api"></script>
   <script rel='preload'>
     // 3. This function creates an <iframe> (and YouTube player)
@@ -70,6 +87,7 @@
     //   player.stopVideo();
     // }
   </script>
+  
   <script src="../dist/bundle.js"></script>
   
   <link rel="stylesheet" href="../src/stylesheets/player.css">

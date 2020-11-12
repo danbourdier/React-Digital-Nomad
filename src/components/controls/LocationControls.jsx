@@ -14,7 +14,6 @@ const LocationControls = props => {
      // once we update our locale, we bubble up our event
       props.updateCurr(locale) // just our effect to occur and update our parent
       // no cleanup method is needed since we are only updating our props
-
   }, [locale]) // we re-render only when there is a change to our state
 
   // This is our method to switch to the next location video in our player
@@ -30,8 +29,8 @@ const LocationControls = props => {
     let newIdx = index == 0 ? cntxt.length - 1 : index - 1
     setIndex( newIdx )
     setLocale(cntxt[newIdx][0])
-    return cntxt[newIdx][1]
-  }
+    return cntxt[newIdx][1] 
+  } 
 
   // this instantiation is to keep our youtube method calls DRY to the respective player
   const loadNext = arg => { window.locationPlayer.loadVideoById(arg) }
