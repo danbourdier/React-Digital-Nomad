@@ -10,13 +10,16 @@
     const loadClient = () => {
         // Before we access access any API belonging to Google, we must set our key, and load the discovery path with the client library we loaded
       gapi.client.setApiKey('AIzaSyDp-Ef6SpV-umrNe9-8TvnmPWiuFylJbNw')
-      return gapi.client.load("https://www.googleapis.com/discovery/v1/apis/youtube/v3/rest")
+      // Here we are loading the discovery URL that allows access to the specific location we can call methods on
+        // Its our way of saying this is what we want access to (within google's client service) so we can request youtube vid data!
+      return gapi.client.load("https://www.googleapis.com/discovery/v1/apis/youtube/v3/rest") // When it loads, our client constructor then appends the methods generated from the URL
         .then(() => console.log('Google client library loaded!'))
     }
 
-
-
+    // Before using any google APIs we need to enable access to our middle man that routes us access to a specific library (Its like we are asking and threading to what we want )
     gapi.load('client', loadClient)
+    // This method allows a second argument (callback) to be executed upon our promise resolving to our target library
+    // For reference, https://github.com/google/google-api-javascript-client/blob/master/docs/reference.md
 
   </script>
 
