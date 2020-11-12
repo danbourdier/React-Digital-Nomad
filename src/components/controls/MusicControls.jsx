@@ -3,7 +3,7 @@ import { musicURL } from '../player/Player'
 
 const MusicControls = props => {
   const [ index, setIndex ] = useState(0)
-
+  const [ track, setTrack ] = useState('')
   const loadNext = arg => props.loadFunc(arg, 'musicPlayer')
   
   // everytime theres change (state or props), i want to load a vid with a respective key
@@ -38,14 +38,13 @@ const MusicControls = props => {
     // Here we consume our API and call a built-in method to the library.
   const getVideoData = vidId => (
     gapi.client.youtube.videos.list({
-      'part': [
-        'snippet'
+      'part': [ // #list requires an object with two required keys
+        'snippet' // The returned JSON gives us a key with info containing title
       ],
       'id': 
-        `${vidId[index]}`
-      
+        `${vidId[index]}` // To fetch read-only data we need to pass in vidIds
     }).then(res => {
-      return console.log('Success, the response is:', res)
+      return console.log('Success, the response is:', res?.result?.items[0]?.snippet?.title )
     }) 
 
   )
@@ -62,7 +61,7 @@ const MusicControls = props => {
         </button> */}
 
         <figure id="track-name-container">
-          <span>Blehh!!!</span>
+          <span>{ track }</span>
         </figure>
 
         <button id="Music-controls-button" onClick={() => { loadNext(nextVid()) }}> 
