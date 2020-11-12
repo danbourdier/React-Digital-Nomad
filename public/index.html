@@ -7,18 +7,17 @@
   <script rel='preload' src="https://apis.google.com/js/api.js"></script>
 
   <script>
-    const start = () => {
-      gapi.client.init({
-        'apiKey': 'AIzaSyDp-Ef6SpV-umrNe9-8TvnmPWiuFylJbNw',
-      }).then(() => {
-        return gapi.client.request({
-          'path': 'https://people.googleapis.com/v1/people/me?requestMask.includeField=person.names'
-        })
-      })
+    const loadClient = () => {
+        // Before we access access any API belonging to Google, we must set our key, and load the discovery path with the client library we loaded
+      gapi.client.setApiKey('AIzaSyDp-Ef6SpV-umrNe9-8TvnmPWiuFylJbNw')
+      return gapi.client.load("https://www.googleapis.com/discovery/v1/apis/youtube/v3/rest")
+        .then(() => console.log('Google client library loaded!'))
     }
 
-    gapi.load('client', start)
-    // gapi.client.setApiKey('AIzaSyDp-Ef6SpV-umrNe9-8TvnmPWiuFylJbNw')
+
+
+    gapi.load('client', loadClient)
+
   </script>
 
   <!-- youtube video API -->
