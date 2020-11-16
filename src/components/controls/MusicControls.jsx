@@ -46,7 +46,6 @@ const MusicControls = props => {
       'id': 
         `${vidId}` // To fetch read-only data we need to pass in vidIds
     }).then(res => {
-      // return console.log('Success, the response is:', res?.result?.items[0]?.snippet?.title )
       setTrack(res?.result?.items[0]?.snippet?.title)
       return res.result.items[0].snippet.title
     }) 
@@ -58,9 +57,6 @@ const MusicControls = props => {
     <div className="Music-controls-container">
       <section className="Music-controls-flex-wrapper">
 
-        {/* <button id="Music-controls-button" onClick={() => { getVideoData(cntxt) } }> 
-          <span>{'<<'}</span>
-        </button> */}
         <button id="Music-controls-button" onClick={() => { loadNext(prevVid()) }}> 
           <span>{'<<'}</span>
         </button>
