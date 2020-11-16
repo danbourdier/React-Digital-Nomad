@@ -50,7 +50,6 @@ const MusicControls = props => {
       setTrack(res?.result?.items[0]?.snippet?.title)
       return res.result.items[0].snippet.title
     }) 
-      // .catch(err => alert('Please allow a couple seconds before switching songs'))
       .catch(err => console.log(err))
 
   )
