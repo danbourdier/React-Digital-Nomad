@@ -6,7 +6,6 @@ const MusicControls = props => {
   const [track, setTrack] = useState('<< Click to navigate tracks! >>')
   const loadNext = arg => props.loadFunc(arg, 'musicPlayer')
   
-  // everytime theres change (state or props), i want to load a vid with a respective key
   useEffect(() => { 
     // a non-*cleanup* effect alone would cause my application to break because the YT player
       // is not constructed in initial render. Therefore using its API calls would throw a TypeError
