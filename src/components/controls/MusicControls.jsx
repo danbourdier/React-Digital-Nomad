@@ -12,8 +12,6 @@ const MusicControls = props => {
     return () => { 
       loadNext(nextVid());
     } // under the hood, #useEffect makes use of currying to call this function in a #componentDidUnmount fashion
-    // this might lead to performance issues on a bigger application due to causing a 
-      // re-render everytime we skip a track. (our state changes every call to #nextVid)
   }, [props, index])
  
   const preCntxt = useContext(musicURL) // our context we made use of
