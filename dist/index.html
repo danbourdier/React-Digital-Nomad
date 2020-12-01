@@ -1,4 +1,18 @@
-<!doctype html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><script rel="preload" src="https://www.youtube.com/iframe_api"></script><script rel="preload">// 3. This function creates an <iframe> (and YouTube player)
+<!doctype html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="icon" href="favicon.ico"><script rel="preload" src="https://apis.google.com/js/api.js"></script><script rel="preload">const loadClient = () => { // 1*
+      gapi.client.setApiKey('AIzaSyDp-Ef6SpV-umrNe9-8TvnmPWiuFylJbNw')// 2*
+      return gapi.client.load("https://www.googleapis.com/discovery/v1/apis/youtube/v3/rest") // 3*
+        .then(() => console.log('Google client library loaded!'))
+
+    }
+
+    gapi.load('client', loadClient) // 4* 
+    // 1* Before we access access any API belonging to Google, we must set our key, and load the discovery path with the client library we loaded
+    // 2* Here we are loading the discovery URL that allows access to the specific location we can call methods on
+        // Its our way of saying this is what we want access to (within google's client service) so we can request youtube vid data!
+    // 3* When it loads, our client constructor then appends the methods generated from the URL
+    // 4* Before using any google APIs we need to enable access to our middle man that routes us access to a specific library (Its like we are asking and threading to what we want )
+      // This method allows a second argument (callback) to be executed upon our promise resolving to our target library
+        // For reference, https://github.com/google/google-api-javascript-client/blob/master/docs/reference.md</script><script rel="preload" src="https://www.youtube.com/iframe_api"></script><script rel="preload">// 3. This function creates an <iframe> (and YouTube player)
     //    after the API code downloads.
     window.locationPlayer
     window.musicPlayer
@@ -13,7 +27,7 @@
           'autoplay': 1,
           'modestbranding': 1,
           'controls': 0,
-          'origin': 'https://www.youtube.com/',
+          // 'origin': 'https://www.youtube.com/',
           'enablejsapi': 1,},
         events: {
           'onReady': onPlayerReady,
@@ -29,7 +43,7 @@
           'autoplay': 1,
           'modestbranding': 1,
           'controls': 0,
-          'origin': 'https://www.youtube.com/',
+          // 'origin': 'https://www.youtube.com/',
           'enablejsapi': 1,
         },
         events: {
@@ -43,7 +57,6 @@
     function onMusicReady(event) {
       event.target.playVideo();
       window.musicPlayer = event.target; 
-      // console.log(event.target)
     }
     function onPlayerReady(event) {
       event.target.playVideo();
@@ -57,7 +70,7 @@
         // setTimeout(stopVideo, 6000);
         done = true;
       }
-    } 
+    }
     // function stopVideo() {
     //   player.stopVideo();
     // }</script><script src="../dist/bundle.js"></script><link rel="stylesheet" href="../src/stylesheets/player.css"><link rel="stylesheet" href="../src/stylesheets/root.css"><link rel="stylesheet" href="../src/stylesheets/controls.css"><title>Digital Nomad</title><script src="./bundle.js"></script></head><body><div id="root"></div></body></html>

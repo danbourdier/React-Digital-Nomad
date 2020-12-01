@@ -6,3 +6,5 @@ bundle.js
 bundle.js.map
 
 logs/
+
+.env
