@@ -10,8 +10,13 @@ const HTMLWebpackPluginConfig = new HTMLWebpackPlugin({
 
 
 module.exports = {
+  // Will soon have to be refactored for production
+  mode: "development",
+
   context: __dirname,
+
   entry: "./src/index.jsx",
+
   module: {
     rules: [
       {
@@ -38,7 +43,8 @@ module.exports = {
   },
 
   plugins: [ HTMLWebpackPluginConfig ],
-  devtool: 'source-map',
+
+  devtool: 'inline-source-map',
 
   resolve: {
     extensions: [".js", ".jsx", ".css", "*"]

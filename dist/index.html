@@ -1,4 +1,15 @@
-<!doctype html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="icon" type="image/png" href="favicon.png"><script rel="preload" src="https://apis.google.com/js/api.js"></script><script rel="preload">const loadClient = () => { // 1*
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="favicon.png">
+
+  <!-- youtube data API -->
+  <script rel='preload' src="https://apis.google.com/js/api.js"></script>
+
+  <script rel='preload'> 
+    const loadClient = () => { // 1*
       gapi.client.setApiKey('AIzaSyDp-Ef6SpV-umrNe9-8TvnmPWiuFylJbNw')// 2*
       return gapi.client.load("https://www.googleapis.com/discovery/v1/apis/youtube/v3/rest") // 3*
         .then(() => console.log('Google client library loaded!'))
@@ -12,7 +23,13 @@
     // 3* When it loads, our client constructor then appends the methods generated from the URL
     // 4* Before using any google APIs we need to enable access to our middle man that routes us access to a specific library (Its like we are asking and threading to what we want )
       // This method allows a second argument (callback) to be executed upon our promise resolving to our target library
-        // For reference, https://github.com/google/google-api-javascript-client/blob/master/docs/reference.md</script><script rel="preload" src="https://www.youtube.com/iframe_api"></script><script rel="preload">// 3. This function creates an <iframe> (and YouTube player)
+        // For reference, https://github.com/google/google-api-javascript-client/blob/master/docs/reference.md
+  </script>
+
+  <!-- youtube video API -->
+  <script rel='preload' src="https://www.youtube.com/iframe_api"></script>
+  <script rel='preload'>
+    // 3. This function creates an <iframe> (and YouTube player)
     //    after the API code downloads.
     window.locationPlayer
     window.musicPlayer
@@ -70,4 +87,21 @@
         // setTimeout(stopVideo, 6000);
         done = true;
       }
-    }</script><link rel="stylesheet" href="/stylesheets/player.css"><link rel="stylesheet" href="/stylesheets/root.css"><link rel="stylesheet" href="/stylesheets/controls.css"><title>Digital Nomad</title><link rel="icon" href="favicon.png"><script src="bundle.js"></script></head><body><div id="root"></div></body></html>
+    }
+    
+  </script>
+  
+  <!-- <script src="../dist/bundle.js"></script> -->
+  
+  <link rel="stylesheet" type="text/css" href="/stylesheets/player.css">
+  <link rel="stylesheet" type="text/css" href="/stylesheets/root.css">
+  <link rel="stylesheet" type="text/css" href="/stylesheets/controls.css">
+
+  <title>Digital Nomad</title>
+<link rel="icon" href="favicon.png"><script src="bundle.js"></script></head>
+<body>
+  <div id="root"></div>
+
+  
+</body>
+</html>
