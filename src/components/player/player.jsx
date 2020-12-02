@@ -6,14 +6,16 @@ import MusicControls from '../controls/MusicControls'
 export const locationURL = React.createContext(null)
 export const musicURL = React.createContext(null)
 
+
+
 const Player = () => {
   const [ currentCountry, setCountry ] = useState('France')
   const loadNext = (vidId, playType) => { window[playType].loadVideoById(vidId) } // our dynamic API caller on respective player
-  debugger
+
   // Because im changing the context values of the provider tags within their 
   //  child components, I triggering a render on top of my useEffects because of
   //    React's diffing algorithm. This requires refactoring.
-  
+
   return (
     <div id="location-player-container">
       <musicURL.Provider value={{ 'HongKong': ['lA0pgGNvmv4', 'gdZLi9oWNZg', 'NGcXJ-ypK3I', 'elRS0ntrEjk', 'gLXNJou6-DQ'], 
