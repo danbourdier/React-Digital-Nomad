@@ -11,27 +11,33 @@ const MusicControls = props => {
       // is not constructed in initial render. Therefore using its API calls would throw a TypeError
     return () => { 
       loadNext(nextVid());
-    } // under the hood, #useEffect makes use of currying to call this function in a #componentDidUnmount fashion
+    }
   }, [props, index])
- 
-  const preCntxt = useContext(musicURL) // our context we made use of
-  let cntxt = preCntxt[props.currCountr]  // with a separation of concerns
+
+
+  const preCntxt = useContext( musicURL ) // our context we made use of
+  let cntxt = preCntxt[ props.currCountr ]  // with a separation of concerns
+
 
   // This is our method to switch to the next location video in our player
   const nextVid = () => { 
     let newIdx = index + 1 // because #setState is async, we have to create a new var. To keep our function sync
-    setIndex(newIdx) // i need to increment our our curr idx
-    getVideoData(cntxt[newIdx % cntxt.length])
-    return cntxt[newIdx % cntxt.length] // we return the videoId located at the Ith idx at [1]
+    
+    setIndex( newIdx ) // i need to increment our our curr idx
+    getVideoData( cntxt[newIdx % cntxt.length] )
+    return cntxt[ newIdx % cntxt.length]  // we return the videoId located at the Ith idx at [1]
   } 
+
 
   // This is the ooposite of above
   const prevVid = () => {
     let newIdx = index == 0 ? cntxt.length - 1 : index - 1
-    setIndex(newIdx)
-    getVideoData(cntxt[newIdx])
-    return cntxt[newIdx] 
+
+    setIndex( newIdx )
+    getVideoData( cntxt[newIdx] )
+    return cntxt[ newIdx ] 
   }
+
 
   // Our method that utilizes our Google Api(gapi) global imported in the header of our index.html
     // Here we consume our API and call a built-in method to the library.
@@ -49,6 +55,7 @@ const MusicControls = props => {
       .catch(err => console.log(err))
 
   )
+
 
   return (
     <div className="Music-controls-container">

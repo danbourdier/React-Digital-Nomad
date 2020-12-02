@@ -7,7 +7,6 @@ export const locationURL = React.createContext(null)
 export const musicURL = React.createContext(null)
 
 
-
 const Player = () => {
   const [ currentCountry, setCountry ] = useState('France')
   const loadNext = (vidId, playType) => { window[playType].loadVideoById(vidId) } // our dynamic API caller on respective player
