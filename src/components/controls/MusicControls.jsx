@@ -3,7 +3,7 @@ import { musicURL } from '../player/Player'
 
 const MusicControls = props => {
   const [ index, setIndex ] = useState(0)
-  const [track, setTrack] = useState('<< Click to navigate tracks! >>')
+  const [ track, setTrack]  = useState('<< Click to navigate tracks! >>')
   const loadNext = arg => props.loadFunc(arg, 'musicPlayer')
   
   useEffect(() => { 
@@ -22,7 +22,7 @@ const MusicControls = props => {
   // This is our method to switch to the next location video in our player
   const nextVid = () => { 
     let newIdx = index + 1 // because #setState is async, we have to create a new var. To keep our function sync
-    
+
     setIndex( newIdx ) // i need to increment our our curr idx
     getVideoData( cntxt[newIdx % cntxt.length] )
     return cntxt[ newIdx % cntxt.length]  // we return the videoId located at the Ith idx at [1]
