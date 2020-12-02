@@ -50,11 +50,17 @@ module.exports = {
     hints: false
   },
 
+  stats: {
+    errorDetails: true,
+    warnings: true,
+    colors: true,
+  },
+
   devServer: {
-    contentBase: path.join(__dirname, 'dist'),
+    contentBase: path.resolve(__dirname, 'src'),
     compress: true,
-    port: 3000,
-    publicPath: '/dist'
+    port: 8080,
+    publicPath: '/'
   }
 
 };
