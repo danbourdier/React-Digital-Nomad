@@ -1,4 +1,5 @@
-// const path = require('path');
+const path = require('path')
+
 const HTMLWebpackPlugin = require('html-webpack-plugin')
 const HTMLWebpackPluginConfig = new HTMLWebpackPlugin({
   template: __dirname + '/public/index.html',
@@ -29,13 +30,31 @@ module.exports = {
 
     ]
   },
+
   output: {
     // path: path.resolve(__dirname, 'dist'),
-    filename: './bundle.js'
+    // filename: './bundle.js',
+    path: path.resolve(__dirname, 'dist'),
+    publicPath: '/',
+    filename: 'bundle.js',
   },
-  plugins: [HTMLWebpackPluginConfig],
+
+  plugins: [ HTMLWebpackPluginConfig ],
   devtool: 'source-map',
+
   resolve: {
     extensions: [".js", ".jsx", ".css", "*"]
+  },
+
+  performance: {
+    hints: false
+  },
+
+  devServer: {
+    contentBase: path.join(__dirname, 'dist'),
+    compress: true,
+    port: 3000,
+    publicPath: '/dist'
   }
+
 };
