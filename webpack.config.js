@@ -4,7 +4,8 @@ const HTMLWebpackPlugin = require('html-webpack-plugin')
 const HTMLWebpackPluginConfig = new HTMLWebpackPlugin({
   template: __dirname + '/public/index.html',
   filename: 'index.html',
-  inject: 'head'
+  inject: 'head',
+  favicon: "favicon.png"
 })
 
 
@@ -32,10 +33,7 @@ module.exports = {
   },
 
   output: {
-    // path: path.resolve(__dirname, 'dist'),
-    // filename: './bundle.js',
     path: path.resolve(__dirname, 'dist'),
-    publicPath: '/',
     filename: 'bundle.js',
   },
 
@@ -60,7 +58,8 @@ module.exports = {
     contentBase: path.resolve(__dirname, 'src'),
     compress: true,
     port: 8080,
-    publicPath: '/'
+    publicPath: '/',
+    historyApiFallback: true
   }
 
 };
