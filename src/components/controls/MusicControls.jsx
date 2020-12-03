@@ -87,7 +87,7 @@ const MusicControls = props => {
           <span>{ track }</span>
         </figure>
 
-        <button id="Music-controls-button" onClick={  }> 
+        <button id="Music-controls-button" onClick={ secondClickHandler }> 
           <span>{'>>'}</span>
         </button>
 
