@@ -15,7 +15,7 @@ const MusicControls = props => {
   //   }
   // // }, [props])
   // }, [ index ])
-
+  // debugger
   console.log('music Controls re-rendered')
 
 
@@ -66,12 +66,20 @@ const MusicControls = props => {
 
   )
 
+  const firstClickHandler = () => {
+    loadNext( prevVid() )
+  }
+
+  const secondClickHandler = () => {
+    loadNext( nextVid() )
+  }
+
 
   return (
     <div className="Music-controls-container">
       <section className="Music-controls-flex-wrapper">
 
-        <button id="Music-controls-button" onClick={() => { loadNext(prevVid()) }}> 
+        <button id="Music-controls-button" onClick={ firstClickHandler }> 
           <span>{'<<'}</span>
         </button>
 
@@ -79,7 +87,7 @@ const MusicControls = props => {
           <span>{ track }</span>
         </figure>
 
-        <button id="Music-controls-button" onClick={() => { loadNext(nextVid()) }}> 
+        <button id="Music-controls-button" onClick={  }> 
           <span>{'>>'}</span>
         </button>
 
