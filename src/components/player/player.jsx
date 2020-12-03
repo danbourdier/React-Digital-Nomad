@@ -41,8 +41,8 @@ const Player = () => {
                                     'HongKong': 'H50az3Aq7x4', 'India': 'XRU9omrRV64', 
                                     'Italy': 'lpo62RjldVA' } }>
 
-        <LocationControls updateCurr={setCountry} loadFunc={ loadNext } />
-        
+        <LocationControls updateCurr={ setCountry } loadFunc={ loadNext } />
+
       </locationURL.Provider>
     </div>
   )

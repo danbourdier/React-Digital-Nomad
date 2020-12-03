@@ -7,26 +7,18 @@ const MusicControls = props => {
 
   const loadNext = arg => props.loadFunc(arg, 'musicPlayer')
   
-  // I am accessing array with track ids in these below
-  const cntxt = useContext(musicURL) // our context we made use of
-  const tracks = props?.trackLists[cntxt]  // with a separation of concerns 
+  // I am accessing my track Ids to later pass into API calls requiring these values
+  const myContext = useContext(musicURL) // our context we made use of
+  const tracks = props?.trackLists[myContext]  // with a separation of concerns 
 
   useEffect(() => { 
-    // a non-*cleanup* effect alone would break my application because the YT player
-      // is not constructed in initial render. 
     try {
       loadNext( nextVid() )
     } catch(error) {
       null
     }
 
-    return () => { 
-      // loadNext(nextVid())
-      // console.log(musicURL)
-      // console.log(cntxt)
-      console.log(' provider value change detected ')
-    }
-  }, [ cntxt ])  
+  }, [ myContext ])  
 
 
   // This is our method to switch to the next location video in our player
