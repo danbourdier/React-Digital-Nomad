@@ -7,24 +7,26 @@ const MusicControls = props => {
 
   const loadNext = arg => props.loadFunc(arg, 'musicPlayer')
   
-  // useEffect(() => { 
-  //   // a non-*cleanup* effect alone would cause my application to break because the YT player
-  //     // is not constructed in initial render. Therefore using its API calls would throw a TypeError
-  //   return () => { 
-  //     loadNext(nextVid());
-  //   }
-  // // }, [props])
-  // }, [ index ])
-  // debugger
-  console.log('music Controls re-rendered')
+  // I am accessing array with track ids in these below
+  const cntxt = useContext(musicURL) // our context we made use of
+  const tracks = props?.trackLists[cntxt]  // with a separation of concerns 
 
+  useEffect(() => { 
+    // a non-*cleanup* effect alone would break my application because the YT player
+      // is not constructed in initial render. 
+    try {
+      loadNext( nextVid() )
+    } catch(error) {
+      null
+    }
 
-// I am accessing array with track ids in these below
-  const cntxt = useContext( musicURL ) // our context we made use of
-  const tracks = props.trackLists[ cntxt ]  // with a separation of concerns
-
-  // const preCntxt = useContext( musicURL ) // our context we made use of
-  // let cntxt = preCntxt[ props.currCountr ]  // with a separation of concerns
+    return () => { 
+      // loadNext(nextVid())
+      // console.log(musicURL)
+      // console.log(cntxt)
+      console.log(' provider value change detected ')
+    }
+  }, [ cntxt ])  
 
 
   // This is our method to switch to the next location video in our player
@@ -32,16 +34,13 @@ const MusicControls = props => {
     let newIdx = index + 1 // because #setState is async, we have to create a new var. To keep our function sync
 
     setIndex( newIdx ) // i need to increment our our curr idx
-    getVideoData( tracks[newIdx % tracks.length] )
-    return tracks[ newIdx % tracks.length]  // we return the videoId located at the Ith idx at [1]
-    // return tracks[ newIdx % tracks.length]  // we return the videoId located at the Ith idx at [1]
+    getVideoData( tracks[newIdx % tracks?.length] )
+    return tracks[ newIdx % tracks?.length ]  // we return the videoId located at the Ith idx at [1]
   } 
-
 
   // This is the ooposite of above
   const prevVid = () => {
-    let newIdx = index == 0 ? tracks.length - 1 : index - 1
-
+    let newIdx = index == 0 ? tracks?.length - 1 : index - 1
 
     setIndex( newIdx )
     getVideoData( tracks[newIdx] )
