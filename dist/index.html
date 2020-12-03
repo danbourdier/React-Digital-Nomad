@@ -16,7 +16,7 @@
 
     }
 
-    gapi.load('client', loadClient) // 4* 
+    gapi.load( 'client', loadClient ) // 4* 
     // 1* Before we access access any API belonging to Google, we must set our key, and load the discovery path with the client library we loaded
     // 2* Here we are loading the discovery URL that allows access to the specific location we can call methods on
         // Its our way of saying this is what we want access to (within google's client service) so we can request youtube vid data!
@@ -29,14 +29,18 @@
   <!-- youtube video API -->
   <script rel='preload' src="https://www.youtube.com/iframe_api"></script>
   <script rel='preload'>
+
+
     // 3. This function creates an <iframe> (and YouTube player)
-    //    after the API code downloads.
     window.locationPlayer
     window.musicPlayer
 
+    let locationVideoId = 'u3ayPmL2KN4'
+    let musicVideoId = 'lEfkziQSmZI'
+
     function onYouTubeIframeAPIReady() {
       window.locationPlayer = new YT.Player('locationPlayer', {
-        videoId: 'u3ayPmL2KN4',
+        videoId: locationVideoId,
         playerVars: {
           'iv_load_policy': 3,
           'disablekb': 1,
@@ -45,7 +49,9 @@
           'modestbranding': 1,
           'controls': 0,
           // 'origin': 'https://www.youtube.com/',
-          'enablejsapi': 1,},
+          'enablejsapi': 1,
+          'rel': 0
+        },
         events: {
           'onReady': onPlayerReady,
           'onStateChange': onPlayerStateChange
@@ -53,15 +59,15 @@
       });
 
       let musicObject = new YT.Player('musicPlayer', {
-        videoId: 'lEfkziQSmZI',
+        videoId: musicVideoId,
         playerVars: {
           'iv_load_policy': 3,
-          'end': 45,
           'autoplay': 1,
           'modestbranding': 1,
           'controls': 0,
           // 'origin': 'https://www.youtube.com/',
           'enablejsapi': 1,
+          'rel': 0
         },
         events: {
           'onReady': onMusicReady,
@@ -75,16 +81,15 @@
       event.target.playVideo();
       window.musicPlayer = event.target; 
     }
+
     function onPlayerReady(event) {
       event.target.playVideo();
     }
+
     // 5. The API calls this function when the player's state changes.
-    //    The function indicates that when playing a video (state=1),
-    //    the player should play for six seconds and then stop.
     let done = false;
     function onPlayerStateChange(event) {
       if (event.data == YT.PlayerState.PLAYING && !done) {
-        // setTimeout(stopVideo, 6000);
         done = true;
       }
     }
