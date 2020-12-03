@@ -34,9 +34,12 @@
     window.locationPlayer
     window.musicPlayer
 
+    let locationVideoId = 'u3ayPmL2KN4'
+    let musicVideoId = 'lEfkziQSmZI'
+
     function onYouTubeIframeAPIReady() {
       window.locationPlayer = new YT.Player('locationPlayer', {
-        videoId: 'u3ayPmL2KN4',
+        videoId: locationVideoId,
         playerVars: {
           'iv_load_policy': 3,
           'disablekb': 1,
@@ -46,6 +49,7 @@
           'controls': 0,
           // 'origin': 'https://www.youtube.com/',
           'enablejsapi': 1,
+          'rel': 0
         },
         events: {
           'onReady': onPlayerReady,
@@ -54,7 +58,7 @@
       });
 
       let musicObject = new YT.Player('musicPlayer', {
-        videoId: 'lEfkziQSmZI',
+        videoId: musicVideoId,
         playerVars: {
           'iv_load_policy': 3,
           'end': 45,
@@ -63,6 +67,7 @@
           'controls': 0,
           // 'origin': 'https://www.youtube.com/',
           'enablejsapi': 1,
+          'rel': 0
         },
         events: {
           'onReady': onMusicReady,
