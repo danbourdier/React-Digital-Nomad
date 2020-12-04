@@ -5,7 +5,7 @@ const MusicControls = props => {
   const [ index, setIndex ] = useState(0)
   const [ track, setTrack]  = useState('<< Click to navigate tracks! >>')
 
-  const loadNext = arg => props.loadFunc(arg, 'musicPlayer')
+  const videoAPILoader = props.loadFunc
   
   // I am accessing my track Ids to later pass into API calls requiring these values
   const myContext = useContext(musicURL) // our context we made use of
@@ -13,7 +13,7 @@ const MusicControls = props => {
 
   useEffect(() => { 
     try {
-      loadNext( nextVid() )
+      videoAPILoader( nextVid(), 'musicPlayer' )
     } catch(error) {
       null
     }
@@ -58,11 +58,11 @@ const MusicControls = props => {
   )
 
   const firstClickHandler = () => {
-    loadNext( prevVid() )
+    videoAPILoader( prevVid(), 'musicPlayer' )
   }
 
   const secondClickHandler = () => {
-    loadNext( nextVid() )
+    videoAPILoader( nextVid(), 'musicPlayer' )
   }
 
 

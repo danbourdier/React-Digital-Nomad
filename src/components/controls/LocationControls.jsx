@@ -12,7 +12,7 @@ const LocationControls = props => {
   // To legibly understand our code we set our parent state update logic in a useEffect
   useEffect(() => {
      // once we update our locale, we bubble up our event
-      props.updateCurr(locale) // just our effect to occur and update our parent
+      props.updateCurr( locale ) // just our effect to occur and update our parent
       // no cleanup method is needed since we are only updating our props
   }, [ locale ]) // we re-render only when there is a change to our state
 
