@@ -21,7 +21,7 @@ const MusicControls = props => {
   }, [ myContext ])  
 
 
-  // This is our method to switch to the next location video in our player
+  // This method loads the next location video in our player
   const nextTrack = () => { 
     let newIdx = index + 1 // because #setState is async, we have to create a new var. To keep our function sync
 
@@ -35,7 +35,7 @@ const MusicControls = props => {
     let newIdx = index == 0 ? tracks?.length - 1 : index - 1
 
     setIndex( newIdx )
-    getTrackData( tracks[newIdx] )
+    getTrackData( tracks[ newIdx ] )
     return tracks[ newIdx ] 
   }
 
@@ -48,9 +48,9 @@ const MusicControls = props => {
         'snippet' // The returned JSON gives us a key with info containing title
       ],
       'id': 
-        `${vidId}` // To fetch read-only data we need to pass in vidIds
+        `${ vidId }` // To fetch read-only data we need to pass in vidIds
     }).then(res => {
-      setTrack(res?.result?.items[0]?.snippet?.title)
+      setTrack( res?.result?.items[0]?.snippet?.title )
       return res.result.items[0].snippet.title
     }) 
       .catch(err => console.log(err))

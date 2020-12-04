@@ -27,14 +27,16 @@ export const musicURL = React.createContext(null)
 
 const Player = () => {
   const [ currentCountry, setCountry ] = useState('France')
-  const loadNext = ( vidId, playType ) => { window[playType].loadVideoById( vidId ) } 
+
+  const loadNext = ( vidId, playType ) => { 
+    window[playType]?.loadVideoById( { videoId: vidId } ) 
+  } 
   // our dynamic API caller passed to respective players ^
 
   return (
     <div id="location-player-container">
       <musicURL.Provider value={ currentCountry }>
         <MusicControls trackLists={ tracks } loadFunc={ loadNext } />
-
       </musicURL.Provider>
 
       <div id="unclickable-overlay"></div>
@@ -43,7 +45,6 @@ const Player = () => {
 
       <locationURL.Provider value={ locations }>
         <LocationControls updateCurr={ setCountry } loadFunc={ loadNext } />
-
       </locationURL.Provider>
     </div>
   )

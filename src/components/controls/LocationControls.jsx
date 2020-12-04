@@ -6,42 +6,43 @@ const LocationControls = props => {
   const [ index, setIndex ] = useState(0)
   const [ locale, setLocale ] = useState('France')
 
+  const videoAPILoader = props.loadFunc
+
   // this is our deconstructed React conext of the nearest provider
   const myLocationContext = Object.entries(useContext(locationURL))
 
   // To legibly understand our code we set our parent state update logic in a useEffect
   useEffect(() => {
      // once we update our locale, we bubble up our event
-      props.updateCurr( locale ) // just our effect to occur and update our parent
-      // no cleanup method is needed since we are only updating our props
+      props.updateCurr( locale )
   }, [ locale ]) // we re-render only when there is a change to our state
 
   // This is our method to switch to the next location video in our player
-  const nextVid = () => {
+  const nextVideo = () => {
     let newIdx = index + 1
+
     setIndex( newIdx ) // i need to increment our our curr idx
-    setLocale( myLocationContext[ newIdx % myLocationContext.length ][0]) // i need to track our current country
+    setLocale( myLocationContext[ newIdx % myLocationContext.length ][0]) // to track our current country
     return myLocationContext[ newIdx % myLocationContext.length ][1] // we return the videoId located at the Ith idx at [1]
   }
 
   // This is the ooposite of above
-  const prevVid = () => {
+  const prevVideo = () => {
     let newIdx = index == 0 ? myLocationContext.length - 1 : index - 1
+
     setIndex( newIdx )
     setLocale( myLocationContext[ newIdx ][0] ) 
     return myLocationContext[ newIdx ][1] 
   } 
 
-  // this instantiation is to keep our youtube method calls DRY to the respective player
-  const loadNext = id => { window.locationPlayer.loadVideoById( id ) }
 
   // Our click handlers
   const firstClickHandler = () => {
-    loadNext( prevVid() )
+    videoAPILoader( prevVideo(), 'locationPlayer' )
   }
 
   const secondClickHandler = () => {
-    loadNext( nextVid() )
+    videoAPILoader( nextVideo(), 'locationPlayer' )
   }
 
   return (
