@@ -5,7 +5,7 @@ const MusicControls = props => {
   const [ index, setIndex ] = useState(0)
   const [ track, setTrack]  = useState('<< Click to navigate tracks! >>')
 
-  const videoAPILoader = props.loadFunc
+  const songAPILoader = props.loadFunc
   
   // I am accessing my track Ids to later pass into API calls requiring these values
   const myContext = useContext(musicURL) // our context we made use of
@@ -13,7 +13,7 @@ const MusicControls = props => {
 
   useEffect(() => { 
     try {
-      videoAPILoader( nextVid(), 'musicPlayer' )
+      songAPILoader( nextTrack(), 'musicPlayer' )
     } catch(error) {
       null
     }
@@ -22,27 +22,27 @@ const MusicControls = props => {
 
 
   // This is our method to switch to the next location video in our player
-  const nextVid = () => { 
+  const nextTrack = () => { 
     let newIdx = index + 1 // because #setState is async, we have to create a new var. To keep our function sync
 
     setIndex( newIdx ) // i need to increment our our curr idx
-    getVideoData( tracks[newIdx % tracks?.length] )
+    getTrackData( tracks[newIdx % tracks?.length] )
     return tracks[ newIdx % tracks?.length ]  // we return the videoId located at the Ith idx at [1]
   } 
 
   // This is the ooposite of above
-  const prevVid = () => {
+  const prevTrack = () => {
     let newIdx = index == 0 ? tracks?.length - 1 : index - 1
 
     setIndex( newIdx )
-    getVideoData( tracks[newIdx] )
+    getTrackData( tracks[newIdx] )
     return tracks[ newIdx ] 
   }
 
 
   // Our method that utilizes our Google Api(gapi) global imported in the header of our index.html
     // Here we consume our API and call a built-in method to the library.
-  const getVideoData = vidId => (
+  const getTrackData = vidId => (
     gapi.client.youtube.videos.list({
       'part': [ // #list requires an object with two required keys
         'snippet' // The returned JSON gives us a key with info containing title
@@ -58,11 +58,11 @@ const MusicControls = props => {
   )
 
   const firstClickHandler = () => {
-    videoAPILoader( prevVid(), 'musicPlayer' )
+    songAPILoader( prevTrack(), 'musicPlayer' )
   }
 
   const secondClickHandler = () => {
-    videoAPILoader( nextVid(), 'musicPlayer' )
+    songAPILoader( nextTrack(), 'musicPlayer' )
   }
 
 
