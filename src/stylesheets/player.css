@@ -1,6 +1,6 @@
 
 /* main player */
-#player-component-container { 
+.player-component-container { 
   overflow: hidden;
   width: 100%; 
   height: 100%; 

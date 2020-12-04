@@ -24,7 +24,7 @@ const Player = () => {
   } 
 
   return (
-    <div id="player-component-container">
+    <div className="player-component-container">
 
       <musicURL.Provider value={ currentCountry }>
         <MusicControls trackLists={ tracks } loadFunc={ mediaAPILoader } />
