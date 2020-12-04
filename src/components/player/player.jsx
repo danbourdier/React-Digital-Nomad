@@ -24,7 +24,8 @@ const Player = () => {
   } 
 
   return (
-    <div id="location-player-container">
+    <div id="player-component-container">
+
       <musicURL.Provider value={ currentCountry }>
         <MusicControls trackLists={ tracks } loadFunc={ mediaAPILoader } />
       </musicURL.Provider>
@@ -33,9 +34,8 @@ const Player = () => {
       <div id="musicPlayer"></div> {/* our first embed player */}
       <div id="locationPlayer"></div>  {/* our location embed player */}
 
-      {/* <locationURL.Provider value={ locations }> */}
-        <LocationControls locationURLs={ locations } updateCurr={ setCountry } loadFunc={ mediaAPILoader } />
-      {/* </locationURL.Provider> */}
+      <LocationControls locationURLs={ locations } updateCurr={ setCountry } loadFunc={ mediaAPILoader } />
+
     </div>
   ) 
 
