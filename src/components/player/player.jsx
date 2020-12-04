@@ -13,21 +13,20 @@ export const musicURL = React.createContext(null)
 const Player = () => {
   const [ currentCountry, setCountry ] = useState('France')
 
-  const loadNext = ( vidId, playType ) => { 
+  const mediaAPILoader = ( vidId, player ) => { 
     try {
-      window[playType]?.loadVideoById({ videoId: vidId }) 
+      window[ player ]?.loadVideoById({ videoId: vidId }) 
+      
     } catch( error ) {
       console.log( `The following error has occured ${ error }. Restarting application. ` )
       window.history.go()
     }
-
   } 
-  // our dynamic API caller passed to respective players ^
 
   return (
     <div id="location-player-container">
       <musicURL.Provider value={ currentCountry }>
-        <MusicControls trackLists={ tracks } loadFunc={ loadNext } />
+        <MusicControls trackLists={ tracks } loadFunc={ mediaAPILoader } />
       </musicURL.Provider>
 
       <div id="unclickable-overlay"></div>
@@ -35,7 +34,7 @@ const Player = () => {
       <div id="locationPlayer"></div>  {/* our location embed player */}
 
       <locationURL.Provider value={ locations }>
-        <LocationControls updateCurr={ setCountry } loadFunc={ loadNext } />
+        <LocationControls updateCurr={ setCountry } loadFunc={ mediaAPILoader } />
       </locationURL.Provider>
     </div>
   ) 
