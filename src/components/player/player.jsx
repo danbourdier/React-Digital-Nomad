@@ -16,7 +16,7 @@ const Player = () => {
   const mediaAPILoader = ( vidId, player ) => { 
     try {
       window[ player ]?.loadVideoById({ videoId: vidId }) 
-      
+
     } catch( error ) {
       console.log( `The following error has occured ${ error }. Restarting application. ` )
       window.history.go()
@@ -33,9 +33,9 @@ const Player = () => {
       <div id="musicPlayer"></div> {/* our first embed player */}
       <div id="locationPlayer"></div>  {/* our location embed player */}
 
-      <locationURL.Provider value={ locations }>
-        <LocationControls updateCurr={ setCountry } loadFunc={ mediaAPILoader } />
-      </locationURL.Provider>
+      {/* <locationURL.Provider value={ locations }> */}
+        <LocationControls locationURLs={ locations } updateCurr={ setCountry } loadFunc={ mediaAPILoader } />
+      {/* </locationURL.Provider> */}
     </div>
   ) 
 

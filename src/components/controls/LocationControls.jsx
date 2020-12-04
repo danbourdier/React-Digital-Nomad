@@ -8,7 +8,7 @@ const LocationControls = props => {
   const videoAPILoader = props.loadFunc
 
   // this is our deconstructed React conext of the nearest provider
-  const myLocationContext = Object.entries(useContext(locationURL))
+  const parsedLocationIDs = Object.entries( props.locationURLs )
 
   // To legibly understand our code we set our parent state update logic in a useEffect
   useEffect(() => {
@@ -21,17 +21,17 @@ const LocationControls = props => {
     let newIdx = index + 1
 
     setIndex( newIdx ) // i need to increment our our curr idx
-    setLocale( myLocationContext[ newIdx % myLocationContext.length ][0]) // to track our current country
-    return myLocationContext[ newIdx % myLocationContext.length ][1] // we return the videoId located at the Ith idx at [1]
+    setLocale( parsedLocationIDs[ newIdx % parsedLocationIDs.length ][0]) // to track our current country
+    return parsedLocationIDs[ newIdx % parsedLocationIDs.length ][1] // we return the videoId located at the Ith idx at [1]
   }
 
   // This is the ooposite of above
   const prevVideo = () => {
-    let newIdx = index == 0 ? myLocationContext.length - 1 : index - 1
+    let newIdx = index == 0 ? parsedLocationIDs.length - 1 : index - 1
 
     setIndex( newIdx )
-    setLocale( myLocationContext[ newIdx ][0] ) 
-    return myLocationContext[ newIdx ][1] 
+    setLocale( parsedLocationIDs[ newIdx ][0] ) 
+    return parsedLocationIDs[ newIdx ][1] 
   } 
 
 
