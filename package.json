@@ -9,15 +9,18 @@
     "server": "webpack serve",
     "start": "npm run build && npm run server"
   },
+
   "repository": {
     "type": "git",
     "url": "git+https://github.com/danbourdier/React-Digital-Nomad.git"
   },
+
   "author": "Daniel Bourdier",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/danbourdier/React-Digital-Nomad/issues"
   },
+
   "homepage": "https://github.com/danbourdier/React-Digital-Nomad#readme",
   "dependencies": {
     "@babel/core": "^7.12.3",
@@ -33,6 +36,7 @@
     "redux": "^4.0.5",
     "webpack-cli": "^4.1.0"
   },
+
   "devDependencies": {
     "css-loader": "^5.0.0",
     "eslint-plugin-react-hooks": "^4.2.0",
@@ -41,4 +45,5 @@
     "webpack": "^5.2.0",
     "webpack-dev-server": "^3.11.0"
   }
+  
 }
