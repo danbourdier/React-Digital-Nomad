@@ -5,7 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/png" href="favicon.png">
 
-  <!-- youtube data API -->
+    <!-- youtube video API -->
+  <script rel='preload' src="https://www.youtube.com/iframe_api"></script>
+    <!-- youtube data API -->
   <script rel='preload' src="https://apis.google.com/js/api.js"></script>
 
   <script rel='preload'> 
@@ -26,9 +28,7 @@
         // For reference, https://github.com/google/google-api-javascript-client/blob/master/docs/reference.md
   </script>
 
-  <!-- youtube video API -->
-  <script rel='preload' src="https://www.youtube.com/iframe_api"></script>
-  <script src="/utils/YTVideoAPI.js"></script>
+
   
   <!-- <script src="../dist/bundle.js"></script> -->
   
@@ -39,8 +39,8 @@
   <title>Digital Nomad</title>
 </head>
 <body>
+  <script defer src="/utils/YTVideoAPI.js"></script>
   <div id="root"></div>
-
   
 </body>
 </html>

@@ -1,12 +1,4 @@
-
-// let tag = document.createElement('script');
-
-// tag.src = "https://www.youtube.com/iframe_api";
-// let firstScriptTag = document.getElementsByTagName('script')[0];
-// firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-
 // 3. This function creates an <iframe> (and YouTube player)
-console.log('YT Video API loaded')
 
 window.locationPlayer
 window.musicPlayer
@@ -69,3 +61,5 @@ function onPlayerStateChange(event) {
     done = true;
   }
 }
+
+console.log('YT Video API successfully loaded')
