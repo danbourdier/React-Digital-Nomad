@@ -2,7 +2,6 @@ import React, { useContext, useEffect, useState } from 'react'
 import { locationURL } from '../player/Player'
 
 const LocationControls = props => {
-  // this slice of state is to track our current index within our cntxt
   const [ index, setIndex ] = useState(0)
   const [ locale, setLocale ] = useState('France')
 

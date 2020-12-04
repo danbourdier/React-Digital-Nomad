@@ -29,7 +29,12 @@ const Player = () => {
   const [ currentCountry, setCountry ] = useState('France')
 
   const loadNext = ( vidId, playType ) => { 
-    window[playType]?.loadVideoById( { videoId: vidId } ) 
+    try {
+      window[playType]?.loadVideoById({ videoId: vidId }) 
+    } catch( error ) {
+      window.history.go()
+    }
+
   } 
   // our dynamic API caller passed to respective players ^
 
