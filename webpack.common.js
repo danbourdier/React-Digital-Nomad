@@ -1,8 +1,9 @@
 const path = require('path')
 
-const CleanWebpackPlugin = require('clean-webpack-plugin')
+const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 const HTMLWebpackPlugin = require('html-webpack-plugin')
 const HTMLWebpackPluginConfig = new HTMLWebpackPlugin({
+  title: 'Production',
   template: __dirname + '/public/index.html',
   filename: 'index.html',
   inject: 'head',
@@ -43,7 +44,10 @@ module.exports = {
     filename: 'bundle.js',
   },
 
-  plugins: [ HTMLWebpackPluginConfig ],
+  plugins: [ 
+    new CleanWebpackPlugin(),
+    HTMLWebpackPluginConfig 
+  ],
 
   // devtool: 'inline-source-map',
 
