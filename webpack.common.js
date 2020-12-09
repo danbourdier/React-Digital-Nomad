@@ -15,7 +15,8 @@ module.exports = {
 
   context: __dirname,
 
-  entry: "./src/index.jsx",
+  // entry: "./src/index.jsx",
+  entry: path.resolve(__dirname, "src", "index.jsx" ),
 
   module: {
     rules: [

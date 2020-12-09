@@ -15,7 +15,8 @@ module.exports = merge( common, {
     compress: true,
     port: 8080,
     publicPath: '/',
-    historyApiFallback: true
+    historyApiFallback: true,
+    open: true
   }
 
 })
