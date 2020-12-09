@@ -1,5 +1,6 @@
 const path = require('path')
 
+const CleanWebpackPlugin = require('clean-webpack-plugin')
 const HTMLWebpackPlugin = require('html-webpack-plugin')
 const HTMLWebpackPluginConfig = new HTMLWebpackPlugin({
   template: __dirname + '/public/index.html',
@@ -10,8 +11,8 @@ const HTMLWebpackPluginConfig = new HTMLWebpackPlugin({
 
 
 module.exports = {
-  // Will soon have to be refactored for production
-  mode: "development",
+
+  // mode: "development",
 
   context: __dirname,
 
@@ -44,7 +45,7 @@ module.exports = {
 
   plugins: [ HTMLWebpackPluginConfig ],
 
-  devtool: 'inline-source-map',
+  // devtool: 'inline-source-map',
 
   resolve: {
     extensions: [".js", ".jsx", ".css", "*"]
@@ -60,12 +61,12 @@ module.exports = {
     colors: true,
   },
 
-  devServer: {
-    contentBase: path.resolve(__dirname, 'src'),
-    compress: true,
-    port: 8080,
-    publicPath: '/',
-    historyApiFallback: true
-  }
+  // devServer: {
+  //   contentBase: path.resolve(__dirname, 'src'),
+  //   compress: true,
+  //   port: 8080,
+  //   publicPath: '/',
+  //   historyApiFallback: true
+  // }
 
 };
