@@ -13,8 +13,6 @@ const HTMLWebpackPluginConfig = new HTMLWebpackPlugin({
 
 module.exports = {
 
-  // mode: "development",
-
   context: __dirname,
 
   entry: "./src/index.jsx",
@@ -49,8 +47,6 @@ module.exports = {
     HTMLWebpackPluginConfig 
   ],
 
-  // devtool: 'inline-source-map',
-
   resolve: {
     extensions: [".js", ".jsx", ".css", "*"]
   },
@@ -65,12 +61,5 @@ module.exports = {
     colors: true,
   },
 
-  // devServer: {
-  //   contentBase: path.resolve(__dirname, 'src'),
-  //   compress: true,
-  //   port: 8080,
-  //   publicPath: '/',
-  //   historyApiFallback: true
-  // }
 
 };
