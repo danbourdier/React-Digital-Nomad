@@ -4,7 +4,7 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 const HTMLWebpackPlugin = require('html-webpack-plugin')
 const HTMLWebpackPluginConfig = new HTMLWebpackPlugin({
   title: 'Production',
-  template: __dirname + 'index.html',
+  template: __dirname + '/index.html',
   filename: 'index.html',
   inject: 'head',
   favicon: "favicon.png"

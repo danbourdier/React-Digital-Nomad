@@ -1,4 +1,5 @@
-// 3. This function creates an <iframe> (and YouTube player)
+// This script creates an <iframe> (and YouTube player)
+
 try {
   window.locationPlayer
   window.musicPlayer
