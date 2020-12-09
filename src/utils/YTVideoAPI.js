@@ -52,6 +52,7 @@ try {
 
   function onPlayerReady(event) {
     event.target.playVideo();
+    console.log('YT Video API successfully loaded')
   }
 
   // 5. The API calls this function when the player's state changes.
@@ -62,8 +63,6 @@ try {
     }
   }
 
-  console.log('YT Video API successfully loaded')
-  
 } catch(err) {
-  console.log(`ERROR! The problemo is :${ err }`)
+  console.log(`Error loading YT Video API, see: ${ err }`)
 }
