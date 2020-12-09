@@ -3,9 +3,27 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="refresh" content="0; url=https://danbourdier.github.io/React-Digital-Nomad/public/index.html">
+  <link rel="icon" type="image/png" href="favicon.png">
+
+    <!-- youtube video API -->
+  <script rel='preload' src="https://www.youtube.com/iframe_api"></script>
+    <!-- youtube data API -->
+  <script rel='preload' src="https://apis.google.com/js/api.js"></script>
+
+  <script defer src="src/utils/YTVideoAPI.js"></script>
+  <script defer src="src/utils/YTDataAPI.js"></script>
+
+  <!-- <script src="../dist/bundle.js"></script> -->
+  
+  <link rel="stylesheet" type="text/css" href="src/stylesheets/player.css">
+  <link rel="stylesheet" type="text/css" href="src/stylesheets/root.css">
+  <link rel="stylesheet" type="text/css" href="src/stylesheets/controls.css">
+
+  <title>Digital Nomad</title>
 </head>
 <body>
+  
+  <div id="root"></div>
   
 </body>
 </html>
