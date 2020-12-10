@@ -3,12 +3,12 @@ import { musicURL } from '../player/Player'
 
 const MusicControls = props => {
   const [ index, setIndex ] = useState(0)
-  const [ track, setTrack]  = useState('<< Click to navigate tracks! >>')
+  const [ track, setTrack ]  = useState('<< Click to navigate tracks! >>')
 
   const songAPILoader = props.loadFunc
   
   // I am accessing my track Ids to later pass into API calls requiring these values
-  const myContext = useContext(musicURL) // our context we made use of
+  const myContext = useContext( musicURL ) // our context we made use of
   const tracks = props?.trackLists[myContext]  // with a separation of concerns 
 
   useEffect(() => { 
@@ -43,17 +43,20 @@ const MusicControls = props => {
   // Our method that utilizes our Google Api(gapi) global imported in the header of our index.html
     // Here we consume our API and call a built-in method to the library.
   const getTrackData = vidId => (
-    gapi.client.youtube.videos.list({
-      'part': [ // #list requires an object with two required keys
-        'snippet' // The returned JSON gives us a key with info containing title
-      ],
-      'id': 
-        `${ vidId }` // To fetch read-only data we need to pass in vidIds
-    }).then(res => {
+    gapi.client.youtube.videos.list(
+      {
+        'part': [ // #list requires an object with two required keys
+          'snippet' // The returned JSON gives us a key with info containing title
+        ],
+        'id': 
+          `${ vidId }` // To fetch read-only data we need to pass in vidIds
+      }
+    )
+    .then(res => {
       setTrack( res?.result?.items[0]?.snippet?.title )
       return res.result.items[0].snippet.title
     }) 
-      .catch(err => console.log(err))
+    .catch(err => console.log(err))
 
   )
 

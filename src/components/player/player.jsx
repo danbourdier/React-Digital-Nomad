@@ -13,6 +13,7 @@ export const musicURL = React.createContext(null)
 const Player = () => {
   const [ currentCountry, setCountry ] = useState('France')
 
+  // This method calls our API to load a new video
   const mediaAPILoader = ( vidId, player ) => { 
     try {
       window[ player ]?.loadVideoById({ videoId: vidId }) 
