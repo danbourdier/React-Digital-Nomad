@@ -16,7 +16,6 @@ module.exports = {
 
   context: __dirname,
 
-  // entry: "./src/index.jsx",
   entry: path.resolve(__dirname, "src", "index.jsx" ),
 
   module: {
@@ -50,7 +49,7 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'bundle.js',
-    publicPath: '/React-Digital-Nomad/'
+    // publicPath: '/dist/'
   },
 
   plugins: [ 
