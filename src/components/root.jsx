@@ -9,4 +9,4 @@ const Root = () => (
     </HashRouter>
 )
 
-export default Root;
+export default Root
