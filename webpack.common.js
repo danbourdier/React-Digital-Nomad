@@ -7,50 +7,37 @@ const HTMLWebpackPluginConfig = new HTMLWebpackPlugin({
   title: 'Production',
   template: __dirname + '/index.html',
   filename: 'index.html',
-  inject: 'head',
+  inject: 'body',
   favicon: "favicon.png"
 })
 
 
 module.exports = {
 
-  context: __dirname,
-
   entry: path.resolve(__dirname, "src", "index.jsx" ),
+  output: {
+    path: path.resolve( 'dist' ),
+    filename: 'bundle.js',
+    publicPath: '/'
+  },
 
   module: {
     rules: [
-      {
-        test: /\.jsx?$/,
-        exclude: /(node_modules)/,
-        use: {
+      { test: /\.jsx?$/, exclude: /(node_modules)/, use: {
           loader: 'babel-loader',
-          options: {
-            presets: ['@babel/env', '@babel/react']
-          }
+          options: { presets: ['@babel/env', '@babel/react'] }
         },
       }, 
-      {
-        test: /\.css$/i,
-        use: [ 
+      { test: /\.css$/i, use: [ 
           {
             loader: MiniCssExtractPlugin.loader,
-            options: {
-              publicPath: '../'
-            }
+            options: { publicPath: '../' }
           }, 
           'css-loader'
         ],
       }
 
     ]
-  },
-
-  output: {
-    path: path.resolve(__dirname, 'dist'),
-    // path: path.resolve(__dirname, 'dist'),
-    filename: 'bundle.js',
-    // publicPath: '/dist/'
   },
 
   plugins: [ 
