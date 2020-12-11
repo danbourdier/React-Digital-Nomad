@@ -19,7 +19,7 @@
   "bugs": {
     "url": "https://github.com/danbourdier/React-Digital-Nomad/issues"
   },
-  "homepage": ".",
+  "homepage": "https://danbourdier.github.io/React-Digital-Nomad/#/",
   "dependencies": {
     "@babel/core": "^7.12.3",
     "@babel/preset-env": "^7.12.1",
