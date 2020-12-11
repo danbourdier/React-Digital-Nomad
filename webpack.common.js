@@ -16,11 +16,14 @@ const ASSET_PATH = process.env.ASSET_PATH || '/';
 
 module.exports = {
 
-  entry: path.resolve(__dirname, "src", "index.jsx" ),
+  entry: path.resolve( __dirname, 'src', 'index.jsx' ),
+  // entry: path.resolve(__dirname, "src", "index.jsx" ),
+  // entry: path.join(__dirname, 'src/', "index.jsx" ),
+
   output: {
-    path: path.resolve(__dirname, 'dist'),
+    path: path.join(__dirname, 'dist/'),
     filename: 'bundle.js',
-    publicPath: ASSET_PATH
+    publicPath: '/dist/'
   },
 
   module: {
