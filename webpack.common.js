@@ -1,4 +1,5 @@
 const path = require('path')
+const webpack = require('webpack')
 
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
@@ -11,6 +12,7 @@ const HTMLWebpackPluginConfig = new HTMLWebpackPlugin({
   favicon: "favicon.png"
 })
 
+const ASSET_PATH = process.env.ASSET_PATH || '/';
 
 module.exports = {
 
@@ -18,7 +20,7 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'bundle.js',
-    publicPath: '../'
+    publicPath: ASSET_PATH
   },
 
   module: {
@@ -44,7 +46,10 @@ module.exports = {
   plugins: [ 
     new CleanWebpackPlugin(),
     new MiniCssExtractPlugin(),
-    HTMLWebpackPluginConfig 
+    new webpack.DefinePlugin({
+      'process.env.ASSET_PATH': JSON.stringify(ASSET_PATH),
+    }),
+    HTMLWebpackPluginConfig
   ],
 
   resolve: {
