@@ -16,19 +16,21 @@ module.exports = {
 
   entry: path.resolve(__dirname, "src", "index.jsx" ),
   output: {
-    path: path.resolve( 'dist' ),
-    filename: 'bundle.js',
-    publicPath: '/'
+    path: path.resolve(__dirname, 'dist'),
+    filename: '[name].js',
+    publicPath: './'
   },
 
   module: {
     rules: [
-      { test: /\.jsx?$/, exclude: /(node_modules)/, use: {
+      { test: /\.jsx?$/, exclude: /(node_modules)/, 
+        use: {
           loader: 'babel-loader',
           options: { presets: ['@babel/env', '@babel/react'] }
         },
       }, 
-      { test: /\.css$/i, use: [ 
+      { test: /\.css$/i, 
+        use: [ 
           {
             loader: MiniCssExtractPlugin.loader,
             options: { publicPath: '../' }
@@ -36,7 +38,6 @@ module.exports = {
           'css-loader'
         ],
       }
-
     ]
   },
 
