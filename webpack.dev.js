@@ -11,11 +11,14 @@ module.exports = merge( common, {
   devtool: 'inline-source-map',
 
   devServer: {
-    // contentBase: path.resolve( __dirname, 'src/' ),
-    contentBase: path.join( __dirname, 'src' ),
-    // contentBasePublicPath: '/',
+    contentBase: path.resolve( __dirname, 'src' ),
+    // contentBase: './',
+    // contentBasePublicPath: '/src',
+    // publicPath: '/dist',
     publicPath: '/',
+    index: 'sudo.html',
     open: true,
+    hot: true,
     port: 8080,
     compress: true,
     watchContentBase: true,
