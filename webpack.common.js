@@ -1,9 +1,11 @@
 const path = require('path')
 const webpack = require('webpack')
 
-const templateDir = process.env.NODE_ENV == 'production' ? __dirname + '/index.html' : __dirname + '/src/sudo.html'
-const tempFileName = process.env.NODE_ENV == 'production' ? __dirname + 'index.html' : 'sudo.html'
+const templateDir = process.env.NODE_ENV === 'production' ? __dirname + '/index.html' : __dirname + '/src/sudo.html'
+const tempFileName = process.env.NODE_ENV === 'production' ? 'index.html' : 'sudo.html'
+
 const outputPath = path.join(__dirname, './dist')
+const outputPublicPath = process.env.NODE_ENV === 'production' ? '/React-Digital-Nomad/' : '/'
 
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
@@ -24,7 +26,7 @@ module.exports = {
   output: {
     path: outputPath,
     filename: 'bundle.js',
-    publicPath: '/'
+    publicPath: outputPublicPath
   },
 
   module: {
