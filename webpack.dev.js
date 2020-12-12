@@ -13,7 +13,7 @@ module.exports = merge( common, {
   devServer: {
     contentBase: path.resolve( __dirname, 'dist' ),
     publicPath: '/',
-    index: 'sudo.html',
+    // index: 'sudo.html',
     open: true,
     hot: true,
     port: 8080,

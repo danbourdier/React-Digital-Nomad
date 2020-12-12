@@ -1,5 +1,4 @@
 // This script creates an <iframe> (and YouTube player)
-// export const mediaAPI = () => {
 
   try {
     window.locationPlayer
@@ -70,6 +69,5 @@
 
   } catch(err) {
     console.log(`Error loading YT Video API, see: ${ err }`)
+    
   }
-
-// }

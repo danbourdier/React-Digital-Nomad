@@ -1,4 +1,3 @@
-// export const dataAPI = () => {
 
   try {
     const loadClient = () => { // 1*
@@ -16,5 +15,3 @@
     console.log(`Error loading YT Data API, see: ${ err } `)
   }
 
-
-// }

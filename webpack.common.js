@@ -1,17 +1,18 @@
 const path = require('path')
-const webpack = require('webpack')
 
-const templateDir = process.env.NODE_ENV === 'production' ? __dirname + '/index.html' : __dirname + '/public/sudo.html'
-const tempFileName = process.env.NODE_ENV === 'production' ? 'index.html' : 'sudo.html'
+const modeBool = process.env.NODE_ENV === 'production'
+
+const tempDir = __dirname + '/index.html'
+const tempFileName = 'index.html'
 
 const outputPath = path.join(__dirname, './dist')
-const outputPublicPath = process.env.NODE_ENV === 'production' ? '/React-Digital-Nomad/' : '/'
+const outputPublicPath = modeBool ? '/React-Digital-Nomad/' : '/'
 
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const HTMLWebpackPlugin = require('html-webpack-plugin')
 const HTMLWebpackPluginConfig = new HTMLWebpackPlugin({
-  template: templateDir,
+  template: tempDir,
   filename: tempFileName,
   inject: 'body',
   favicon: "favicon.png"
@@ -56,7 +57,6 @@ module.exports = {
     new CleanWebpackPlugin(),
     new MiniCssExtractPlugin(),
     HTMLWebpackPluginConfig,
-
   ],
 
   resolve: {
