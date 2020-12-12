@@ -1,0 +1,297 @@
+
+
+/* location controls (tokyo, france, nyc, etc) */
+.location-controls-container {
+  position: absolute;
+  left: 44.5%;
+  bottom: -8%;
+  width: 15%;
+  height: 15%;
+  z-index: 20;
+}
+
+.location-controls-flex-wrapper {
+  width: 104%;
+  display: flex;
+  justify-content: space-between;
+  background-color: lightblue;
+  opacity: .65;
+  border-radius: 6px;
+  border: groove 2px whitesmoke;
+  border-top-left-radius: 90px;
+    border-top-right-radius: 90px;
+    height: 50%;
+
+  flex-direction: row;
+    align-items: center;
+}
+
+  /* buttons in location controls */
+  .location-controls-button {
+    height: 55%;
+    width: 13%;
+    margin: auto;
+    font-weight: 800;
+    text-transform: uppercase;
+    border: whitesmoke outset 4px;
+    background-color: transparent;
+    border-radius: 100px;
+    font-family: 'Inter-Loom';
+    outline: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+    .location-controls-button span {
+      position: relative;
+      width: fit-content;
+      height: fit-content;
+      margin: auto;
+    }
+    .location-controls-button:active {
+      border: inset;
+    }
+
+/* Nusic Controls */
+
+/* Music controls (tokyo, france, nyc, etc) */
+.Music-controls-container {
+  position: absolute;
+  left: 44.5%;
+  width: 15% !important;
+  height: 15% !important;
+  z-index: 20;
+}
+
+
+
+.Music-controls-flex-wrapper {
+  position: relative;
+  width: 104%;
+  display: flex;
+  justify-content: space-between;
+  background-color: lightblue;
+  opacity: .65;
+  border-radius: 6px;
+  border: groove 2px whitesmoke;
+  border-bottom-left-radius: 90px;
+    border-bottom-right-radius: 90px;
+    height: 50%;
+  
+  flex-direction: row;
+    align-items: center;
+}
+
+  /* buttons in Music controls */
+  #Music-controls-button {
+    height: 55%;
+    width: 13%;
+    margin: auto;
+    font-weight: 800;
+    text-transform: uppercase;
+    background-color: transparent;
+    border-radius: 100px;
+    border: whitesmoke outset 4px;
+    font-family: 'Inter-Loom';
+    outline: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #Music-controls-button span {
+      position: relative;
+      width: fit-content;
+      height: fit-content;
+      margin: auto;
+    }
+
+    #Music-controls-button:active {
+      border: inset;
+    }
+
+#location-name-container {
+  background: white;
+    height: 2em;
+    display: flex;
+    border-radius: 7px;
+    width: 40%;
+    border: inset 1px lightgrey;
+}
+
+#location-name-container span {
+  font-family: 'Inter-Loom';
+  text-transform: uppercase;
+  text-align: center;
+    width: 100%;
+    align-items: center;
+    display: grid;
+}
+
+
+@media screen and (max-width: 600px) {
+  .location-controls-container {
+    width: 40%;
+    margin: 0px auto;
+    left: 0;
+    right: 0;
+  }
+
+  .location-controls-button {
+    border: none;
+  }
+
+
+  .Music-controls-container {
+    width: 40% !important;
+    margin: 0px auto;
+    left: 0;
+    right: 0;
+  }
+
+  #Music-controls-button {
+    border: none;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  #Music-controls-button {
+    border: none;
+  }
+
+  .Music-controls-container {
+    width: 40% !important;
+    margin: 0px auto;
+    left: 0;
+    right: 0;
+  }
+
+  .location-controls-button {
+    border: none;
+  }
+
+  .location-controls-container {
+    width: 40%;
+    margin: 0px auto;
+    left: 0;
+    right: 0;
+  }
+}
+
+
+/* main player */
+.player-component-container { 
+  overflow: hidden;
+  width: 100%; 
+  height: 100%; 
+  position: relative; 
+  z-index: 10;
+}
+
+#locationPlayer {
+  height: 100%;
+  width: 100%;
+  z-index: 10;
+  -moz-transform: scale(1.5);
+  -webkit-transform: scale(1.5);
+  -o-transform: scale(1.5);
+  -ms-transform: scale(1.5);
+  transform: scale(1.5);
+}
+
+#musicPlayer {
+  height: 0%;
+  width: 0%;
+}
+
+.ytp-chrome-top {
+  display: none !important;
+  z-index: -1;
+}
+
+#unclickable-overlay {
+  z-index: 15;
+  position: absolute;
+    height: 100%;
+    width: 100%;
+    background: transparent;
+}
+
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  box-sizing: border-box;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 0;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+
+#root {
+  height: 100vh;
+  width: 100vw;
+  box-sizing: border-box;
+}
+  #root div:first-child {
+    width: 100%;
+    height: 100%;
+  }
+
+#blur2 {
+  position: absolute;
+    height: 20vh;
+    width: 100vw;
+    right: -800px;
+    filter: blur(0px);
+    background: black;
+    opacity: .965;
+}
+#blur1 {
+  position: absolute;
+    height: 20vh;
+    width: 100vw;
+    right: -800px;
+    filter: blur(0px);
+    background: black;
+    opacity: .965;
+}
+
+
+/*# sourceMappingURL=main.css.map*/
