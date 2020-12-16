@@ -1,5 +1,5 @@
 import React from 'react'
-import Player from './player/Player'
+import Player from './playerComp/Player'
 
 
 const App = () => {

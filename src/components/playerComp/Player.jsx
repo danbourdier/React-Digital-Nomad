@@ -8,7 +8,6 @@ import { tracks, locations } from '../misc/data.js'
 const importDataAPI = () => import( /* webpackChunkName: "YTDataAPI"  */  '../../utils/YTDataAPI.js')
 const importMediaAPI = () => import( /* webpackChunkName: "YTMediaAPI"  */   '../../utils/YTVideoAPI.js')
 
-export const locationURL = React.createContext(null)
 export const musicURL = React.createContext(null)
 
 
@@ -43,7 +42,7 @@ const Player = () => {
       <div id="locationPlayer"></div>  {/* our location embedded player */}
 
       <LocationControls locationURLs={ locations } updateCurr={ setCountry } loadFunc={ mediaAPILoader } />
-      { `Net Earnings $${asd}` }
+
     </div>
   ) 
 
