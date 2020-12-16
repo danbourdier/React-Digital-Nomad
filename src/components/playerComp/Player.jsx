@@ -42,7 +42,7 @@ const Player = () => {
       <div id="locationPlayer"></div>  {/* our location embedded player */}
 
       <LocationControls locationURLs={ locations } updateCurr={ setCountry } loadFunc={ mediaAPILoader } />
-      { `Net Earnings $${asd}` }
+
     </div>
   ) 
 
