@@ -19,7 +19,7 @@
   "bugs": {
     "url": "https://github.com/danbourdier/React-Digital-Nomad/issues"
   },
-  "homepage": "https://danbourdier.github.io/React-Digital-Nomad/",
+  "homepage": ".",
   "dependencies": {
     "@babel/core": "^7.12.3",
     "@babel/preset-env": "^7.12.1",
@@ -46,4 +46,5 @@
     "webpack": "^5.2.0",
     "webpack-dev-server": "^3.11.0"
   }
+
 }

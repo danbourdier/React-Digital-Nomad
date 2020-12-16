@@ -1,12 +1,12 @@
 const path = require('path')
 
-const modeBool = process.env.NODE_ENV === 'production'
+// const modeBool = process.env.NODE_ENV === 'production'
 
 const tempDir = __dirname + '/index.html'
 const tempFileName = 'index.html'
 
 const outputPath = path.join(__dirname, './dist')
-const outputPublicPath = modeBool ? '/React-Digital-Nomad/' : '/'
+// const outputPublicPath = modeBool ? '/React-Digital-Nomad/dist' : '/'
 
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
@@ -14,7 +14,7 @@ const HTMLWebpackPlugin = require('html-webpack-plugin')
 const HTMLWebpackPluginConfig = new HTMLWebpackPlugin({
   template: tempDir,
   filename: tempFileName,
-  inject: 'body',
+  inject: 'head',
   favicon: "favicon.png"
 })
 
@@ -26,7 +26,8 @@ module.exports = {
   output: {
     path: outputPath,
     filename: 'bundle.js',
-    publicPath: outputPublicPath
+    // publicPath: '/React-Digital-Nomad/#/dist/'
+    publicPath: '/'
   },
 
   module: {

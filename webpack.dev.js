@@ -3,7 +3,6 @@ const { merge } = require('webpack-merge')
 const common = require('./webpack.common.js')
 
 
-
 module.exports = merge( common, {
 
   mode: 'development',
@@ -13,13 +12,11 @@ module.exports = merge( common, {
   devServer: {
     contentBase: path.resolve( __dirname, 'dist' ),
     publicPath: '/',
-    // index: 'sudo.html',
     open: true,
     hot: true,
     port: 8080,
     compress: true,
     watchContentBase: true,
-    // historyApiFallback: true,
   }
 
 })

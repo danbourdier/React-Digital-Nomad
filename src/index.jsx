@@ -6,6 +6,8 @@ import './stylesheets/controls.css'
 import './stylesheets/player.css'
 import './stylesheets/root.css'
 
+console.log('@ index.jsx')
+
 if ( process.env.NODE_ENV === 'production' ) {
   console.log('production mode');
 } else {
