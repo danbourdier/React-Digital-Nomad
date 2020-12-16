@@ -15,8 +15,8 @@ if ( process.env.NODE_ENV !== 'production' ) {
 
 
 document.addEventListener('DOMContentLoaded', () => {
-  domMutationImport()
-
   const root = document.getElementById('root')
+  
   ReactDOM.render(<Root />, root)
+  domMutationImport()
 } )
