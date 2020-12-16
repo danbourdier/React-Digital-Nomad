@@ -1,5 +1,5 @@
 import React, { useContext, useState, useEffect } from 'react'
-import { musicURL } from '../player/Player'
+import { musicURL } from '../playerComp/Player'
 
 const MusicControls = props => {
   const [ index, setIndex ] = useState(0)

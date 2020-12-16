@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useState } from 'react'
-import { locationURL } from '../player/Player'
+
 
 const LocationControls = props => {
   const [ index, setIndex ] = useState(0)
