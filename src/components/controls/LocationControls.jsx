@@ -11,9 +11,10 @@ const LocationControls = props => {
 
   useEffect(() => {
     document.addEventListener('LocationReady', () => {
+      window.locationPlayer.H.onReady = true
       window.locationPlayer.H.onReady = false
       window.locationPlayer.H.onReady = true
-      // console.log(window.locationPlayer.H.onReady)
+      window.locationPlayer.playVideo()
     })
 
   }, [])

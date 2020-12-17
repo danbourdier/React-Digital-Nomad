@@ -29,7 +29,7 @@
           'iv_load_policy': 3,
           'disablekb': 1,
           'start': 300,
-          // 'autoplay': 1,
+          'autoplay': 1,
           'modestbranding': 1,
           'controls': 0,
           'origin': 'https://digital-nomad.netlify.app/',
@@ -46,7 +46,7 @@
         videoId: musicVideoId,
         playerVars: {
           'iv_load_policy': 3,
-          // 'autoplay': 1,
+          'autoplay': 1,
           'modestbranding': 1,
           'controls': 0,
           'origin': 'https://digital-nomad.netlify.app/',
