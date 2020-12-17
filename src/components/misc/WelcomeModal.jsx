@@ -1,13 +1,18 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 const WelcomeModal = () => {
+  const [ visible, changeVisibility ] = useState( true )
 
-  const targetModal = document.querySelector('#welcome-modal-container')
 
   const playMedia = () => {
-    // window.locationPlayer.playVideo()
-    // window.musicPlayer.playVideo()
-    console.log('HITT')
+    try {
+      window.locationPlayer.playVideo()
+      window.musicPlayer.playVideo()
+      console.log('HITT')
+
+    } catch( error ) {
+      console.log('Error at Modal Component, see:', error)
+    }
   }
 
   const handleClick = event => {
@@ -15,11 +20,11 @@ const WelcomeModal = () => {
     event.stopPropagation()
 
     playMedia()
-    targetModal.style.display = 'none'
+    changeVisibility( !visible )
   }
 
   return (
-    <figure id="welcome-modal-container" className="modal">
+    <figure id="welcome-modal-container" className="modal" style={ visible ? null : {display: 'none' } }>
       <section className="modal-content">
         <span id="welcome-modal-message"></span>
         <button id="modal-button" onClick={ handleClick }> Lets Go! </button>
