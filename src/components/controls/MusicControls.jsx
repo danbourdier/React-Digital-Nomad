@@ -68,6 +68,17 @@ const MusicControls = props => {
     songAPILoader( nextTrack(), 'musicPlayer' )
   }
 
+  const formattedTrackName = () => {
+    let dupTrack = track
+
+    if (track.length <= 31 ) {
+      return track
+    } else {
+      dupTrack = dupTrack.slice(0, 25) + '...'
+      return dupTrack
+    }
+  }
+
 
   return (
     <div className="Music-controls-container">
@@ -78,7 +89,7 @@ const MusicControls = props => {
         </button>
 
         <figure id="track-name-container">
-          <span>{ track }</span>
+          <span>{ formattedTrackName() }</span>
         </figure>
 
         <button id="Music-controls-button" onClick={ secondClickHandler }> 

@@ -8,7 +8,6 @@ const WelcomeModal = () => {
     try {
       window.locationPlayer.playVideo()
       window.musicPlayer.playVideo()
-      console.log('HITT')
 
     } catch( error ) {
       console.log('Error at Modal Component, see:', error)
