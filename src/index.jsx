@@ -6,8 +6,7 @@ import './stylesheets/controls.css'
 import './stylesheets/player.css'
 import './stylesheets/root.css'
 
-const domMutationImport = () => import('./utils/listeners')
-
+// const domMutationImport = () => import('./utils/listeners')
 if ( process.env.NODE_ENV !== 'production' ) {
   console.log('DEV mode')
 }
@@ -17,6 +16,6 @@ if ( process.env.NODE_ENV !== 'production' ) {
 document.addEventListener('DOMContentLoaded', () => {
   const root = document.getElementById('root')
   
+  // domMutationImport()
   ReactDOM.render(<Root />, root)
-  domMutationImport()
 } )
