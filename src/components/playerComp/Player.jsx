@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 
 import LocationControls from '../controls/LocationControls'
 import MusicControls from '../controls/MusicControls'
+import WelcomeModal from '../misc/WelcomeModal'
 
 import { tracks, locations } from '../misc/data.js'
 
@@ -12,7 +13,7 @@ export const musicURL = React.createContext(null)
 
 
 const Player = () => {
-  const [ currentCountry, setCountry ] = useState('France')
+  const [ currentCountry, setCountry ] = useState( 'France' )
 
   useEffect( () => {
     importDataAPI()
@@ -42,6 +43,8 @@ const Player = () => {
       <div id="locationPlayer"></div>  {/* our location embedded player */}
 
       <LocationControls locationURLs={ locations } updateCurr={ setCountry } loadFunc={ mediaAPILoader } />
+
+      <WelcomeModal />
 
     </div>
   ) 
