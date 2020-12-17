@@ -48,13 +48,11 @@
 
     // 4. The API will call this function when the video player is ready.
     const onMusicReady = event => {
-      debugger
       event.target.playVideo();
       window.musicPlayer = event.target;
     }
 
     const onPlayerReady = event => {
-      debugger
       event.target.playVideo();
       console.log('YT Video API successfully loaded')
     }
@@ -68,6 +66,6 @@
     }
 
   } catch(err) {
-    console.log(`Error loading YT Video API, see: ${ err }`)
+    console.log(`Error loading YT Video API, see:`, err)
     
   }

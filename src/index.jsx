@@ -6,16 +6,16 @@ import './stylesheets/controls.css'
 import './stylesheets/player.css'
 import './stylesheets/root.css'
 
-console.log('@ index.jsx')
-
-if ( process.env.NODE_ENV === 'production' ) {
-  console.log('production mode');
-} else {
-  console.log(process.env.NODE_ENV)
+// const domMutationImport = () => import('./utils/listeners')
+if ( process.env.NODE_ENV !== 'production' ) {
+  console.log('DEV mode')
 }
 
-document.addEventListener('DOMContentLoaded', () => {
 
+
+document.addEventListener('DOMContentLoaded', () => {
   const root = document.getElementById('root')
+  
+  // domMutationImport()
   ReactDOM.render(<Root />, root)
 } )

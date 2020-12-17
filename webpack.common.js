@@ -26,7 +26,6 @@ module.exports = {
   output: {
     path: outputPath,
     filename: 'bundle.js',
-    // publicPath: '/React-Digital-Nomad/#/dist/'
     publicPath: '/'
   },
 
