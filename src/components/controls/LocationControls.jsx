@@ -8,18 +8,7 @@ const LocationControls = props => {
   const videoAPILoader = props.loadFunc
   // this is our deconstructed React conext of the nearest provider
   const parsedLocationIDs = Object.entries( props.locationURLs )
-
-  useEffect(() => {
-    document.addEventListener('LocationReady', () => {
-      window.locationPlayer.H.onReady = true
-      window.locationPlayer.H.onReady = false
-      window.locationPlayer.H.onReady = true
-      window.locationPlayer.playVideo()
-    })
-
-  }, [])
-
-
+  
   // To legibly understand our code we set our parent state update logic in a useEffect
   useEffect(() => {
      // once we update our locale, we bubble up our event

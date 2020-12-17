@@ -10,13 +10,13 @@
 
 
     const onMusicReady = event => {
-      event.target.playVideo()
+      // event.target.playVideo()
       window.musicPlayer = event.target
       document.dispatchEvent( new CustomEvent('MusicReady'))
     }
 
     const onLocationReady = event => {
-      event.target.playVideo()
+      // event.target.playVideo()
       window.locationPlayer = event.target
       document.dispatchEvent(new CustomEvent('LocationReady'))
     }
@@ -28,8 +28,8 @@
         playerVars: {
           'iv_load_policy': 3,
           'disablekb': 1,
-          'start': 300,
-          'autoplay': 1,
+          'start': 180,
+          // 'autoplay': 1,
           'modestbranding': 1,
           'controls': 0,
           'origin': 'https://digital-nomad.netlify.app/',
@@ -46,8 +46,9 @@
         videoId: musicVideoId,
         playerVars: {
           'iv_load_policy': 3,
-          'autoplay': 1,
+          // 'autoplay': 1,
           'modestbranding': 1,
+          'start': 10,
           'controls': 0,
           'origin': 'https://digital-nomad.netlify.app/',
           'enablejsapi': 1,

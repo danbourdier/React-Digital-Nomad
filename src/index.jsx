@@ -5,6 +5,7 @@ import Root from './components/root'
 import './stylesheets/controls.css'
 import './stylesheets/player.css'
 import './stylesheets/root.css'
+import './stylesheets/welcomeModal.css'
 
 
 
