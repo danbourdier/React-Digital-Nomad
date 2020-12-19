@@ -58,8 +58,8 @@
 .music-controls-container {
   position: absolute;
   left: 44.5%;
-  width: 15% !important;
-  height: 15% !important;
+  width: 15%;
+  height: 15%;
   z-index: 20;
 }
 
