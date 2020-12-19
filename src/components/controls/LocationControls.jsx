@@ -45,7 +45,7 @@ const LocationControls = props => {
 
   return (
     <div className="location-controls-container">
-      {/* <section className="location-controls-flex-wrapper">
+      <section className="location-controls-flex-wrapper">
 
         <button className="location-controls-button" onClick={ firstClickHandler }>
            <span>{'<<'}</span>
@@ -59,9 +59,9 @@ const LocationControls = props => {
           <span>{'>>'}</span>
         </button>
 
-      </section> */}
+      </section>
 
-      
+
     </div>
   )
 } 
