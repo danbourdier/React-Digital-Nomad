@@ -5,7 +5,7 @@ import Player from './playerComp/Player'
 const App = () => {
 
   return (
-    <div>
+    <div className="player-component-wrapper">
       <Player />
     </div>
   )

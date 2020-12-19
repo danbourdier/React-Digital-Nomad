@@ -55,7 +55,7 @@
 /* Nusic Controls */
 
 /* Music controls (tokyo, france, nyc, etc) */
-.Music-controls-container {
+.music-controls-container {
   position: absolute;
   left: 44.5%;
   width: 15% !important;
@@ -65,7 +65,7 @@
 
 
 
-.Music-controls-flex-wrapper {
+.music-controls-flex-wrapper {
   position: relative;
   width: 104%;
   display: flex;

@@ -34,15 +34,17 @@ const Player = () => {
   return (
     <div className="player-component-container">
 
-      <musicURL.Provider value={ currentCountry }>
-        <MusicControls trackLists={ tracks } loadFunc={ mediaAPILoader } />
-      </musicURL.Provider>
+      <LocationControls locationURLs={locations} updateCurr={setCountry} loadFunc={mediaAPILoader} />
 
       <div id="unclickable-overlay"></div>
       <div id="musicPlayer"></div> {/* our music embedded player */}
       <div id="locationPlayer"></div>  {/* our location embedded player */}
 
-      <LocationControls locationURLs={ locations } updateCurr={ setCountry } loadFunc={ mediaAPILoader } />
+      
+
+      <musicURL.Provider value={currentCountry}>
+        <MusicControls trackLists={tracks} loadFunc={mediaAPILoader} />
+      </musicURL.Provider>
 
       <WelcomeModal />
 
