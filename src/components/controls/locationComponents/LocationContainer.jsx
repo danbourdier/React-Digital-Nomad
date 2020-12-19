@@ -49,7 +49,7 @@ const LocationContainer = props => {
     const locationVidId = city[ 1 ]
 
 
-    return <LocationIndexItem key={ idx } label={ cityName } />
+    return <LocationIndexItem key={idx} label={cityName} videoId={locationVidId } />
   })
 
   return (
@@ -71,7 +71,6 @@ const LocationContainer = props => {
       </section> */}
 
       { cityIndex }
-
 
     </div>
   )

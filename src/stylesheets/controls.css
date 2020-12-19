@@ -1,14 +1,13 @@
 
 
 /* location controls (tokyo, france, nyc, etc) */
-.location-controls-container {
+/* .location-controls-container {
   position: absolute;
   left: 44.5%;
-  /* bottom: -8%; */
   width: 15%;
   height: 15%;
   z-index: 20;
-}
+} */
 
 .location-controls-flex-wrapper {
   width: 104%;
@@ -131,12 +130,12 @@
 
 
 @media screen and (max-width: 600px) {
-  .location-controls-container {
+  /* .location-controls-container {
     width: 40%;
     margin: 0px auto;
     left: 0;
     right: 0;
-  }
+  } */
 
   .location-controls-button {
     border: none;
@@ -171,10 +170,10 @@
     border: none;
   }
 
-  .location-controls-container {
+  /* .location-controls-container {
     width: 40%;
     margin: 0px auto;
     left: 0;
     right: 0;
-  }
+  } */
 }

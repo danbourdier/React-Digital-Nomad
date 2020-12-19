@@ -9,3 +9,13 @@
     z-index: 20;
 }
 
+  /* Header logo */
+  .header-logo-container {
+    background-color: tomato;
+    text-align: center;
+  }
+    .header-logo-container span {
+      width: fit-content;
+      height: fit-content;
+      margin: auto auto;
+    }

@@ -1,10 +1,14 @@
 import React from 'react'
 
 const LocationIndexItem = props => {
-  const {  } = props
+  const { label, videoId } = props
+
 
   return (
-    <strong>HERHEHREHHEE</strong>
+    <article className="city-label" >
+      <section> { label } </section>
+      <section> { videoId } </section>
+    </article>
   )
 }
 
