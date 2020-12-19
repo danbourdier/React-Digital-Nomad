@@ -4,7 +4,7 @@
 .location-controls-container {
   position: absolute;
   left: 44.5%;
-  bottom: -8%;
+  /* bottom: -8%; */
   width: 15%;
   height: 15%;
   z-index: 20;
@@ -57,6 +57,7 @@
 /* Music controls (tokyo, france, nyc, etc) */
 .music-controls-container {
   position: absolute;
+  bottom: 0;
   left: 44.5%;
   width: 15%;
   height: 15%;
