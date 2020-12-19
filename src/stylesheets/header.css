@@ -1,0 +1,11 @@
+.header-container {
+    position: absolute;
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    height: 10%;
+    width: 100%;
+    opacity: 0.85;
+    z-index: 20;
+}
+

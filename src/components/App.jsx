@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react'
 
 import HeaderContainer from './headerComponents/HeaderContainer'
-import LocationControls from './controls/LocationControls'
 import MusicControls from './controls/MusicControls'
 import WelcomeModal from './misc/WelcomeModal'
 
@@ -37,7 +36,6 @@ const App = () => {
       <div className="player-component-container">
 
         <HeaderContainer locationURLs={ locations } updateCurr={ setCountry } loadFunc={ mediaAPILoader } />
-        {/* <LocationControls locationURLs={ locations } updateCurr={ setCountry } loadFunc={ mediaAPILoader } /> */}
 
         <musicURL.Provider value={ currentCountry }>
           <MusicControls trackLists={ tracks } loadFunc={ mediaAPILoader } />

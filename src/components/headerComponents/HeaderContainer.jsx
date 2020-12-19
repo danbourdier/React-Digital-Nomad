@@ -1,16 +1,16 @@
 import React from 'react'
 
-import LocationControls from '../controls/LocationControls'
+import LocationContainer from '../controls/locationComponents/LocationContainer'
 
 
 const HeaderContainer = props => {
-
-
   const { locationURLs, updateCurr, loadFunc } = props
 
+
+
   return (
-    <div>
-      <LocationControls locationURLs={ locationURLs } updateCurr={ updateCurr } loadFunc={ loadFunc } />
+    <div className="header-container">
+      <LocationContainer locationURLs={ locationURLs } updateCurr={ updateCurr } loadFunc={ loadFunc } />
     </div>
   )
 }
