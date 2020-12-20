@@ -3,6 +3,7 @@
   flex-direction: row;
   justify-content: space-evenly;
 }
+  /* City Names */
   .city-labels {
     position: relative;
     display: flex;
@@ -13,9 +14,32 @@
   }
     .city-label-sections {
       font-family: sans-serif;
+
+      display: flex;
+      flex-direction: column;
     }
+
       .city-label-sections span {
         font-size: 28px;
         font-size: 1.5vw;
+        color: white;
+        cursor: pointer;
+      }
+
+    /* Hidden sub city locations */
+    .sub-city-list {
+      position: absolute;
+      top: 70%;
+      display: flex;
+      flex-direction: column;
+      font-size: 28px;
+      font-size: 1.5vw;
+    }
+
+      .sub-city-list li {
+        width: inherit;
+        font-size: 75%;
+        line-height: 1;
+        text-overflow: ellipsis;
         color: white;
       }
