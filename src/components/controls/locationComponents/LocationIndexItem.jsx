@@ -5,9 +5,11 @@ const LocationIndexItem = props => {
 
 
   return (
-    <article className="city-label" >
-      <section> { label } </section>
-      <section> { videoId } </section>
+    <article className="city-labels" >
+      <section className='city-label-sections'> 
+        <span> { label } </span>
+      </section>
+      {/* <section className='city-label-sections'> { videoId } </section> */}
     </article>
   )
 }

@@ -2,7 +2,20 @@
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
-
-  background: springgreen;
 }
-  
+  .city-labels {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 20px 0 0;
+
+  }
+    .city-label-sections {
+      font-family: sans-serif;
+    }
+      .city-label-sections span {
+        font-size: 28px;
+        font-size: 1.5vw;
+        color: white;
+      }
