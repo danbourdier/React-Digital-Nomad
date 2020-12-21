@@ -15,6 +15,7 @@
       display: table;
       text-overflow: ellipsis;
       vertical-align: bottom;
+      line-height: 1;
     }
       .current-track-label {
         font-size: 28px;
@@ -22,7 +23,6 @@
         color: white;
         cursor: pointer;
         transition: ease-out .2s;
-        line-height: 1;
       }
 
     .sub-track-index-section {
@@ -39,6 +39,7 @@
     display: block;
     /* padding: 4px; */
     margin: 1em;
+    line-height: 1;
   }
     .music-labels span {
       align-self: flex-end;
