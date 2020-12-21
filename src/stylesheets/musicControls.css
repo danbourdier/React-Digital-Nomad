@@ -10,6 +10,7 @@
     width: 90%;
     padding: 1.5%;
     height: 100%;
+    font-family: sans-serif;
   }
     .current-track-section {
       display: table;
@@ -28,20 +29,28 @@
     .sub-track-index-section {
       position: absolute;
       display: block;
-      bottom: 100%;
-      min-width: 100%;
+      bottom: 90%;
+      width: 30%;
+      border-radius: 4px;
+      background-color: black;
+        opacity: .75;
       text-overflow: ellipsis;
     }
 
   .music-labels {
-    color: gold;
+    color: white;
     min-height: 1em;
     display: block;
-    /* padding: 4px; */
-    margin: 1em;
+    padding: 1em;
+    /* margin: 1em; */
     line-height: 1;
+    cursor: pointer;
   }
+    .music-labels:hover{
+      color: gold;
+    }
     .music-labels span {
       align-self: flex-end;
     }
+      
 

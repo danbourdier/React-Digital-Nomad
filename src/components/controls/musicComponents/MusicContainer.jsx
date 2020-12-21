@@ -6,6 +6,7 @@ import MusicIndexItem from './MusicIndexItem'
 const MusicContainer = props => {
   // const [ index, setIndex ] = useState( 0 )
   const [ track, setTrack ]  = useState('<< Click to navigate tracks! >>')
+  const [ visible, changeVisibility ] = useState( false )
 
   const songAPILoader = trackId => props.loadFunc('musicPlayer', trackId)
   
@@ -102,24 +103,31 @@ const MusicContainer = props => {
   //   console.log(event)
   // }
 
+  const handleHover = () => {
+    changeVisibility( !visible )
+  }
+
 
   const trackIndex = tracks.map( (trackId, idx) => {
 
     return <MusicIndexItem key={ idx } track={ trackId } />
   })
 
-  
+
   return (
     <div className="music-controls-container" >
-      < nav className="music-controls-nav" >
+      < nav className="music-controls-nav" onMouseEnter={ handleHover } onMouseLeave={ handleHover } >
+
         < section className="current-track-section" >
           < span className="current-track-label" > 
             { track }
           </ span>
         </ section>
-        < section className="sub-track-index-section">
+
+        < section className="sub-track-index-section" style={visible ? { visibility: "visible" } : { visibility: "hidden" }}>
           { trackIndex }
         </ section>
+
       </ nav>
       
     </div>

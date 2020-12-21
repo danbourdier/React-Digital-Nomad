@@ -14,8 +14,6 @@
 
     .city-label-sections {
       font-family: sans-serif;
-      /* display: flex; */
-      /* flex-direction: column; */
     }
       .city-label-sections span {
         font-size: 28px;
@@ -38,6 +36,7 @@
       font-size: 28px;
         font-size: 1.5vw;
       background: black;
+        opacity: .75;
       border-radius: 6px;
       padding: 0.4vw;
       height: auto;
