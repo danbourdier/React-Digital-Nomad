@@ -6,18 +6,18 @@ const LocationIndexItem = props => {
 
 
   const handleHover = event => {
-    changeVisibility( !visible)
+    changeVisibility( !visible )
   }
-  // mouseEnter. mouseLeave
+  
 
   return (
-    <article className="city-labels" >
+    <article onMouseEnter={ handleHover } /* onMouseLeave={ handleHover } */ className="city-labels" >
       
       <section className='city-label-sections'> 
-        <span onMouseEnter={ handleHover }> { label } </span>
+        <span> { label } </span>
       </section>
 
-      <section className='city-label-sections' onMouseOut={ handleHover } style={ visible ? { visibility: visible } : { visibility: "hidden" } } >
+      <section className='city-label-sections' style={ visible ? { visibility: visible } : { visibility: "hidden" } } >
           <ul className="sub-city-list"> 
             <li>123</li>
             <li>2asdfasfasdfasfdasdfasf</li>
