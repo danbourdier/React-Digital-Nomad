@@ -7,7 +7,7 @@ const MusicContainer = props => {
   const [ index, setIndex ] = useState( 0 )
   const [ track, setTrack ]  = useState('<< Click to navigate tracks! >>')
 
-  const songAPILoader = props.loadFunc
+  const songAPILoader = trackId => props.loadFunc('musicPlayer', trackId)
   
   // I am accessing my track Ids to later pass into API calls requiring these values
   const myContext = useContext( musicURL ) // our context we made use of
@@ -22,6 +22,17 @@ const MusicContainer = props => {
 
   // }, [ myContext ])  
 
+  useEffect( () => {
+    try {
+
+    } catch( error ) {
+
+    }
+  }, [])
+
+  const loadTrack = () => {
+    //
+  }
 
   // This method loads the next location video in our player
   // const nextTrack = () => { 
