@@ -1,9 +1,10 @@
 import React, { useContext, useState, useEffect } from 'react'
-// import { musicURL } from '../playerComp/Player'
+
 import { musicURL } from '../../App'
+import MusicIndexItem from './MusicIndexItem'
 
 const MusicContainer = props => {
-  const [ index, setIndex ] = useState(0)
+  const [ index, setIndex ] = useState( 0 )
   const [ track, setTrack ]  = useState('<< Click to navigate tracks! >>')
 
   const songAPILoader = props.loadFunc
@@ -23,22 +24,22 @@ const MusicContainer = props => {
 
 
   // This method loads the next location video in our player
-  const nextTrack = () => { 
-    let newIdx = index + 1 // because #setState is async, we have to create a new var. To keep our function sync
+  // const nextTrack = () => { 
+  //   let newIdx = index + 1 // because #setState is async, we have to create a new var. To keep our function sync
 
-    setIndex( newIdx ) // i need to increment our our curr idx
-    getTrackData( tracks[newIdx % tracks?.length] )
-    return tracks[ newIdx % tracks?.length ]  // we return the videoId located at the Ith idx at [1]
-  } 
+  //   setIndex( newIdx ) // i need to increment our our curr idx
+  //   getTrackData( tracks[newIdx % tracks?.length] )
+  //   return tracks[ newIdx % tracks?.length ]  // we return the videoId located at the Ith idx at [1]
+  // } 
 
-  // This is the ooposite of above
-  const prevTrack = () => {
-    let newIdx = index == 0 ? tracks?.length - 1 : index - 1
+  // // This is the ooposite of above
+  // const prevTrack = () => {
+  //   let newIdx = index == 0 ? tracks?.length - 1 : index - 1
 
-    setIndex( newIdx )
-    getTrackData( tracks[ newIdx ] )
-    return tracks[ newIdx ] 
-  }
+  //   setIndex( newIdx )
+  //   getTrackData( tracks[ newIdx ] )
+  //   return tracks[ newIdx ] 
+  // }
 
 
   // Our method that utilizes our Google Api(gapi) global imported in the header of our index.html
@@ -87,9 +88,25 @@ const MusicContainer = props => {
   //   console.log(event)
   // }
 
+  console.log(tracks)
+
+  const trackIndex = tracks.map( (trackId, idx) => {
+
+    return <MusicIndexItem key={ idx } track={ trackId } />
+  })
+
   return (
-    <div className="music-controls-container">
-      {/* <section className="music-controls-flex-wrapper">
+    <div className="music-controls-container" >
+      
+      { trackIndex }
+    </div>
+  )
+}
+
+
+export default MusicContainer 
+
+/* <section className="music-controls-flex-wrapper">
 
         <button id="Music-controls-button" onClick={ firstClickHandler }> 
           <span>{'<<'}</span>
@@ -103,12 +120,6 @@ const MusicContainer = props => {
           <span>{'>>'}</span>
         </button>
 
-      </section> */}
+      </section> */
 
-      <input type="range" name="" />
-    </div>
-  )
-}
-
-
-export default MusicContainer 
+        /* <input type="range" name="" /> */
