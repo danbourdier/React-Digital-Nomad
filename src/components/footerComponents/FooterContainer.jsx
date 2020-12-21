@@ -9,7 +9,7 @@ const FooterContainer = props => {
 
   return (
     <section className='footer-container'>
-      <MusicContainer />  
+      <MusicContainer trackLists={ props.trackLists } loadFunc={ props.loadFunc } />  
 
     </section>
   )

@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react'
 
 import HeaderContainer from './headerComponents/HeaderContainer'
-import MusicContainer from './controls/musicComponents/MusicContainer'
-// import MusicControls from './controls/MusicControls'
+import FooterContainer from './footerComponents/FooterContainer'
 import WelcomeModal from './misc/WelcomeModal'
+// import MusicControls from './controls/MusicControls'
 
 import { tracks, locations } from './misc/data.js'
 
@@ -43,7 +43,7 @@ const App = () => {
         </musicURL.Provider> */}
 
         < musicURL.Provider value={ currentCountry }>
-          < MusicContainer trackLists={ tracks } loadFunc={ mediaAPILoader } />
+          < FooterContainer trackLists={ tracks } loadFunc={ mediaAPILoader } />
         </ musicURL.Provider>
 
         <div id="unclickable-overlay"></div>
