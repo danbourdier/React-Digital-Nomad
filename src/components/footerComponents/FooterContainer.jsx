@@ -8,10 +8,9 @@ const FooterContainer = props => {
 
 
   return (
-    <section className='footer-container'>
+    <div className='footer-container'>
       <MusicContainer trackLists={ props.trackLists } loadFunc={ props.loadFunc } />  
-
-    </section>
+    </div>
   )
 
 }

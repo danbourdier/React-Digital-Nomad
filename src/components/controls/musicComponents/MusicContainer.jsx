@@ -81,14 +81,11 @@ const MusicContainer = props => {
   //   } catch( error ) {
   //     null
   //   }
-    
   // }
 
   // const handleDrag = event => {
   //   console.log(event)
   // }
-
-  console.log(tracks)
 
   const trackIndex = tracks.map( (trackId, idx) => {
 

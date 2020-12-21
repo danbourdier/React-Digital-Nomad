@@ -4,7 +4,7 @@ const MusicIndexItem = props => {
   const { trackId: track } = props
 
   return (
-    <article>
+    <article className="music-labels">
       INDEXITEM
     </article>
   )
