@@ -2,9 +2,14 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 
 import Root from './components/root'
+import './stylesheets/header.css'
+import './stylesheets/footer.css'
 import './stylesheets/controls.css'
 import './stylesheets/player.css'
 import './stylesheets/root.css'
+import './stylesheets/welcomeModal.css'
+import './stylesheets/locationControls.css'
+import './stylesheets/musicControls.css'
 
 
 

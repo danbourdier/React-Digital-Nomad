@@ -1,0 +1,57 @@
+.location-controls-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+  /* City Names */
+  .city-labels {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 20px 0 0;
+  }
+
+    .city-label-sections {
+      font-family: sans-serif;
+      /* display: flex; */
+      /* flex-direction: column; */
+    }
+      .city-label-sections span {
+        font-size: 28px;
+        font-size: 1.5vw;
+        color: white;
+        cursor: pointer;
+        transition: ease-out .2s;
+      }
+        .city-label-sections span:hover {
+          color: gold;
+        }
+
+    /* Hidden sub city locations */
+    .sub-city-list {
+      position: absolute;
+        top: 90%;
+        right: 0;
+      display: flex;
+        flex-direction: column;
+      font-size: 28px;
+        font-size: 1.5vw;
+      background: black;
+      border-radius: 6px;
+      padding: 0.4vw;
+      height: auto;
+    }
+      .sub-city-list li {
+        width: inherit;
+        height: 1.5em;
+        line-height: 1;
+        font-size: 75%;
+          text-overflow: ellipsis;
+          text-align: end;
+        color: white;
+        cursor: pointer;
+      }
+        .sub-city-list li:hover {
+          color: gold;
+        }

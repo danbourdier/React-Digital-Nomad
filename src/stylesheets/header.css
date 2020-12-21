@@ -1,0 +1,21 @@
+.header-container {
+    position: absolute;
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    height: 10%;
+    width: 100%;
+    opacity: 0.85;
+    z-index: 20;
+}
+
+  /* Header logo */
+  .header-logo-container {
+    background-color: tomato;
+    text-align: center;
+  }
+    .header-logo-container span {
+      width: fit-content;
+      height: fit-content;
+      margin: auto auto;
+    }
