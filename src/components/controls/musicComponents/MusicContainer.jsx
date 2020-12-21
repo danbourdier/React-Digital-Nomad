@@ -25,12 +25,12 @@ const MusicContainer = props => {
   useEffect( () => {
     try {
       loadTrack( 'lEfkziQSmZI' )
-
+      console.log(track)
     } catch( error ) {
-      console.log('Error at MusicContainer')
+      null
     }
 
-  }, [])
+  }, [ myContext ] )
 
   const loadTrack = trackId => {
     songAPILoader( trackId ) // loads our track to iframe
@@ -102,21 +102,35 @@ const MusicContainer = props => {
   //   console.log(event)
   // }
 
+
   const trackIndex = tracks.map( (trackId, idx) => {
 
     return <MusicIndexItem key={ idx } track={ trackId } />
   })
 
+  
   return (
     <div className="music-controls-container" >
+      < nav className="music-controls-nav" >
+        < section className="current-track-section" >
+          < span className="current-track-label" > 
+            { track }
+          </ span>
+        </ section>
+        < section className="sub-track-index-section">
+          { trackIndex }
+        </ section>
+      </ nav>
       
-      { trackIndex }
     </div>
   )
 }
 
 
 export default MusicContainer 
+
+
+
 
 /* <section className="music-controls-flex-wrapper">
 
