@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react'
 
 import HeaderContainer from './headerComponents/HeaderContainer'
-import MusicControls from './controls/MusicControls'
+import MusicContainer from './controls/musicComponents/MusicContainer'
+// import MusicControls from './controls/MusicControls'
 import WelcomeModal from './misc/WelcomeModal'
 
 import { tracks, locations } from './misc/data.js'
@@ -35,11 +36,15 @@ const App = () => {
     <div className="player-component-wrapper">
       <div className="player-component-container">
 
-        <HeaderContainer locationURLs={ locations } updateCurr={ setCountry } loadFunc={ mediaAPILoader } />
+        < HeaderContainer locationURLs={ locations } updateCurr={ setCountry } loadFunc={ mediaAPILoader } />
 
-        <musicURL.Provider value={ currentCountry }>
+        {/* <musicURL.Provider value={ currentCountry }>
           <MusicControls trackLists={ tracks } loadFunc={ mediaAPILoader } />
-        </musicURL.Provider>
+        </musicURL.Provider> */}
+
+        < musicURL.Provider value={ currentCountry }>
+          < MusicContainer trackLists={ tracks } loadFunc={ mediaAPILoader } />
+        </ musicURL.Provider>
 
         <div id="unclickable-overlay"></div>
         <div id="musicPlayer"></div> {/* our music embedded player */}

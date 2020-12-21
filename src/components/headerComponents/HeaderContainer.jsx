@@ -1,5 +1,4 @@
 import React from 'react'
-
 import LocationContainer from '../controls/locationComponents/LocationContainer'
 
 

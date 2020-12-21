@@ -8,6 +8,7 @@ import './stylesheets/player.css'
 import './stylesheets/root.css'
 import './stylesheets/welcomeModal.css'
 import './stylesheets/locationControls.css'
+import './stylesheets/musicControls.css'
 
 
 

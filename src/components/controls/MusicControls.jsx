@@ -58,31 +58,30 @@ const MusicControls = props => {
       return res.result.items[0].snippet.title
     }) 
     .catch(err => console.log(err))
-
   )
 
-  const firstClickHandler = () => {
-    songAPILoader( prevTrack(), 'musicPlayer' )
-  }
+  // const firstClickHandler = () => {
+  //   songAPILoader( prevTrack(), 'musicPlayer' )
+  // }
 
-  const secondClickHandler = () => {
-    songAPILoader( nextTrack(), 'musicPlayer' )
-  }
+  // const secondClickHandler = () => {
+  //   songAPILoader( nextTrack(), 'musicPlayer' )
+  // }
 
-  const formattedTrackName = () => {
-    let dupTrack = track
-    try {
-      if (track.length <= 31 ) {
-        return track
-     } else {
-        dupTrack = dupTrack.slice(0, 25) + '...'
-        return dupTrack
-      }
-    } catch( error ) {
-      null
-    }
+  // const formattedTrackName = () => {
+  //   let dupTrack = track
+  //   try {
+  //     if (track.length <= 31 ) {
+  //       return track
+  //    } else {
+  //       dupTrack = dupTrack.slice(0, 25) + '...'
+  //       return dupTrack
+  //     }
+  //   } catch( error ) {
+  //     null
+  //   }
     
-  }
+  // }
 
   // const handleDrag = event => {
   //   console.log(event)

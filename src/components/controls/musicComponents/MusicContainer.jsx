@@ -1,7 +1,9 @@
 import React from 'react'
 
+
 const MusicContainer = props => {
 
+  const { trackLists, loadFunc } = props
 
   return (
     <div>
