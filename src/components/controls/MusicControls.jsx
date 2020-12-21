@@ -84,10 +84,13 @@ const MusicControls = props => {
     
   }
 
+  // const handleDrag = event => {
+  //   console.log(event)
+  // }
 
   return (
     <div className="music-controls-container">
-      <section className="music-controls-flex-wrapper">
+      {/* <section className="music-controls-flex-wrapper">
 
         <button id="Music-controls-button" onClick={ firstClickHandler }> 
           <span>{'<<'}</span>
@@ -101,7 +104,9 @@ const MusicControls = props => {
           <span>{'>>'}</span>
         </button>
 
-      </section>
+      </section> */}
+
+      <input type="range" name="" />
     </div>
   )
 }

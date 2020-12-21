@@ -11,7 +11,7 @@ const LocationIndexItem = props => {
   
 
   return (
-    <article onMouseEnter={ handleHover } /* onMouseLeave={ handleHover } */ className="city-labels" >
+    <article onMouseEnter={ handleHover } onMouseLeave={ handleHover } className="city-labels" >
       
       <section className='city-label-sections'> 
         <span> { label } </span>

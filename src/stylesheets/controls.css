@@ -1,14 +1,5 @@
 
 
-/* location controls (tokyo, france, nyc, etc) */
-/* .location-controls-container {
-  position: absolute;
-  left: 44.5%;
-  width: 15%;
-  height: 15%;
-  z-index: 20;
-} */
-
 .location-controls-flex-wrapper {
   width: 104%;
   display: flex;
