@@ -4,14 +4,14 @@ import { musicURL } from '../../App'
 import MusicIndexItem from './MusicIndexItem'
 
 const MusicContainer = props => {
-  const [ index, setIndex ] = useState( 0 )
+  // const [ index, setIndex ] = useState( 0 )
   const [ track, setTrack ]  = useState('<< Click to navigate tracks! >>')
 
   const songAPILoader = trackId => props.loadFunc('musicPlayer', trackId)
   
   // I am accessing my track Ids to later pass into API calls requiring these values
   const myContext = useContext( musicURL ) // our context we made use of
-  const tracks = props?.trackLists[myContext]  // with a separation of concerns 
+  const tracks = props?.trackLists[ myContext ]  // with a separation of concerns 
 
   // useEffect(() => { 
   //   try {
@@ -24,14 +24,18 @@ const MusicContainer = props => {
 
   useEffect( () => {
     try {
+      loadTrack( 'lEfkziQSmZI' )
 
     } catch( error ) {
-
+      console.log('Error at MusicContainer')
     }
+
   }, [])
 
-  const loadTrack = () => {
-    //
+  const loadTrack = trackId => {
+    songAPILoader( trackId ) // loads our track to iframe
+    getTrackData( trackId ) // API call to extract title from Id, and set state
+
   }
 
   // This method loads the next location video in our player
