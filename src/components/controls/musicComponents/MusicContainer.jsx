@@ -14,15 +14,13 @@ const MusicContainer = props => {
 
   const songAPILoader = props.loadFunc
 
+
   useEffect( () => {
     try {
-      // previous version loaded first song of current value of music cntxt
       loadTrack( tracks[ 0 ] )
-      console.log('change in music context')
     } catch( error ) {
       null
     }
-
   }, [ myContext ] )
 
   // This method loads the next chosne track for our player
@@ -32,8 +30,8 @@ const MusicContainer = props => {
   }
 
   // Here we consume our API and call a built-in method to the library.
-  const getTrackData = trackId => (
-    gapi.client.youtube.videos.list(
+  const getTrackData = ( trackId, bool = true ) => (
+    gapi.client?.youtube.videos.list(
       {
         'part': [ // #list requires an object with two required keys
           'snippet' // The returned JSON gives us a key with info containing title
@@ -43,16 +41,12 @@ const MusicContainer = props => {
       }
     )
     .then(res => {
-      setTrack( res?.result?.items[0]?.snippet?.title )
-      return res.result.items[0].snippet.title
+      // have a condition that evaluates to below when passed as an arg
+      if ( bool ) { setTrack( res?.result?.items[0]?.snippet?.title ) }
+      return res.result.items[0].snippet.title 
     }) 
     .catch(err => console.log(err))
   )
-
-
-  // const secondClickHandler = () => {
-  //   songAPILoader( nextTrack(), 'musicPlayer' )
-  // }
 
   // const handleDrag = event => {
   //   console.log(event)
@@ -63,10 +57,12 @@ const MusicContainer = props => {
   }
 
 
-  const trackIndex = tracks.map( (trackId, idx) => {
+  // const trackIndex = gapi.client?.youtube ? tracks.map( ( trackId, idx ) => {
+  //   let trackName = getTrackData( trackId, 0 )
+  //   trackName = trackName.jj
 
-    return <MusicIndexItem key={ idx } track={ trackId } trackLoader={ loadTrack } />
-  })
+  //   return <MusicIndexItem key={ idx } track={ trackId } trackName={ trackName } trackLoader={ loadTrack } />
+  // }) : <span> loading client API... </span>
 
 
   return (

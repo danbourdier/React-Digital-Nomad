@@ -26,7 +26,8 @@ const App = () => {
     try {
       window[player]?.loadVideoById({ videoId: vidId })
     } catch (error) {
-      console.log(`The following error has occured ${error}. Restart application. `)
+      // console.log(`The following error has occured ${error}. Restart application. `)
+      null
     }
   }
  
@@ -37,9 +38,6 @@ const App = () => {
 
         < HeaderContainer locationURLs={ locations } updateCurr={ setCountry } loadFunc={ mediaAPILoader } />
 
-        {/* <musicURL.Provider value={ currentCountry }>
-          <MusicControls trackLists={ tracks } loadFunc={ mediaAPILoader } />
-        </musicURL.Provider> */}
 
         < musicURL.Provider value={ currentCountry }>
           < FooterContainer trackLists={ tracks } mediaLoader={ mediaAPILoader } />

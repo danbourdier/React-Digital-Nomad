@@ -1,8 +1,8 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 
 
 const MusicIndexItem = props => {
-  const { track: trackId, trackLoader } = props
+  const { track: trackId, trackLoader, trackName } = props
 
 
   const clickHandler = () => {
@@ -12,7 +12,7 @@ const MusicIndexItem = props => {
 
   return (
     <article className="music-labels" onClick={ clickHandler }>
-      <span> { trackId } </span>
+      <span> { trackName } </span>
     </article>
   )
 }
