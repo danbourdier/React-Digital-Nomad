@@ -7,7 +7,7 @@ import WelcomeModal from './misc/WelcomeModal'
 
 import { tracks, locations } from './misc/data.js'
 
-export const musicURL = React.createContext(null) 
+export const musicURL = React.createContext( null ) 
 
 const importDataAPI = () => import( /* webpackChunkName: "YTDataAPI"  */  '../utils/YTDataAPI.js')
 const importMediaAPI = () => import( /* webpackChunkName: "YTMediaAPI"  */   '../utils/YTVideoAPI.js')
@@ -26,8 +26,7 @@ const App = () => {
     try {
       window[player]?.loadVideoById({ videoId: vidId })
     } catch (error) {
-      console.log(`The following error has occured ${error}. Restarting application. `)
-      window.history.go()
+      console.log(`The following error has occured ${error}. Restart application. `)
     }
   }
  
@@ -43,7 +42,7 @@ const App = () => {
         </musicURL.Provider> */}
 
         < musicURL.Provider value={ currentCountry }>
-          < FooterContainer trackLists={ tracks } loadFunc={ mediaAPILoader } />
+          < FooterContainer trackLists={ tracks } mediaLoader={ mediaAPILoader } />
         </ musicURL.Provider>
 
         <div id="unclickable-overlay"></div>

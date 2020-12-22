@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react'
 import LocationIndexItem from './LocationIndexItem.jsx'
 
 const LocationContainer = props => {
-  const [ index, setIndex ] = useState(0)
+  // const [ index, setIndex ] = useState(0)
   const [ locale, setLocale ] = useState('France')
 
   const videoAPILoader = props.loadFunc

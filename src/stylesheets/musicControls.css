@@ -24,6 +24,7 @@
         color: white;
         cursor: pointer;
         transition: ease-out .2s;
+        white-space: nowrap;
       }
 
     .sub-track-index-section {

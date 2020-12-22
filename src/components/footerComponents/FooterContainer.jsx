@@ -9,7 +9,7 @@ const FooterContainer = props => {
 
   return (
     <div className='footer-container'>
-      <MusicContainer trackLists={ props.trackLists } loadFunc={ props.loadFunc } />  
+      <MusicContainer trackLists={ props.trackLists } loadFunc={ props.mediaLoader } />  
     </div>
   )
 
