@@ -57,12 +57,12 @@ const MusicContainer = props => {
   }
 
 
-  // const trackIndex = gapi.client?.youtube ? tracks.map( ( trackId, idx ) => {
-  //   let trackName = getTrackData( trackId, 0 )
-  //   trackName = trackName.jj
+  const trackIndex = gapi.client?.youtube ? tracks.map( ( trackId, idx ) => {
+    // let trackName = getTrackData( trackId, false )
+    // trackName = trackName.jj
 
-  //   return <MusicIndexItem key={ idx } track={ trackId } trackName={ trackName } trackLoader={ loadTrack } />
-  // }) : <span> loading client API... </span>
+    return <MusicIndexItem key={ idx } track={ trackId } fetchTrackData={ getTrackData } trackLoader={ loadTrack } />
+  }) : <span> loading client API... </span>
 
 
   return (
@@ -87,24 +87,3 @@ const MusicContainer = props => {
 
 
 export default MusicContainer 
-
-
-
-
-/* <section className="music-controls-flex-wrapper">
-
-        <button id="Music-controls-button" onClick={ firstClickHandler }> 
-          <span>{'<<'}</span>
-        </button>
-
-        <figure id="track-name-container">
-          <span>{ formattedTrackName() }</span>
-        </figure>
-
-        <button id="Music-controls-button" onClick={ secondClickHandler }> 
-          <span>{'>>'}</span>
-        </button>
-
-      </section> */
-
-        /* <input type="range" name="" /> */
