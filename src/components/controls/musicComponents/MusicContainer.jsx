@@ -2,7 +2,7 @@ import React, { useContext, useState, useEffect } from 'react'
 
 import { musicURL } from '../../App'
 import MusicIndexItem from './MusicIndexItem'
-
+import VolumeControl from '../volumeComponents/VolumeControl'
 
 const MusicContainer = props => {
   const [ track, setTrack ]  = useState('Hover over me to choose a track!')
@@ -28,7 +28,17 @@ const MusicContainer = props => {
   }
 
   const handleDrag = event => {
-    console.log( event.target.name )
+    const targetEle = event.target.name
+
+    switch( targetEle ) {
+      case 'musicPlayer':
+        window[ targetEle ].setVolume( event.target.value )
+        break
+      case 'locationPlayer':
+        window[ targetEle ].setVolume( event.target.value )
+        break
+    }
+
   }
 
 
@@ -76,9 +86,12 @@ const MusicContainer = props => {
 
       </ nav>
       
-      <section className='music-volume-container'>
-        <input type="range" name="music-vol" onChange={ handleDrag } />
-      </section>
+      <VolumeControl  />
+
+      {/* <section className='music-volume-container'>
+        <span>Music:</span>
+        <input type="range" name="musicPlayer" onChange={ handleDrag } />
+      </section> */}
 
     </div>
   )
