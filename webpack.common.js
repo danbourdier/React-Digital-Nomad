@@ -25,7 +25,7 @@ module.exports = {
 
   output: {
     path: outputPath,
-    filename: 'bundle.js',
+    filename: '[name].js',
     publicPath: '/'
   },
 
@@ -51,9 +51,9 @@ module.exports = {
     ]
   },
 
-  // optimization: {
-  //   splitChunks: { chunks: "all" }
-  // },
+  optimization: {
+    splitChunks: { chunks: "all" }
+  },
 
   plugins: [ 
     new CleanWebpackPlugin(),

@@ -3,6 +3,7 @@ import React, { useContext, useState, useEffect } from 'react'
 import { musicURL } from '../../App'
 import MusicIndexItem from './MusicIndexItem'
 
+
 const MusicContainer = props => {
   const [ track, setTrack ]  = useState('Hover over me to choose a track!')
   const [ visible, changeVisibility ] = useState( false )
@@ -49,9 +50,10 @@ const MusicContainer = props => {
 
 
   const trackIndex = gapi.client?.youtube ? trackCollection.map( ( trackId, idx ) => {
-
     return <MusicIndexItem key={ idx } track={ trackId } fetchTrackData={ getTrackData } trackLoader={ loadTrack } />
-  }) : <span> loading client API... </span>
+ 
+  }) : null
+
 
 
   return (
