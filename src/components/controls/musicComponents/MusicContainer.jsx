@@ -72,7 +72,7 @@ const MusicContainer = props => {
 
       </ nav>
       
-      <section>
+      <section className='music-volume-container'>
         <input type="range" name="" id=""/>
       </section>
 

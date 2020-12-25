@@ -29,8 +29,9 @@
 
     .sub-track-index-section {
       position: absolute;
+        left: 10.5%;
+        bottom: 90%;
       display: block;
-      bottom: 90%;
       width: 30%;
       border-radius: 4px;
       background-color: black;
@@ -43,7 +44,6 @@
     min-height: 1em;
     display: block;
     padding: 1em;
-    /* margin: 1em; */
     line-height: 1;
     cursor: pointer;
   }
@@ -52,6 +52,15 @@
     }
     .music-labels span {
       align-self: flex-end;
+    }
+
+  /* Music Volume */
+  .music-volume-container {
+    display: flex;
+    width: 50%;
+  }
+    .music-volume-container input {
+      width: 100%;
     }
       
 
