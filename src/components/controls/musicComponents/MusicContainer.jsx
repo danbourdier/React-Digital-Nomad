@@ -27,6 +27,10 @@ const MusicContainer = props => {
     changeVisibility( !visible )
   }
 
+  const handleDrag = event => {
+    console.log( event.target.name )
+  }
+
 
   const loadTrack = trackId => {
     songAPILoader( trackId, 'musicPlayer' ) // loads our track to iframe
@@ -73,7 +77,7 @@ const MusicContainer = props => {
       </ nav>
       
       <section className='music-volume-container'>
-        <input type="range" name="" id=""/>
+        <input type="range" name="music-vol" onChange={ handleDrag } />
       </section>
 
     </div>
