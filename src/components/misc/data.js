@@ -10,8 +10,8 @@ export const tracks = {
 }
 
 export const locations = {
-  'France': 'u3ayPmL2KN4', 'NYC': 'eZe4Q_58UTU',
-  'Columbia': 'FBDLlpg1P_I', 'Germany': 'mlS89Cd176M',
-  'HongKong': 'H50az3Aq7x4', 'India': 'XRU9omrRV64',
-  'Italy': 'lpo62RjldVA'
+  'France': ['u3ayPmL2KN4'], 'NYC': ['eZe4Q_58UTU'],
+  'Columbia': ['FBDLlpg1P_I'], 'Germany': ['mlS89Cd176M'],
+  'HongKong': ['H50az3Aq7x4'], 'India': ['XRU9omrRV64'],
+  'Italy': ['lpo62RjldVA']
 }

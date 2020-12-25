@@ -26,7 +26,6 @@ const App = () => {
     try {
       window[player]?.loadVideoById({ videoId: vidId })
     } catch (error) {
-      // console.log(`The following error has occured ${error}. Restart application. `)
       null
     }
   }
