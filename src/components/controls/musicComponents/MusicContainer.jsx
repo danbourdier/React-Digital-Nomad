@@ -1,6 +1,6 @@
 import React, { useContext, useState, useEffect } from 'react'
 
-import { musicURL } from '../../App'
+import { musicGeoOrigin } from '../../App'
 import MusicIndexItem from './MusicIndexItem'
 import VolumeControl from '../volumeComponents/VolumeControl'
 
@@ -9,7 +9,7 @@ const MusicContainer = props => {
   const [ visible, changeVisibility ] = useState( false )
 
   // I am accessing my track Ids to later pass into API calls requiring these values
-  const myContext = useContext( musicURL ) // our context we made use of
+  const myContext = useContext( musicGeoOrigin ) // our context we made use of
   const trackCollection = props?.trackLists[ myContext ]  // with a separation of concerns 
 
   const songAPILoader = props.loadFunc

@@ -3,11 +3,11 @@ import React, { useEffect, useState } from 'react'
 import HeaderContainer from './headerComponents/HeaderContainer'
 import FooterContainer from './footerComponents/FooterContainer'
 import WelcomeModal from './misc/WelcomeModal'
-// import MusicControls from './controls/MusicControls'
+
 
 import { tracks, locations } from './misc/data.js'
 
-export const musicURL = React.createContext( null ) 
+export const musicGeoOrigin = React.createContext( null ) 
 
 const importDataAPI = () => import( /* webpackChunkName: "YTDataAPI"  */  '../utils/YTDataAPI.js')
 const importMediaAPI = () => import( /* webpackChunkName: "YTMediaAPI"  */   '../utils/YTVideoAPI.js')
@@ -32,6 +32,7 @@ const App = () => {
   }
  
 
+
   return (
     <div className="player-component-wrapper">
       <div className="player-component-container">
@@ -39,9 +40,9 @@ const App = () => {
         < HeaderContainer locationURLs={ locations } updateCurr={ setCountry } loadFunc={ mediaAPILoader } />
 
 
-        < musicURL.Provider value={ currentCountry }>
+        < musicGeoOrigin.Provider value={ currentCountry }>
           < FooterContainer trackLists={ tracks } mediaLoader={ mediaAPILoader } />
-        </ musicURL.Provider>
+        </ musicGeoOrigin.Provider>
 
         <div id="unclickable-overlay"></div>
         <div id="musicPlayer"></div> {/* our music embedded player */}
