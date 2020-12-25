@@ -6,12 +6,17 @@ const MusicIndexItem = props => {
   const [ trackName, setTrackName ] = useState('')
 
   useEffect( () => {
-    const myAsyncFunc = async() => {
-      let data = await fetchTrackData(trackId, false)
-      setTrackName( data )
+    try {
+      const myAsyncFunc = async () => {
+        let data = await fetchTrackData(trackId, false)
+        setTrackName(data)
+      }
+
+      myAsyncFunc()
+    } catch( error ) {
+      console.log('error fetching track names, try refreshing your page')
     }
-    
-    myAsyncFunc()
+
   }, [])
 
 
