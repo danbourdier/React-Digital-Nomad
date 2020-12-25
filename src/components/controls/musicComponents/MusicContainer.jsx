@@ -72,6 +72,10 @@ const MusicContainer = props => {
 
       </ nav>
       
+      <section>
+        <input type="range" name="" id=""/>
+      </section>
+
     </div>
   )
 }
