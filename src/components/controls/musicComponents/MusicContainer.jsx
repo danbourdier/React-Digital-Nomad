@@ -65,7 +65,7 @@ const MusicContainer = props => {
           </ span>
         </ section>
 
-        < section className="sub-track-index-section" style={ visible ? { visibility: "visible" } : { visibility: "hidden" } }>
+        < section className="hidden-index-section" style={ visible ? { visibility: "visible" } : { visibility: "hidden" } }>
           { trackIndex }
         </ section>
       </ nav>

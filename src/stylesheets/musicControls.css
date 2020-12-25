@@ -27,7 +27,7 @@
         white-space: nowrap;
       }
 
-    .sub-track-index-section {
+    .hidden-index-section {
       position: absolute;
         left: 10.5%;
         bottom: 90%;
@@ -39,7 +39,7 @@
       text-overflow: ellipsis;
     }
 
-  .music-labels {
+  .hidden-index-items {
     color: white;
     min-height: 1em;
     display: block;
@@ -47,20 +47,44 @@
     line-height: 1;
     cursor: pointer;
   }
-    .music-labels:hover{
+    .hidden-index-items:hover{
       color: gold;
     }
-    .music-labels span {
+    .hidden-index-items span {
       align-self: flex-end;
     }
 
   /* Music Volume */
   .music-volume-container {
+    position: relative;
     display: flex;
     width: 50%;
+    font-family: sans-serif;
+      font-size: 1.2vw;
   }
     .music-volume-container input {
       width: 100%;
     }
-      
+    
+    .volume-container-sections {
+      width: 100%;
+      display: flex;
+      line-height: 1;
+      left: 0;
+      color: white;
+    }
+      .volume-container-sections span {
+        width: fit-content;
+        align-self: center;
+        height: 1em;
+      }
+
+    .hidden-volume-container {
+      position: absolute;
+      bottom: 100%;
+      background: black;
+    }
+      .volume-article {
+        width: 100%;
+      }
 

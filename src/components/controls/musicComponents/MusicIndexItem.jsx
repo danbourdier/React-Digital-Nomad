@@ -26,7 +26,7 @@ const MusicIndexItem = props => {
 
 
   return (
-    <article className="music-labels" onClick={ clickHandler }>
+    <article className="hidden-index-items" onClick={ clickHandler }>
       <span>
         { trackName.length ? trackName : 'Loading...' }
       </span>

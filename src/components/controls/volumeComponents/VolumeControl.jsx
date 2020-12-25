@@ -17,21 +17,24 @@ const VolumeControl = () => {
     }
   }
 
-  const handleHover = event => {
+  const handleHover = () => {
     changeVisibility( !isVisible )
   }
 
 
+
   return (
-    <div className='music-volume-container'>
+    <div className='music-volume-container' onMouseEnter={ handleHover } onMouseLeave={ handleHover }>
       <section className="volume-container-sections">
         <span>Music:</span>
         <input type="range" name="musicPlayer" onChange={ handleDrag } />
       </section >
-      
-      <section className="volume-container-sections" style={ isVisible ? { visibility: "visible" } : { visibility: "hidden" } }>
-        <span>Background Noise:</span>
-        <input type="range" name="locationPlayer" onChange={ handleDrag } />
+
+      <section className="volume-container-sections hidden-index-section" style={ isVisible ? { visibility: "visible" } : { visibility: "hidden" } }>
+        <article className="hidden-index-items volume-article">
+          <span>Background:</span>
+          <input type="range" name="locationPlayer" onChange={ handleDrag } />
+        </article>
       </section>
     </div>
   )
