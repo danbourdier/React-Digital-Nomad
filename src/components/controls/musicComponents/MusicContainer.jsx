@@ -27,20 +27,6 @@ const MusicContainer = props => {
     changeVisibility( !visible )
   }
 
-  const handleDrag = event => {
-    const targetEle = event.target.name
-
-    switch( targetEle ) {
-      case 'musicPlayer':
-        window[ targetEle ].setVolume( event.target.value )
-        break
-      case 'locationPlayer':
-        window[ targetEle ].setVolume( event.target.value )
-        break
-    }
-
-  }
-
 
   const loadTrack = trackId => {
     songAPILoader( trackId, 'musicPlayer' ) // loads our track to iframe
@@ -71,29 +57,21 @@ const MusicContainer = props => {
 
 
   return (
-    <div className="music-controls-container" >
+    < div className="music-controls-container" >
       < nav className="music-controls-nav" onMouseEnter={ handleHover } onMouseLeave={ handleHover } >
-
         < section className="current-track-section" >
           < span className="current-track-label" > 
             { track }
           </ span>
         </ section>
 
-        < section className="sub-track-index-section" style={visible ? { visibility: "visible" } : { visibility: "hidden" }}>
+        < section className="sub-track-index-section" style={ visible ? { visibility: "visible" } : { visibility: "hidden" } }>
           { trackIndex }
         </ section>
-
       </ nav>
       
-      <VolumeControl  />
-
-      {/* <section className='music-volume-container'>
-        <span>Music:</span>
-        <input type="range" name="musicPlayer" onChange={ handleDrag } />
-      </section> */}
-
-    </div>
+      < VolumeControl  />
+    </ div>
   )
 }
 
