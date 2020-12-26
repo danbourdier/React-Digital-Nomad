@@ -16,9 +16,10 @@ const LocationContainer = props => {
   const cityIndex = parsedLocationIDs.map( ( city, idx ) => {
     const cityName = city[ 0 ]
     const subLocations = city[ 1 ]
-    const locationVidId = city[ 1 ][ 0 ]
+      console.log( subLocations )
+    const locationVidId = city[ 1 ][ 0 ].id
 
-    return <LocationIndexItem key={ idx } label={ cityName } videoId={ locationVidId } subLocationCollection={ subLocations } />
+    return <LocationIndexItem key={ idx } label={ cityName } videoId={ locationVidId } subLocations={ subLocations } />
   })
 
 

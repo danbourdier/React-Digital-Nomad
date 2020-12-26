@@ -2,13 +2,22 @@ import React, { useState } from 'react'
 
 const LocationIndexItem = props => {
   const [ visible, changeVisibility ] = useState( false )
-  const { label, videoId } = props
-
+  const { label, videoId, subLocations } = props
+  // need to receive video load method with consideration to major locations
 
   const handleHover = event => {
     changeVisibility( !visible )
   }
-  
+
+  const subCityIndex = subLocations.map( ( location, idx ) => {
+
+    return (
+      <li key={ idx }>
+        Sub City
+      </li>
+    )
+  })
+
 
   return (
     <article onMouseEnter={ handleHover } onMouseLeave={ handleHover } className="city-labels" >
@@ -19,14 +28,13 @@ const LocationIndexItem = props => {
 
       <section className='city-label-sections' style={ visible ? { visibility: visible } : { visibility: "hidden" } } >
           <ul className="sub-city-list"> 
-            <li>123</li>
-            <li>2asdfasfasdfasfdasdfasf</li>
-            <li>3sdfasdfsadfasf</li>
+            { subCityIndex }
           </ul>
       </section>
 
     </article>
   )
+
 }
 
 
