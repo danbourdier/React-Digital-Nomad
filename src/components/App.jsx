@@ -22,9 +22,9 @@ const App = () => {
   }, [])
 
   // This method calls our API to load a new video
-  const mediaAPILoader = ( vidId, player ) => {
+  const mediaAPILoader = ( vidId, player, seconds = 8 ) => {
     try {
-      window[player]?.loadVideoById({ videoId: vidId })
+      window[player]?.loadVideoById({ videoId: vidId, startSeconds: seconds })
     } catch (error) {
       null
     }

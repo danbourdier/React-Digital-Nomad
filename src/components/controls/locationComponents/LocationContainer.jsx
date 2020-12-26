@@ -16,10 +16,15 @@ const LocationContainer = props => {
   const cityIndex = parsedLocationIDs.map( ( city, idx ) => {
     const cityName = city[ 0 ]
     const subLocations = city[ 1 ]
-      console.log( subLocations )
     const locationVidId = city[ 1 ][ 0 ].id
 
-    return <LocationIndexItem key={ idx } label={ cityName } videoId={ locationVidId } subLocations={ subLocations } />
+    return < LocationIndexItem 
+              key={ idx } 
+              label={ cityName } 
+              videoId={ locationVidId } 
+              subLocations={ subLocations } 
+              loader={ videoAPILoader } 
+           />
   })
 
 

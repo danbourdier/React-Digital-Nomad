@@ -2,18 +2,20 @@ import React, { useState } from 'react'
 
 const LocationIndexItem = props => {
   const [ visible, changeVisibility ] = useState( false )
-  const { label, videoId, subLocations } = props
+  const { label, videoId, subLocations, loader } = props
   // need to receive video load method with consideration to major locations
 
-  const handleHover = event => {
+  const handleHover = () => {
     changeVisibility( !visible )
   }
 
   const subCityIndex = subLocations.map( ( location, idx ) => {
+    const { id, name } = location
 
     return (
-      <li key={ idx }>
-        Sub City
+      // <li key={ idx } onClick={ () => loader(id, 'locationPlayer') }>
+      <li key={ idx } onClick={ () => loader( id, 'locationPlayer', 45 ) }>
+        { name }
       </li>
     )
   })
