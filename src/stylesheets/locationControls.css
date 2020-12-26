@@ -50,6 +50,7 @@
           text-align: end;
         color: white;
         cursor: pointer;
+        white-space: nowrap;
       }
         .sub-city-list li:hover {
           color: gold;

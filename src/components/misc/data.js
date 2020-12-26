@@ -10,11 +10,33 @@ export const tracks = {
 }
 
 export const locations = {
-  'France': [ { 'id': 'aZ-31-p3saU', 'name': 'Eiffel Tower' }, { 'id': 'VIT-zhyiAoo', 'name': 'Champes Elyseè' }, { 'id': "wKSZwIYeAKs", 'name': 'Le Marais' }, { 'id': 'u3ayPmL2KN4', 'name': 'Providencé' } ],
-  'NYC': [ {'id': 'eZe4Q_58UTU', 'name': 'xxx'}, ],
-  'Columbia': [ {'id': 'FBDLlpg1P_I', 'name': 'xxx'}, ], 
-  'Germany': [ {'id': 'mlS89Cd176M', 'name': 'xxx'}, ],
-  'HongKong': [ {'id': 'H50az3Aq7x4', 'name': 'xxx'}, ], 
-  'India': [ {'id': 'XRU9omrRV64', 'name': 'xxx'}, ],
-  'Italy': [ {'id': 'lpo62RjldVA', 'name': 'xxx'},  ]
+  'France': [ 
+    { 'id': 'aZ-31-p3saU', 'name': 'Eiffel Tower' }, 
+    { 'id': 'VIT-zhyiAoo', 'name': 'Champes Elyseè' }, 
+    { 'id': "pxp0BrsZq3E", 'name': 'Champes (Night Time)' }, 
+    { 'id': 'u3ayPmL2KN4', 'name': 'Providencé' } 
+  ],
+  'NYC': [ 
+    {'id': 'eZe4Q_58UTU', 'name': 'xxx'}, 
+  ],
+
+  'Columbia': [ 
+    {'id': 'FBDLlpg1P_I', 'name': 'xxx'}, 
+  ], 
+
+  'Germany': [ 
+    {'id': 'mlS89Cd176M', 'name': 'xxx'}, 
+  ],
+
+  'HongKong': [ 
+    {'id': 'H50az3Aq7x4', 'name': 'xxx'}, 
+  ], 
+
+  'India': [ 
+    {'id': 'XRU9omrRV64', 'name': 'xxx'}, 
+  ],
+
+  'Italy': [ 
+    {'id': 'lpo62RjldVA', 'name': 'xxx'},  
+  ]
 }
