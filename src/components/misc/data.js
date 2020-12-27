@@ -22,30 +22,28 @@ export const locations = {
     {'id': '8sVOncVFJfA', 'name': 'Lower Manhattan'}, 
     {'id': 'xzQW_ri7zwE', 'name': 'Rockefeller Plaza'}, 
   ],
-
-  'Columbia': [ 
-    {'id': 'FBDLlpg1P_I', 'name': 'xxx'}, 
-  ], 
-
   'Germany': [ 
-    {'id': 'mlS89Cd176M', 'name': 'xxx'}, 
+    {'id': 'mlS89Cd176M', 'name': 'Munich'}, 
+    {'id': '5COC4WMheH0', 'name': 'Frankfurt'}, 
+    {'id': '3VgJVB3OD3g', 'name': 'Meersburg'}, 
+    {'id': 'AmpRO0c-8_w', 'name': 'Berlin'}, 
   ],
-
   'Japan': [ 
     {'id': 'n3Dru5y3ROc', 'name': 'Tokyo, Red Light District'}, 
     {'id': '0nTO4zSEpOs', 'name': 'Shibuya'}, 
     {'id': 'q48xVf-AbmA', 'name': 'Kyoto'}, 
     {'id': '5mbh1wZSweo', 'name': 'Asakusa'}, 
   ], 
-
   'India': [ 
     {'id': 'nR22Inj-_r8', 'name': 'Taj Mahal'}, 
     {'id': 'XRU9omrRV64', 'name': 'Ganges'}, 
     {'id': 'XVvYXBTSuaA', 'name': 'New Delhi, Paharganj'}, 
     {'id': 's6lfvfe1i4g', 'name': 'Diwali'}, 
   ],
-
   'Italy': [ 
-    {'id': 'lpo62RjldVA', 'name': 'xxx'},  
+    {'id': 'P9uMtDLhXbE', 'name': 'Trastevere'},  
+    {'id': 'xrRFKEdtQIc', 'name': 'Milan'},  
+    {'id': 'EsFheWkimsU', 'name': 'Rome'},  
+    {'id': '17xMrhDD87c', 'name': 'Genoa'},  
   ]
 }
