@@ -10,7 +10,6 @@ const LocationContainer = props => {
 
   useEffect(() => {
       props.updateCurr( locale )
-
   }, [ locale ])
 
   const cityIndex = parsedLocationIDs.map( ( city, idx ) => {
