@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react'
 
-
 const MusicIndexItem = props => {
   const { track, trackLoader, fetchTrackData } = props
   const [ trackName, setTrackName ] = useState('')

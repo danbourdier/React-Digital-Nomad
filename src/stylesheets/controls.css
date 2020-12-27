@@ -123,12 +123,12 @@
   }
 
 
-  .Music-controls-container {
+  /* .Music-controls-container {
     width: 40% !important;
     margin: 0px auto;
     left: 0;
     right: 0;
-  }
+  } */
 
   #Music-controls-button {
     border: none;
@@ -140,12 +140,12 @@
     border: none;
   }
 
-  .Music-controls-container {
+  /* .Music-controls-container {
     width: 40% !important;
     margin: 0px auto;
     left: 0;
     right: 0;
-  }
+  } */
 
   .location-controls-button {
     border: none;
