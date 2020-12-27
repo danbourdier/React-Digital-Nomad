@@ -39,7 +39,10 @@ export const locations = {
   ], 
 
   'India': [ 
-    {'id': 'XRU9omrRV64', 'name': 'xxx'}, 
+    {'id': 'nR22Inj-_r8', 'name': 'Taj Mahal'}, 
+    {'id': 'XRU9omrRV64', 'name': 'Ganges'}, 
+    {'id': 'XVvYXBTSuaA', 'name': 'New Delhi, Paharganj'}, 
+    {'id': 's6lfvfe1i4g', 'name': 'Diwali'}, 
   ],
 
   'Italy': [ 
