@@ -14,7 +14,7 @@ const LocationIndexItem = props => {
 
     return (
       // <li key={ idx } onClick={ () => loader(id, 'locationPlayer') }>
-      <li key={ idx } onClick={ () => loader( id, 'locationPlayer', 45 ) }>
+      <li key={ idx } onClick={ () => loader( id, 'locationPlayer', 50 ) }>
         { name }
       </li>
     )
