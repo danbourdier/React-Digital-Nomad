@@ -11,11 +11,28 @@
 
   /* Header logo */
   .header-logo-container {
-    background-color: tomato;
+    background-color: antiquewhite;
     text-align: center;
+    width: 15%;
+    /* height: 335%; */
+    height: 280%;
+    display: flex;
+    position: relative;
+      bottom: -35%;
+      left: 1.5%;
+    border: grey ridge 0.4vw;
+      border-radius: 100vw;
+    opacity: 0.83;
   }
     .header-logo-container span {
       width: fit-content;
       height: fit-content;
       margin: auto auto;
+
+      font-family: cursive;
+      font-size: 3.5vw;
+      font-weight: 900;
+      transform: rotate(-20deg);
+      white-space: nowrap;
     }
+
