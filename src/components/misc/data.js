@@ -31,8 +31,11 @@ export const locations = {
     {'id': 'mlS89Cd176M', 'name': 'xxx'}, 
   ],
 
-  'HongKong': [ 
-    {'id': 'H50az3Aq7x4', 'name': 'xxx'}, 
+  'Japan': [ 
+    {'id': 'n3Dru5y3ROc', 'name': 'Tokyo, Red Light District'}, 
+    {'id': '0nTO4zSEpOs', 'name': 'Shibuya'}, 
+    {'id': 'q48xVf-AbmA', 'name': 'Kyoto'}, 
+    {'id': '5mbh1wZSweo', 'name': 'Asakusa'}, 
   ], 
 
   'India': [ 
