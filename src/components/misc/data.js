@@ -17,7 +17,10 @@ export const locations = {
     { 'id': 'u3ayPmL2KN4', 'name': 'Providencé' } 
   ],
   'NYC': [ 
-    {'id': 'eZe4Q_58UTU', 'name': 'xxx'}, 
+    {'id': 'n493bDy2W-U', 'name': 'Times Square'}, 
+    {'id': 'YGqD6kLs_-c', 'name': 'Grand Central'}, 
+    {'id': '8sVOncVFJfA', 'name': 'Lower Manhattan'}, 
+    {'id': 'xzQW_ri7zwE', 'name': 'Rockefeller Plaza'}, 
   ],
 
   'Columbia': [ 
