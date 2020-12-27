@@ -15,12 +15,14 @@ const LocationContainer = props => {
   const cityIndex = parsedLocationIDs.map( ( city, idx ) => {
     const cityName = city[ 0 ]
     const subLocations = city[ 1 ]
-    const locationVidId = city[ 1 ][ 0 ].id
+    const defaultId = city[ 1 ][ 0 ].id
 
     return < LocationIndexItem 
+              currMajorCity={ locale }
+              changeMajorCity={ setLocale }
               key={ idx } 
               label={ cityName } 
-              videoId={ locationVidId } 
+              videoId={ defaultId } 
               subLocations={ subLocations } 
               loader={ videoAPILoader } 
            />
