@@ -50,6 +50,7 @@ const MusicContainer = props => {
 
 
   const trackIndex = gapi.client?.youtube ? trackCollection.map( ( trackId, idx ) => {
+    console.log(trackCollection)
     return <MusicIndexItem key={ idx } track={ trackId } fetchTrackData={ getTrackData } trackLoader={ loadTrack } />
  
   }) : null
