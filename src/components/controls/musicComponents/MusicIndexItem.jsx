@@ -2,26 +2,36 @@ import React, { useState, useEffect } from 'react'
 
 
 const MusicIndexItem = props => {
-  const { track: trackId, trackLoader, fetchTrackData } = props
+  const { track, trackLoader, fetchTrackData } = props
   const [ trackName, setTrackName ] = useState('')
+
+
+  const myAsyncFunc = async() => {
+    let data = await fetchTrackData(track, false)
+    setTrackName(data)
+  }
 
   useEffect( () => {
     try {
-      const myAsyncFunc = async () => {
-        let data = await fetchTrackData(trackId, false)
-        setTrackName(data)
-      }
-
       myAsyncFunc()
     } catch( error ) {
       console.log('error fetching track names, try refreshing your page')
-    }
+    } 
 
   }, [])
 
+  useEffect( () => {
+    try {
+      myAsyncFunc()
+    } catch (error) {
+      console.log('error fetching track names, try refreshing your page')
+    } 
+
+  }, [ track ])
+
 
   const clickHandler = () => {
-    trackLoader( trackId )
+    trackLoader( track )
   }
 
 
