@@ -6,7 +6,7 @@
     window.musicPlayer
 
     let locationVideoId = 'u3ayPmL2KN4'
-    let musicVideoId = 'lEfkziQSmZI'
+    let musicVideoId = 'D9znOPZX5MQ'
 
 
     const onMusicReady = event => {

@@ -1,0 +1,37 @@
+.header-container {
+    position: absolute;
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    height: 10%;
+    width: 100%;
+    opacity: 0.85;
+    z-index: 20;
+}
+
+  /* Header logo */
+  .header-logo-container {
+    background-color: antiquewhite;
+    text-align: center;
+    width: 15%;
+    height: 280%;
+    display: flex;
+    position: relative;
+      bottom: -35%;
+      left: 1.5%;
+    border: grey ridge 0.4vw;
+      border-radius: 100vw;
+    opacity: 0.83;
+  }
+    .header-logo-container span {
+      width: fit-content;
+      height: fit-content;
+      margin: auto auto;
+
+      font-family: cursive;
+      font-size: 3.5vw;
+      font-weight: 900;
+      transform: rotate(-20deg);
+      white-space: nowrap;
+    }
+

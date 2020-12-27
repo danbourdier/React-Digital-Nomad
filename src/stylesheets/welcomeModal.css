@@ -11,12 +11,13 @@
   overflow: auto; 
   background-color: rgb(0,0,0);
   background-color: rgba(0,0,0,0.4);
+  filter: drop-shadow(2px 4px 6px black);
   margin: 0;
 }
 
   .modal-content {
     background-color: #fefefe;
-    margin: 15% auto; /* 15% from the top and centered */
+    margin: 22% auto; /* 15% from the top and centered */
     padding: 20px;
     display: flex;
     flex-direction: column;
