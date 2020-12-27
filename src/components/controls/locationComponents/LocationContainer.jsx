@@ -22,7 +22,7 @@ const LocationContainer = props => {
               changeMajorCity={ setLocale }
               key={ idx } 
               label={ cityName } 
-              videoId={ defaultId } 
+              defaultVid={ defaultId } 
               subLocations={ subLocations } 
               loader={ videoAPILoader } 
            />

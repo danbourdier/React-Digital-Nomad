@@ -2,26 +2,31 @@ import React, { useState } from 'react'
 
 const LocationIndexItem = props => {
   const [ visible, changeVisibility ] = useState( false )
-  const { label, videoId, subLocations, loader, currMajorCity, changeMajorCity } = props
-  // need to receive video load method with consideration to major locations
+  const { label, defaultVid, subLocations, loader, currMajorCity, changeMajorCity } = props
 
 
   const handleHover = () => {
     changeVisibility( !visible )
   }
 
-  // handleClick for label default vid loaded using videoId
+  const labelHandleClick = () => {
+    loader( defaultVid, 'locationPlayer', 55 )
+    if ( currMajorCity !== label ) { changeMajorCity( label ) }
+  } 
 
-  const handleClick = id => {
+  const itemHandleClick = id => {
     loader( id, 'locationPlayer', 55 )
     if ( currMajorCity !== label ) { changeMajorCity( label ) }
   }
+
+
+
 
   const subCityIndex = subLocations.map( ( location, idx ) => {
     const { id, name } = location
 
     return (
-      <li key={ idx } onClick={ () => handleClick(id) }>
+      <li key={ idx } onClick={ () => itemHandleClick(id) }>
         { name }
       </li>
     )
@@ -32,7 +37,7 @@ const LocationIndexItem = props => {
     <article onMouseEnter={ handleHover } onMouseLeave={ handleHover } className="city-labels" >
       
       <section className='city-label-sections'> 
-        <span> { label } </span>
+        <span onClick={ labelHandleClick }> { label } </span>
       </section>
 
       <section className='city-label-sections' style={ visible ? { visibility: visible } : { visibility: "hidden" } } >
