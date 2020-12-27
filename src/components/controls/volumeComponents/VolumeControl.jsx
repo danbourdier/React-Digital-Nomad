@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 
 
 const VolumeControl = () => {
@@ -33,7 +33,7 @@ const VolumeControl = () => {
       <section className="volume-container-sections hidden-index-section" style={ isVisible ? { visibility: "visible" } : { visibility: "hidden" } }>
         <article className="hidden-index-items volume-article">
           <span>Background:</span>
-          <input type="range" name="locationPlayer" onChange={ handleDrag } />
+          <input type="range" name="locationPlayer" defaultValue={ 1 } onChange={ handleDrag } />
         </article>
       </section>
     </div>

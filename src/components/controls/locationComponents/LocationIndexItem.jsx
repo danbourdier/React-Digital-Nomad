@@ -21,7 +21,6 @@ const LocationIndexItem = props => {
 
 
 
-
   const subCityIndex = subLocations.map( ( location, idx ) => {
     const { id, name } = location
 
