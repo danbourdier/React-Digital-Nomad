@@ -23,21 +23,15 @@ const WelcomeModal = () => {
     changeVisibility( !visible )
   }
 
-  const modalMessageChange = () => {
-
-  }
-
   const handleModal = event => {
     event.stopPropagation()
 
     switch( event.target.name ) {
       case 'back':
-        console.log( modalPage == 1 ? 1 : modalPage - 1 )
         changeModalPage( modalPage == 1 ? 1 : modalPage - 1 )
         return
       case 'next':
         changeModalPage( modalPage == 5 ? 5 : modalPage + 1 )
-        console.log(modalPage == 5 ? 5 : modalPage + 1 )
         return
     }
 
