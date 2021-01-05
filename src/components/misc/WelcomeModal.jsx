@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 
 const WelcomeModal = () => {
   const [ visible, changeVisibility ] = useState( true )
-  const [ page, changePage ] = useState( 0 )
+  const [ page, changePage ] = useState( 1 )
 
   const playMedia = () => {
     try {
@@ -32,10 +32,10 @@ const WelcomeModal = () => {
 
     switch( event.target.name ) {
       case 'back':
-        console.log('back button')
+        changePage( page == 1 ? 1 : page - 1 )
       break;
       case 'next':
-        console.log('forward button')
+        changePage( page == 5 ? 5 : page + 1 )
       break;
     }
 
