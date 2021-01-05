@@ -31,7 +31,7 @@ const WelcomeModal = () => {
         changeModalPage( modalPage == 1 ? 1 : modalPage - 1 )
         return
       case 'next':
-        changeModalPage( modalPage == 5 ? 5 : modalPage + 1 )
+        changeModalPage( modalPage == 4 ? 4 : modalPage + 1 )
         return
     }
 
