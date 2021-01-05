@@ -8,15 +8,15 @@ https://take-a-walk.netlify.app/
 ## Instructions
   1. npm install
   2. run `npm run start`
-  3. Open browser and go to localhost: `XXXXX`
 
 ### Technologies used
   1. HTML5
   2. CSS3
-  1. JavaScript
-  2. React.js
+  1. JavaScript (ES6)
+  2. React.js (Hooks)
   3. Youtube video player API
-  4. Github pages (Hosting)
+  3. Youtube Data API
+  4. Netlify
 
 
 ### Locations supported
