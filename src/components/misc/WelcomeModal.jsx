@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 
 const WelcomeModal = () => {
   const [ visible, changeVisibility ] = useState( true )
-  const [ page, changePage ] = useState( 1 )
+  const [ modalPage, changeModalPage ] = useState( 1 )
 
   const playMedia = () => {
     try {
@@ -32,11 +32,13 @@ const WelcomeModal = () => {
 
     switch( event.target.name ) {
       case 'back':
-        changePage( page == 1 ? 1 : page - 1 )
-      break;
+        console.log( modalPage == 1 ? 1 : modalPage - 1 )
+        changeModalPage( modalPage == 1 ? 1 : modalPage - 1 )
+        return
       case 'next':
-        changePage( page == 5 ? 5 : page + 1 )
-      break;
+        changeModalPage( modalPage == 5 ? 5 : modalPage + 1 )
+        console.log(modalPage == 5 ? 5 : modalPage + 1 )
+        return
     }
 
   }
@@ -49,12 +51,16 @@ const WelcomeModal = () => {
       <div className="modal-content">
         <section id="welcome-modal-message">
 
-          <span style={ page == 1 ? { display: 'visible' } : { display: 'none' } } className="hidden-modal-message"> Welcome to Take A Walk! A space where you can visit other countries from the comfort of your home! Click next below to continue.</span>
-          <span style={ page == 2 ? { display: 'visible' } : { display: 'none' } } className="hidden-modal-message"> Change your current location by hovering over destination in the header above and clicking a sub-region. Click next below to continue.</span>
-          <span style={ page == 3 ? { display: 'visible' } : { display: 'none' } } className="hidden-modal-message"> Lastly, listen to top local tracks by hovering over the left of the toolbar below and choose a track! If you just want a break from it all, just turn down music to take in the background noise! </span>
-          <span style={ page == 4 ? { display: 'visible' } : { display: 'none' } } className="hidden-modal-message"> If you are ready, just click the 'Lets Walk' button! </span>
+          <span style={ modalPage === 1 ? { display: 'flex' } : { display: 'none' } } className="hidden-modal-message">
+            <span className="modal-initial-caption">
+              Controls are disabled until the final page.
+            </span> 
+             Welcome to Take A Walk! A space where you can visit other countries from the comfort of your home! Click next to continue.</span>
+          <span style={ modalPage === 2 ? { display: 'block' } : { display: 'none' } } className="hidden-modal-message"> Change current location by hovering over a destination in the header above and click a sub-region. Click next to continue.</span>
+          <span style={modalPage === 3 ? { display: 'block' } : { display: 'none' }} className="hidden-modal-message"> Lastly, listen to top local tracks by hovering over the left of the toolbar below and choose a track! If you want a break from it all, just click and drag volume control on your bottom right! Click next to continue. </span>
 
-          <button style={ page == 5 ? { display: 'visible' } : { display: 'none' }} id="modal-button" onClick={ handleClick }> Lets Walk </button>
+
+          <button style={ modalPage == 4 ? { display: 'block' } : { display: 'none' }} id="modal-button" onClick={ handleClick }> Take A Walk! </button>
         </section>
 
         <section>
