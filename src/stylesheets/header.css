@@ -13,8 +13,10 @@
   .header-logo-container {
     background-color: antiquewhite;
     text-align: center;
-    width: 15%;
-    height: 280%;
+    /* width: 15%;
+    height: 280%; */
+    width: 270px;
+    height: 270px;
     display: flex;
     position: relative;
       bottom: -35%;
