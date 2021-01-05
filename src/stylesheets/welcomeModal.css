@@ -56,6 +56,24 @@
     border: inset;
   }
 
+  .modal-controls {
+    margin: 0 auto;
+  }
+    .modal-controls-button {
+      background-color: cornflowerblue;
+      border-radius: 4px;
+      border: 1px solid gray;
+      margin: 4px;
+      font-family: sans-serif;
+      font-weight: 900;
+      text-transform: uppercase;
+      outline: none;
+      padding: 6px;
+    }
+    .modal-controls-button:active {
+      border: 1px inset;
+    }
+
 
   .hidden-modal-message {
     font-size: 1vw;
@@ -67,6 +85,7 @@
   }
     .modal-initial-caption {
       font-size: .6vw;
+      margin: -30px 0 20px 0;
       font-weight: 900;
       color: yellow;
       animation: warno 1s infinite;

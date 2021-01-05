@@ -53,19 +53,23 @@ const WelcomeModal = () => {
 
           <span style={ modalPage === 1 ? { display: 'flex' } : { display: 'none' } } className="hidden-modal-message">
             <span className="modal-initial-caption">
-              Controls are disabled until the final page.
+              Main controls disabled until end of intro
             </span> 
              Welcome to Take A Walk! A space where you can visit other countries from the comfort of your home! Click next to continue.</span>
-          <span style={ modalPage === 2 ? { display: 'block' } : { display: 'none' } } className="hidden-modal-message"> Change current location by hovering over a destination in the header above and click a sub-region. Click next to continue.</span>
-          <span style={modalPage === 3 ? { display: 'block' } : { display: 'none' }} className="hidden-modal-message"> Lastly, listen to top local tracks by hovering over the left of the toolbar below and choose a track! If you want a break from it all, just click and drag volume control on your bottom right! Click next to continue. </span>
+          <span style={ modalPage === 2 ? { display: 'block' } : { display: 'none' } } className="hidden-modal-message"> 
+            Change current location by hovering over a destination in the header above and click a sub-region. Click next to continue.
+          </span>
+          <span style={modalPage === 3 ? { display: 'block' } : { display: 'none' }} className="hidden-modal-message"> 
+            Lastly, listen to top local tracks by hovering over the left of the toolbar below and choose a track! If you want a break from it all, just click and drag volume control on your bottom right! Click next to continue.
+          </span>
 
 
           <button style={ modalPage == 4 ? { display: 'block' } : { display: 'none' }} id="modal-button" onClick={ handleClick }> Take A Walk! </button>
         </section>
 
-        <section>
-          <button name="back" onClick={ handleModal }>{ 'back' }</button>
-          <button name="next" onClick={ handleModal }>{ 'next' }</button>
+        <section className="modal-controls">
+          <button name="back" className="modal-controls-button" onClick={ handleModal }>{ 'back' }</button>
+          <button name="next" className="modal-controls-button" onClick={ handleModal }>{ 'next' }</button>
         </section>
       </div>
     </figure>
