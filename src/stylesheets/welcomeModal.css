@@ -34,24 +34,28 @@
     font-family: sans-serif;
     text-align: center;
     margin: auto;
-    /* display: flex;
-    flex-direction: column; */
   }
 
   #modal-button {
-    width: 20%;
-    height: 24%;
+    position: relative;
     margin: auto;
     background-color: cornflowerblue;
-    border-radius: 4px;
+    border: none;
+    border-radius: 6px;
+    padding: .6em;
     color: whitesmoke;
     outline: none;
-    font-family: 'Circular-Loom';
-    text-transform: uppercase;
+    font-family: sans-serif;
     font-weight: 900;
-    font-size: unset;
+    font-size: 1.6vw;
+    text-transform: uppercase;
+    transition: 1s ease all;
+    animation: crazyButton .14s infinite;
   }
 
+  #modal-button:hover {
+    background-color: rgb(101, 123, 212);
+  }
   #modal-button:active {
     border: inset;
   }
@@ -69,6 +73,7 @@
       text-transform: uppercase;
       outline: none;
       padding: 6px;
+      color: whitesmoke;
     }
     .modal-controls-button:active {
       border: 1px inset;
@@ -93,8 +98,6 @@
 
 
 
-
-
 @keyframes warno {
   0% { color: yellow; }
   15% { color: orange; }
@@ -104,3 +107,10 @@
   65% { color: orange; }
   100% { color: yellow; }
 }
+
+@keyframes crazyButton {
+  0% { right: 0; left: 0; }
+  50% { right: 10px; left: 0; }
+  100% { right: 0; left: 10px; }
+}
+
