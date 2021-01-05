@@ -72,7 +72,16 @@
       animation: warno 1s infinite;
     }
 
-    @keyframes warno {
-      from { color: yellow; }
-      to { color: red; }
-    }
+
+
+
+
+@keyframes warno {
+  0% { color: yellow; }
+  15% { color: orange; }
+  30% { color: orangered; }
+  45% { color: red; }
+  55% { color: orangered; }
+  65% { color: orange; }
+  100% { color: yellow; }
+}
