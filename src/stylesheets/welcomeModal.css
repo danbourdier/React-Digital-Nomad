@@ -16,38 +16,105 @@
 }
 
   .modal-content {
-    background-color: #fefefe;
+    background-color: grey;
     margin: 22% auto; /* 15% from the top and centered */
     padding: 20px;
     display: flex;
     flex-direction: column;
-    border-radius: 15px;
+    border-radius: 8px;
     width: 45%;
-    height: 18%;
-    border: cornflowerblue solid 4px;
+    height: 24%;
+    color: white;
+    border: grey solid 4px;
   }
 
   #welcome-modal-message {
     width: fit-content;
     font-size: 45px;
-    font-family: 'Circular-Loom';
+    font-family: sans-serif;
+    text-align: center;
     margin: auto;
   }
 
   #modal-button {
-    width: 20%;
-    height: 24%;
+    position: relative;
     margin: auto;
     background-color: cornflowerblue;
-    border-radius: 4px;
+    border: none;
+    border-radius: 6px;
+    padding: .6em;
     color: whitesmoke;
     outline: none;
-    font-family: 'Circular-Loom';
-    text-transform: uppercase;
+    font-family: sans-serif;
     font-weight: 900;
-    font-size: unset;
+    font-size: 1.6vw;
+    text-transform: uppercase;
+    transition: 1s ease all;
+    animation: crazyButton .14s infinite;
   }
 
+  #modal-button:hover {
+    background-color: rgb(101, 123, 212);
+  }
   #modal-button:active {
     border: inset;
   }
+
+  .modal-controls {
+    margin: 0 auto;
+  }
+    .modal-controls-button {
+      background-color: cornflowerblue;
+      border-radius: 4px;
+      border: 1px solid gray;
+      margin: 4px;
+      font-family: sans-serif;
+      font-weight: 900;
+      text-transform: uppercase;
+      outline: none;
+      padding: 6px;
+      color: whitesmoke;
+      transition: all 1s ease;
+    }
+    .modal-controls-button:active {
+      border: 1px inset;
+    }
+    .modal-controls-button:hover {
+      filter: brightness(1.5);
+    }
+
+
+  .hidden-modal-message {
+    font-size: 1vw;
+    font-family: sans-serif;
+    font-weight: 600;
+    line-height: 1;
+    display: flex;
+    flex-direction: column;
+  }
+    .modal-initial-caption {
+      font-size: .6vw;
+      margin: -30px 0 20px 0;
+      font-weight: 900;
+      color: yellow;
+      animation: warno 1s infinite;
+    }
+
+
+
+@keyframes warno {
+  0% { color: yellow; }
+  15% { color: orange; }
+  30% { color: orangered; }
+  45% { color: red; }
+  55% { color: orangered; }
+  65% { color: orange; }
+  100% { color: yellow; }
+}
+
+@keyframes crazyButton {
+  0% { right: 0; left: 0; }
+  50% { right: 10px; left: 0; }
+  100% { right: 0; left: 10px; }
+}
+
