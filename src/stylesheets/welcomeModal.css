@@ -21,9 +21,9 @@
     padding: 20px;
     display: flex;
     flex-direction: column;
-    border-radius: 15px;
+    border-radius: 8px;
     width: 45%;
-    height: 22%;
+    height: 24%;
     color: white;
     border: grey solid 4px;
   }
@@ -74,9 +74,13 @@
       outline: none;
       padding: 6px;
       color: whitesmoke;
+      transition: all 1s ease;
     }
     .modal-controls-button:active {
       border: 1px inset;
+    }
+    .modal-controls-button:hover {
+      filter: brightness(1.5);
     }
 
 
