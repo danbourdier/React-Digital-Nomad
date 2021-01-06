@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 
 const WelcomeModal = () => {
+  
   const [ visible, changeVisibility ] = useState( true )
   const [ modalPage, changeModalPage ] = useState( 1 )
 
