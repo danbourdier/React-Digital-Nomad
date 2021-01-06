@@ -10,7 +10,7 @@ const HeaderContainer = props => {
   return (
     <div className="header-container">
       <figure className="header-logo-container"> 
-        <span>Take A Walk!</span>
+        <span>Walk Around Town</span>
       </figure>
 
       <LocationContainer locationURLs={ locationURLs } updateCurr={ updateCurr } loadFunc={ loadFunc } />

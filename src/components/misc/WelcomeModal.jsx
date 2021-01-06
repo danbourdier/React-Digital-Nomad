@@ -15,6 +15,7 @@ const WelcomeModal = () => {
     }
   }
 
+
   const handleClick = event => {
     event.preventDefault()
     event.stopPropagation()

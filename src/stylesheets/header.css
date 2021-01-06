@@ -13,27 +13,27 @@
   .header-logo-container {
     background-color: antiquewhite;
     text-align: center;
-    /* width: 15%;
-    height: 280%; */
-    width: 270px;
-    height: 270px;
+    line-height: 1;
+    width: 190px;
+    height: 190px;
     display: flex;
+      flex-direction: column;
+      justify-content: center;
     position: relative;
       bottom: -35%;
       left: 1.5%;
-    border: grey ridge 0.4vw;
       border-radius: 100vw;
-    opacity: 0.83;
+    opacity: 0.88;
+
+    box-shadow: 0px 0px 0px 11px ghostwhite;
+    border: solid 5px darkslategrey;
   }
     .header-logo-container span {
-      width: fit-content;
-      height: fit-content;
-      margin: auto auto;
+      font-family: sans-serif;
+      font-size: 3vw;
+      font-weight: 700;
 
-      font-family: cursive;
-      font-size: 3.5vw;
-      font-weight: 900;
-      transform: rotate(-20deg);
-      white-space: nowrap;
+      transform: scale(0.65, 1.1);
+      text-transform: uppercase;
     }
 
