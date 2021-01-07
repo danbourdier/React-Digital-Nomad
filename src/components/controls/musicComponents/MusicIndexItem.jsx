@@ -6,7 +6,7 @@ const MusicIndexItem = props => {
 
 
   const myAsyncFunc = async() => {
-    let data = await fetchTrackData(track, false)
+    let data = await fetchTrackData( track, false ) 
     setTrackName(data)
   }
 

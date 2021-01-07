@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react'
 import LocationIndexItem from './LocationIndexItem.jsx'
 
 const LocationContainer = props => {
-  const [ locale, setLocale ] = useState('France')
+  const [ locale, setLocale ] = useState( 'NYC' )
 
   const parsedLocationIDs = Object.entries( props.locationURLs )
   const videoAPILoader = props.loadFunc

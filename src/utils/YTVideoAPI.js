@@ -5,8 +5,8 @@
     window.locationPlayer
     window.musicPlayer
 
-    let locationVideoId = 'u3ayPmL2KN4'
-    let musicVideoId = 'D9znOPZX5MQ'
+    let locationVideoId = 'n493bDy2W-U'
+    let musicVideoId = 'iY5j1fM-9DU'
 
 
     const onMusicReady = event => {

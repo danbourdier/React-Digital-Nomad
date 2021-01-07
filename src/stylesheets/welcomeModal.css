@@ -3,45 +3,60 @@
 .modal {
   flex-direction: column;
   position: absolute;
-  z-index: 20;
+  z-index: 40;
   left: 0;
   top: 0;
   width: 100%;
   height: 100%; 
   overflow: auto; 
   background-color: rgb(0,0,0);
-  background-color: rgba(0,0,0,0.4);
+  background-color: rgb(0 0 0 / 31%);
   filter: drop-shadow(2px 4px 6px black);
   margin: 0;
 }
 
   .modal-content {
-    background-color: grey;
-    margin: 22% auto; /* 15% from the top and centered */
+    background-color: #575555;
+    box-shadow: 0px 0px 9px 0px black;
+      opacity: .8;
+    margin: 60vh auto; 
+      margin-right: 0;
     padding: 20px;
     display: flex;
     flex-direction: column;
-    border-radius: 8px;
-    width: 45%;
-    height: 24%;
+    width: 62%;
+    height: fit-content;
     color: white;
-    border: grey solid 4px;
-  }
-
-  #welcome-modal-message {
-    width: fit-content;
-    font-size: 45px;
     font-family: sans-serif;
-    text-align: center;
-    margin: auto;
+    font-size: 2.5vw;
+      line-height: 1;
   }
+    .modal-message-body-wrap {
+      width: 70%;
+    }
+    .modal-message-body {
+      font-size: 70%;
+      transform: scale(1, 1.3);
+    }
+    .bold-modal-header {
+      color: yellow;
+      transform: scale(1, 1.3);
+    }
+    #welcome-modal-message {
+      width: fit-content;
+      font-size: 45px;
+      font-family: sans-serif;
+      text-align: center;
+    }
 
   #modal-button {
-    position: relative;
+    position: absolute;
+    filter: brightness(1.3);
+    top: 47%;
     margin: auto;
     background-color: cornflowerblue;
     border: none;
-    border-radius: 6px;
+    border-radius: 4px;
     padding: .6em;
     color: whitesmoke;
     outline: none;

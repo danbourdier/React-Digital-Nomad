@@ -1,12 +1,9 @@
 const path = require('path')
 
-// const modeBool = process.env.NODE_ENV === 'production'
-
 const tempDir = __dirname + '/index.html'
 const tempFileName = 'index.html'
 
 const outputPath = path.join(__dirname, './dist')
-// const outputPublicPath = modeBool ? '/React-Digital-Nomad/dist' : '/'
 
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
@@ -47,7 +44,20 @@ module.exports = {
           }, 
           'css-loader'
         ],
-      }
+      },
+      {
+        test: /\.(png|jpe?g|gif)$/i,
+        use: [
+          {
+            loader: "file-loader",
+            options: {
+              name: "[name].[ext]",
+              // outputPath: "images/",
+              publicPath: "../"
+            }
+          }
+        ]
+      },
     ]
   },
 

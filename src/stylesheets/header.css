@@ -6,34 +6,33 @@
     height: 10%;
     width: 100%;
     opacity: 0.85;
-    z-index: 20;
+    z-index: 30;
 }
 
   /* Header logo */
   .header-logo-container {
     background-color: antiquewhite;
     text-align: center;
-    /* width: 15%;
-    height: 280%; */
-    width: 270px;
-    height: 270px;
+    line-height: 1;
+    width: 190px;
+    height: 190px;
     display: flex;
+      flex-direction: column;
+      justify-content: center;
     position: relative;
       bottom: -35%;
       left: 1.5%;
-    border: grey ridge 0.4vw;
       border-radius: 100vw;
-    opacity: 0.83;
+    opacity: 0.88;
+
+    box-shadow: 0px 0px 0px 11px ghostwhite;
+    border: solid 5px darkslategrey;
   }
     .header-logo-container span {
-      width: fit-content;
-      height: fit-content;
-      margin: auto auto;
-
-      font-family: cursive;
-      font-size: 3.5vw;
-      font-weight: 900;
-      transform: rotate(-20deg);
-      white-space: nowrap;
+      font-family: sans-serif;
+      font-size: 272%;
+      font-weight: 700;
+      transform: scale(0.65, 1.1);
+      text-transform: uppercase;
     }
 
