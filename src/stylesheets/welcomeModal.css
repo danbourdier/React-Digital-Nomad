@@ -10,15 +10,16 @@
   height: 100%; 
   overflow: auto; 
   background-color: rgb(0,0,0);
-  background-color: rgba(0,0,0,0.4);
+  background-color: rgb(0 0 0 / 31%);
   filter: drop-shadow(2px 4px 6px black);
   margin: 0;
 }
 
   .modal-content {
     background-color: #575555;
+    box-shadow: 0px 0px 9px 0px black;
       opacity: .8;
-    margin: 29% auto; 
+    margin: 60vh auto; 
       margin-right: 0;
     padding: 20px;
     display: flex;
@@ -39,6 +40,7 @@
     }
     .bold-modal-header {
       color: yellow;
+      transform: scale(1, 1.3);
     }
     #welcome-modal-message {
       width: fit-content;
@@ -49,6 +51,7 @@
 
   #modal-button {
     position: absolute;
+    filter: brightness(1.3);
     top: 47%;
     margin: auto;
     background-color: cornflowerblue;
