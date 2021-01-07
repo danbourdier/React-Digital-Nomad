@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 
 const WelcomeModal = () => {
   const [ visible, changeVisibility ] = useState( true )
@@ -19,8 +19,12 @@ const WelcomeModal = () => {
     event.preventDefault()
     event.stopPropagation()
 
-    playMedia()
-    changeVisibility( !visible )
+    if ( !!window?.locationPlayer?.playVideo?.constructor == true ) {
+      playMedia()
+      changeVisibility( !visible )
+    } else {
+      console.log('API not yet loaded, please try again.')
+    }
   }
 
 
@@ -39,7 +43,7 @@ const WelcomeModal = () => {
              </div>
              
 
-          <button id="modal-button" onClick={ handleClick }> Start Now </button>
+        <button id="modal-button" onClick={ handleClick }> Start Now </button>
 
       </div>
     </figure>
