@@ -49,8 +49,3 @@ const WelcomeModal = () => {
 
 
 export default WelcomeModal
-
-
-{/* <span className="modal-initial-caption">
-              Main controls disabled until end of intro
-            </span>  */}
