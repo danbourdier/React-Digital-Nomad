@@ -39,7 +39,7 @@ const WelcomeModal = () => {
              </div>
              
 
-          <button id="modal-button" onClick={ handleClick }> Take A Walk! </button>
+          <button id="modal-button" onClick={ handleClick }> Start Now </button>
 
       </div>
     </figure>
