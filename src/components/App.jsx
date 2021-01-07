@@ -14,7 +14,7 @@ const importMediaAPI = () => import( /* webpackChunkName: "YTMediaAPI"  */   '..
 
 
 const App = () => {
-  const [ currentCountry, setCountry ] = useState('France')
+  const [ currentCountry, setCountry ] = useState('NYC')
 
   useEffect( () => {
     importDataAPI()

@@ -17,6 +17,7 @@
 
   .modal-content {
     background-color: #575555;
+      opacity: .8;
     margin: 29% auto; 
       margin-right: 0;
     padding: 20px;
