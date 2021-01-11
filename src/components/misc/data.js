@@ -16,16 +16,16 @@ export const locations = {
     {'id': 'xzQW_ri7zwE', 'name': 'Rockefeller Plaza'}, 
   ],
   'France': [ 
-    { 'id': 'aZ-31-p3saU', 'name': 'Eiffel Tower' }, 
-    { 'id': 'VIT-zhyiAoo', 'name': 'Champes Elyseè' }, 
-    { 'id': "pxp0BrsZq3E", 'name': 'Champes (Night Time)' }, 
-    { 'id': 'u3ayPmL2KN4', 'name': 'Providencé' } 
+    { 'id': 'udpuCudGU8Y', 'name': 'Paris in Autumn' }, 
+    { 'id': 'QbvED3eUfk8', 'name': 'Eiffel Tower' }, 
+    { 'id': "kGgmQQ_wOkU", 'name': 'Village Royale' }, 
+    { 'id': 'F1KgfE1OGz8', 'name': 'Hotel De Ville to Notre Dame' } 
   ],
   'Germany': [ 
-    {'id': 'mlS89Cd176M', 'name': 'Munich'}, 
-    {'id': '5COC4WMheH0', 'name': 'Frankfurt'}, 
+    { 'id': '4lOzYUlhJEw', 'name': 'Munich' }, 
+    { 'id': 'Xq79kGuXpH4', 'name': 'Dresden' }, 
     {'id': '3VgJVB3OD3g', 'name': 'Meersburg'}, 
-    {'id': 'AmpRO0c-8_w', 'name': 'Berlin'}, 
+    { 'id': 'M6MOMNKbcoM', 'name': 'Berlin'}, 
   ],
   'Japan': [ 
     {'id': 'n3Dru5y3ROc', 'name': 'Tokyo, Red Light District'}, 
