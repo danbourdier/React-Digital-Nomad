@@ -10,13 +10,11 @@
 
 
     const onMusicReady = event => {
-      // event.target.playVideo()
       window.musicPlayer = event.target
       document.dispatchEvent( new CustomEvent('MusicReady'))
     }
 
     const onLocationReady = event => {
-      // event.target.playVideo()
       window.locationPlayer = event.target
       document.dispatchEvent(new CustomEvent('LocationReady'))
     }
