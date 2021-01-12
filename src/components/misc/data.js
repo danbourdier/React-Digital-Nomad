@@ -22,9 +22,9 @@ export const locations = {
     { 'id': 'F1KgfE1OGz8', 'name': 'Hotel De Ville to Notre Dame' } 
   ],
   'Germany': [ 
+    { 'id': 'Xq79kGuXpH4', 'name': 'Dresden' },  
     { 'id': '4lOzYUlhJEw', 'name': 'Munich' }, 
-    { 'id': 'Xq79kGuXpH4', 'name': 'Dresden' }, 
-    {'id': '3VgJVB3OD3g', 'name': 'Meersburg'}, 
+    { 'id': '3VgJVB3OD3g', 'name': 'Meersburg' }, 
     { 'id': 'M6MOMNKbcoM', 'name': 'Berlin'}, 
   ],
   'Japan': [ 
@@ -40,8 +40,8 @@ export const locations = {
     {'id': 's6lfvfe1i4g', 'name': 'Diwali'}, 
   ],
   'Italy': [ 
-    {'id': 'P9uMtDLhXbE', 'name': 'Trastevere'},  
     {'id': 'xrRFKEdtQIc', 'name': 'Milan'},  
+    {'id': 'P9uMtDLhXbE', 'name': 'Trastevere'},  
     {'id': 'EsFheWkimsU', 'name': 'Rome'},  
     {'id': '17xMrhDD87c', 'name': 'Genoa'},  
   ]
