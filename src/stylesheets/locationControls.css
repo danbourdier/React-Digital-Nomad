@@ -2,6 +2,7 @@
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
+  padding-right: 15px;
 }
   /* City Names */
   .city-labels {
@@ -38,7 +39,7 @@
       background: black;
         opacity: .75;
       border-radius: 6px;
-      padding: 0.4vw;
+      padding: 0.6vw;
       height: auto;
     }
       .sub-city-list li {
