@@ -35,7 +35,7 @@ const App = () => {
   return (
     <div className="player-component-wrapper">
       <div className="player-component-container">
-
+        <meta property="og:image" content="../../walkGif.gif" />
         < HeaderContainer locationURLs={ locations } updateCurr={ setCountry } loadFunc={ mediaAPILoader } />
 
 
