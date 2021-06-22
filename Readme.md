@@ -1,4 +1,4 @@
-# Welcome to Digital Nomad! A way to visit the city of your dreams in person from the comfort of home!
+# Tired of quarantine? Then welcome to Take-A-Walk! A way to visit the city of your dreams in person from the comfort of home!
 
 
 ## Live Site
@@ -6,8 +6,11 @@ https://take-a-walk.netlify.app/
 
 
 ## Instructions
-  1. npm install
-  2. run `npm run start`
+  1. Either visit live site or clone repo
+  2. Cd into root directory with json
+  3. Run `npm install`
+  4. Run `npm run start`
+  5. Open browser and go to `localhost:8080` !
 
 ### Technologies used
   1. HTML5
@@ -26,3 +29,4 @@ https://take-a-walk.netlify.app/
   4. Germany
   5. India
   6. Italy
+  7. More to come!
