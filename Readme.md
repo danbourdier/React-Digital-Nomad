@@ -14,7 +14,7 @@ https://take-a-walk.netlify.app/
 
 ### Technologies used
   1. HTML5
-  2. CSS3
+  2. CSS3(animations, flexbox, media queries...)
   1. JavaScript (ES6)
   2. React.js (Hooks)
   3. Youtube video player API
